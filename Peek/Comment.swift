@@ -9,7 +9,7 @@
 import Foundation
 import CloudKit
 
-class Comment {
+class Comment: CloudKitSyncable {
     
     static let kType = "Comment"
     static let kText = "text"

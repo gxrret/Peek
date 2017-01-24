@@ -9,7 +9,13 @@
 import UIKit
 import CloudKit
 
-class Peek {
+class Peek: CloudKitSyncable {
+    
+    static let kType = "Peek"
+    static let kPhotoData = "photoData"
+    static let kTimeStamp = "timestamp"
+    static let kTitle = "title"
+    static let kText = "text"
     
     let title: String
     let text: String
@@ -18,6 +24,7 @@ class Peek {
     var comments: [Comment]
     
     var photo: UIImage? {
+        
         guard let photoData = self.photoData else { return nil }
         return UIImage(data: photoData)
     }
@@ -30,6 +37,23 @@ class Peek {
         self.comments = comments
     }
     
+    var recordType: String {
+        return Peek.kType
+    }
+    
+    var cloudKitRecordID: CKRecordID?
+    
+    convenience required init?(record: CKRecord) {
+        
+        guard let timestamp = record.creationDate,
+            let photoAsset = record[Peek.kPhotoData] as? CKAsset,
+        let text = record[Peek.kText] as? String,
+        let title = record[Peek.kTitle] as? String else { return nil }
+        let photoData = try? Data(contentsOf: photoAsset.fileURL)
+        self.init(title: title, timestamp: timestamp, text: text, photoData: photoData)
+        cloudKitRecordID = record.recordID
+    }
+    
     fileprivate var temporaryPhotoURL: URL {
         let temporaryDirectory = NSTemporaryDirectory()
         let temporaryDirectoryURL = URL(fileURLWithPath: temporaryDirectory)
@@ -40,3 +64,22 @@ class Peek {
         return fileURL
     }
 }
+
+extension CKRecord {
+    
+    convenience init(_ peek: Peek) {
+        let recordID = CKRecordID(recordName: UUID().uuidString)
+        self.init(recordType: peek.recordType, recordID: recordID)
+        
+        self[Peek.kTimeStamp] = peek.timestamp as CKRecordValue?
+        self[Peek.kPhotoData] = CKAsset(fileURL: peek.temporaryPhotoURL)
+    }
+}
+
+
+
+
+
+
+
+

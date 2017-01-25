@@ -16,8 +16,6 @@ class PeekDetailViewController: UIViewController {
         }
     }
     
-    var comment: Comment?
-    
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var peekTextView: UITextView!
@@ -29,17 +27,14 @@ class PeekDetailViewController: UIViewController {
         super.viewDidLoad()
         
         updateViews()
-        
     }
     
     func updateViews() {
         guard let peek = peek, isViewLoaded else { return }
         
         titleLabel.text = peek.title
+        peekTextView.text = peek.text
         peekImageView.image = peek.photo
-        
-        guard let comment = comment else { return }
-        peekTextView.text = comment.text
         
     }
     
@@ -52,7 +47,7 @@ class PeekDetailViewController: UIViewController {
     func presentActivityViewController() {
         
         guard let title = peek?.title,
-            let text = comment?.text,
+            let text = peek?.text,
             let photo = peek?.photo else { return }
         
         let activityViewController = UIActivityViewController(activityItems: [title, text, photo], applicationActivities: nil)

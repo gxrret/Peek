@@ -48,14 +48,12 @@ class PeekController {
     func createPeek(title: String, caption: String, image: UIImage, completion: ((Peek) -> Void)? = nil) {
         
         guard let data = UIImageJPEGRepresentation(image, 0.8) else { return }
-        let peek = Peek(title: title, photoData: data)
-        
+        let peek = Peek(title: title, text: caption, photoData: data)
         peeks.insert(peek, at: 0)
         
         cloudKitManager.saveRecord(CKRecord(peek)) { (record, error) in
             guard let record = record else { return }
             peek.cloudKitRecordID = record.recordID
-            let _ = self.addComment(peek: peek, commentText: caption)
             if let error = error {
                 print("Error saving new peek to CloudKit: \(error)")
             }

@@ -12,12 +12,7 @@ class MainPeekViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var tableView: UITableView!
     
-    lazy var refreshControl: UIRefreshControl = {
-        let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: #selector(handleRefresh(refreshControl:)), for: UIControlEvents.valueChanged)
-        
-        return refreshControl
-    }()
+    var refreshControl: UIRefreshControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +22,11 @@ class MainPeekViewController: UIViewController, UITableViewDelegate, UITableView
         let nc = NotificationCenter.default
         nc.addObserver(self, selector: #selector(postsChanged(_:)), name: PeekController.PeeksChangedNotification, object: nil)
         
+        refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
+        tableView.addSubview(refreshControl)
+        
         self.tableView.addSubview(self.refreshControl)
         
     }
@@ -35,10 +35,12 @@ class MainPeekViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.reloadData()
     }
     
-    func handleRefresh(refreshControl: UIRefreshControl) {
-        requestFullSync {
-            self.refreshControl.endRefreshing()
-        }
+    func refresh(sender: AnyObject) {
+        
+        requestFullSync()
+        tableView.reloadData()
+        self.refreshControl?.endRefreshing()
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

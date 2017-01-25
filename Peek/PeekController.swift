@@ -31,10 +31,6 @@ class PeekController {
         return peeks.flatMap { $0.comments }
     }
     
-    var sortedPeeks: [Peek] {
-        return peeks.sorted(by: { return $0.timestamp.compare($1.timestamp as Date) == .orderedDescending })
-    }
-    
     var isSyncing: Bool = false
     
     var cloudKitManager = CloudKitManager()

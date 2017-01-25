@@ -212,7 +212,7 @@ If you have any questions about these Terms, please contact us at peek app.conta
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="📃 Content Policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BrY-lp-f1A">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="📃 Terms &amp; Conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BrY-lp-f1A">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
@@ -222,6 +222,9 @@ If you have any questions about these Terms, please contact us at peek app.conta
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.25879135727882385" green="0.2588421106338501" blue="0.25878816843032837" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="Spv-U1-WyG" kind="show" id="t1t-8q-NGa"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="aXP-pl-I4a" style="IBUITableViewCellStyleDefault" id="wjy-HD-txO">
                                         <rect key="frame" x="0.0" y="100" width="375" height="44"/>
@@ -240,6 +243,9 @@ If you have any questions about these Terms, please contact us at peek app.conta
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.25879135727882385" green="0.2588421106338501" blue="0.25878816843032837" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="ooM-pn-IsG" kind="show" id="1az-2N-xGR"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="pan-97-RBO">
                                         <rect key="frame" x="0.0" y="144" width="375" height="44"/>
@@ -267,9 +273,6 @@ If you have any questions about these Terms, please contact us at peek app.conta
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.25879135727882385" green="0.2588421106338501" blue="0.25878816843032837" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <segue destination="7Wj-gd-fpM" kind="presentation" id="RCB-Zw-e4o"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -285,23 +288,200 @@ If you have any questions about these Terms, please contact us at peek app.conta
             </objects>
             <point key="canvasLocation" x="2880.8000000000002" y="904.49775112443785"/>
         </scene>
-        <!--Mail View Controller-->
-        <scene sceneID="1HL-hQ-UcD">
+        <!--Terms & Conditions-->
+        <scene sceneID="5HH-GL-33L">
             <objects>
-                <viewController id="7Wj-gd-fpM" customClass="MailViewController" customModule="Peek" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Spv-U1-WyG" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="tN4-0E-kX4"/>
-                        <viewControllerLayoutGuide type="bottom" id="Rxa-bV-pFX"/>
+                        <viewControllerLayoutGuide type="top" id="vBm-H2-fcW"/>
+                        <viewControllerLayoutGuide type="bottom" id="qnQ-N2-EQl"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="cQE-oK-f7v">
+                    <view key="view" contentMode="scaleToFill" id="PdG-ey-s5s">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gcg-ot-ZLZ">
+                                <rect key="frame" x="16" y="64" width="343" height="546"/>
+                                <mutableString key="text">Last updated: January 22nd, 2016
+
+Please read these Terms and Conditions carefully before using Peek operated by us.
+
+Your access to and use of the service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all of our users who access or use Peek.
+
+By downloading or using Peek you agree to these Terms and Conditions and our Privacy Policy.
+
+If you are under the age of 13, you may not download or use Peek. We do not knowingly collect or maintain information from children under age 13.
+
+if you are between the ages of 13 and 17, you must get a parent or guardian to read and agree to our Terms and Conditions and Privacy Policy.
+
+By accessing this Service you agree to be bound by these Terms. If you disagree with any part of the Terms then you may not access the Service.
+
+Termination
+
+We may terminate or suspend access to our Service immediately, without prior notice or liability, for any reason whatsoever, include without limitation if you breach our Terms.
+
+All provisions of the Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability.
+
+Content
+
+Our Service allows you to post, upload images, share information, and otherwise make available other certain information, text, graphics or other material (“Content”). You are responsible for the information you post. The rules for using the app are as follows (Also under “Rules” when creating a peek). You agree to not use the Service:
+- To depict  pornographic material;
+- To show nudity of any kind;
+- To show depictions of graphic violence ;
+- To post spam or illicit advertising;
+- To bully, threaten, or harass other users;
+- To impersonate or misrepresent any person or other Peek user (this includes pretending to be a minor if you are not);
+- To disrupt or impose an unreasonable burden on Peek or networks affiliated with Peek, or breach or attempt to breach the security of Peek; and
+- To register accounts or post Content automatically, systematically, or programmatically.
+
+You are solely liable and responsible for your interactions with other users. We reserve the right to monitor disputes between you and other users, but have no obligation to do so. You should first report the dispute in the “Report a Problem” section of Peek.
+
+We reserve the right to remove Content, or ban anyone without warning as we deem necessary.
+
+We do not condone posting personal information, so if you do happen to post a phone number, email, or any other sensitive personal information, you are responsible.
+
+COPPA
+
+Peek is in compliance with COPPA.
+
+Peek is a general audience application that complies with the Children’s Online Privacy Protection Act (COPPA). If we receive valid information that a registered user is under the age of 13, the account will be closed and personal information will be removed from the database.
+
+If you are the parent of guardian of a child under the age of 13 who has created an account under the impression that the application is for an older audience (18 and over), please contact Peek at peekapp.contact@gmail.com and we will immediately cancel your child’s account and nullify personal information displaying within the application and collected from them.
+
+For more information on COPPA, visit www.ftc.gov. For more information for staying safe online , visit www.socialsafety.org.
+
+Limitation of Liability
+
+YOU ACKNOWLEDGE AND AGREE THAT WE CANNOT CONTROL THE CONDUCT OF PEEK’S USERS AND THEREFORE CANNOT BE RESPONSIBLE FOR ANY HARM THEY MAY CAUSE. WE ARE NOT RESPONSIBLE FOR THE ACTIONS, CONTENT, INFORMATION, OR DATA OF THIRD PARTIES, AND YOU RELEASE US, OUR DIRECTORS, OFFICERS, EMPLOYEES, AND AGENTS FROM ANY CLAIMS AND DAMAGES, KNOWN AND UNKNOWN, ARISING OUT OF OR IN ANY WAY CONNECTED WITH ANY CLAIM YOU HAVE AGAINST ANY SUCH THIRD PARTIES. IF YOU ARE A CALIFORNIA RESIDENT, YOU WAIVE CALIFORNIA CIVIL CODE §1542, WHICH SAYS: A GENERAL RELEASE DOES NOT EXTEND TO CLAIMS WHICH THE CREDITOR DOES NOT KNOW OR SUSPECT TO EXIST IN HIS FAVOR AT THE TIME OF EXECUTING THE RELEASE, WHICH IF KNOWN BY HIM MUST HAVE MATERIALLY AFFECTED HIS SETTLEMENT WITH THE DEBTOR.
+
+YOU EXPRESSLY AGREE THAT WE SHALL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, PUNITIVE, OR EXEMPLARY DAMAGES, INCLUDING WITHOUT LIMITATION DAMAGES FOR LOSS OF PROFITS, GOODWILL, USE, DATA OR OTHER INTANGIBLES (EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES), AND INCLUDING WITHOUT LIMITATION RESULTING FROM: (1) THE USE OR THE INABILITY TO USE PEEK; (2) THE COST OF PROCUREMENT OF SUBSTITUTE GOODS AND SERVICES RESULTING FROM ANY GOODS, DATA, INFORMATION OR SERVICES PURCHASED OR OBTAINED OR MESSAGES RECEIVED OR TRANSACTIONS ENTERED INTO THROUGH OR FROM PEEK; (3) UNAUTHORIZED ACCESS TO OR ALTERATION OF YOUR CONTENT, TRANSMISSIONS OR DATA; (4) STATEMENTS OR CONDUCT OF ANY THIRD PARTY ON PEEK; OR (5) ANY OTHER MATTER RELATING TO PEEK.
+
+OTHER USERS OF PEEK WITH WHOM YOU ASSOCIATE, CONNECT, INTERACT AND/OR SHARE CONTENT COULD USE YOUR CONTENT AND/OR LIKENESS IN A MANNER YOU DISLIKE, DISAPPROVE OF OR OTHERWISE FIND OFFENSIVE. HOWEVER, YOU AGREE NOT TO ASSERT ANY CLAIMS, ACTIONS OR DEMANDS AGAINST US IN CONNECTION WITH SUCH USE OR ACTIVITIES, WHETHER SUCH USE OR ACTIVITIES ARE AUTHORIZED BY THESE TOS OR NOT.
+
+WE ARE NOT RESPONSIBLE FOR ANY OFFENSIVE, INAPPROPRIATE, OBSCENE, UNLAWFUL OR OTHERWISE OBJECTIONABLE CONTENT OR INFORMATION YOU MAY ENCOUNTER ON PEEK. WE ARE NOT RESPONSIBLE FOR THE CONDUCT, WHETHER ONLINE OR OFFLINE, OR ANY USER OF PEEK.
+
+WE ARE NOT LIABLE FOR ANY LOST OR DELETED INFORMATION OR DATA, WHETHER INTENTIONAL OR UNINTENTIONAL, NOR FOR THE TIMELINESS, DELETION, MIS-DELIVERY OR FAILURE TO STORE ANY USER COMMUNICATIONS OR PERSONALIZATION SETTINGS.
+NOTWITHSTANDING ANYTHING TO THE CONTRARY CONTAINED HEREIN, AND TO THE EXTENT THAT A JUDGMENT IS RENDERED IN A COURT OF COMPETENT JURISDICTION DISREGARDING ONE OR MORE OF THE WARRANTY DISCLAIMERS AND LIABILITY LIMITATIONS CONTAINED HEREIN, OUR AGGREGATE LIABILITY TO YOU SHALL NOT EXCEED ONE DOLLAR ($1.00).
+
+Links to other Websites
+
+Our Service may contain links to third-party web sites or services that are not owned or controlled by Peek.
+
+Peek has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party websites or services. You further acknowledge and agree that Peek shall not be responsible or liable, directly or indirectly, for any such content, goods, or services available on or through any such web sites or services.
+
+DMCA - Digital Media Copyright Act
+
+If you believe that any material on this Service infringes upon any copyright which you own or control, you may send a written notification of such infringement to the email: peekapp.contact@gmail.com
+
+Include the following in your email:
+- an electronic signature of a person authorized to act on behalf of the owner of an exclusive right that is allegedly infringed;
+- Identification of the copyrighted work or works claimed to have been infringed;
+- Information sufficient to permit us to contact the complaining party (e.g. address, phone number, or email address);
+- A statement that the complaining party has a good-faith belief that use of the material in the manner complained of is not authorized by the copyright owner; and
+- A statement that the information in the notification is accurate, and under penalty or perjury, that the complaining party is authorized to act on behalf of the owner of an exclusive right that is allegedly infringed.
+
+Changes
+
+We reserve the right, at our sole discretion, to modify or replace these Terms at any time. What constitutes a material change will be determined at our sole discretion.
+
+Contact Us
+
+If you have any questions about these Terms, please contact us at: peekapp.contact@gmail.com.</mutableString>
+                                <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25879135727882385" green="0.2588421106338501" blue="0.25878816843032837" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qnQ-N2-EQl" firstAttribute="top" secondItem="Gcg-ot-ZLZ" secondAttribute="bottom" constant="8" symbolic="YES" id="1pY-Vq-Ivg"/>
+                            <constraint firstItem="Gcg-ot-ZLZ" firstAttribute="top" secondItem="vBm-H2-fcW" secondAttribute="bottom" id="I0O-ND-a9d"/>
+                            <constraint firstItem="Gcg-ot-ZLZ" firstAttribute="trailing" secondItem="PdG-ey-s5s" secondAttribute="trailingMargin" id="bla-z4-Hxw"/>
+                            <constraint firstItem="Gcg-ot-ZLZ" firstAttribute="leading" secondItem="PdG-ey-s5s" secondAttribute="leadingMargin" id="nQF-X3-2Xq"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Terms &amp; Conditions" id="3lY-Bl-HzC"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kYw-kg-MRv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jXe-x5-D55" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3795" y="920"/>
+            <point key="canvasLocation" x="3780" y="902.69865067466276"/>
+        </scene>
+        <!--Privacy Policy-->
+        <scene sceneID="JKE-lK-KQu">
+            <objects>
+                <viewController id="ooM-pn-IsG" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cu3-XE-9JB"/>
+                        <viewControllerLayoutGuide type="bottom" id="9ju-vz-j70"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="otR-aU-f0M">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hQX-MR-721">
+                                <rect key="frame" x="16" y="64" width="343" height="554"/>
+                                <mutableString key="text">
+Thank you for using Peek! As Peek is a social media app where there is no private information shared with others, We still require you to have an iCloud account set up on your device. Holding onto your information, including your peeks, comments, and likes is a serious responsibility, and we want to let you know how we handle it.
+
+What Information Peek Collects and Why
+
+Information from the user
+
+As Peek is an anonymous social media application, we still need to keep an account of who you are through an iCloud account that you are logged into on your device.  This does not include any encrypted data including 
+
+Why do we collect this information?
+- To access Peek in its entirety, you will need an iCloud account.
+- We keep records of how many users are using Peek.
+- If you are in violation of our Terms of Service below, then your records and registered account in our database will be removed.
+
+Peek does not and will not share your account information with anyone else outside of Peek for unauthorized use, disclosure, and any third-parties.
+
+Other information We Collect
+
+Peek also collects the public data you add into the network, such as peeks, location, images, comments, and likes. To ensure your data you have posted is seen, our real-time database stores it and allows other users to interact with it as you would.
+
+You are not required to add a location to sort through peeks when using Peek. 
+
+Why do we collect this information?
+- To store peeks, optional location set by the user, uploaded images, comments, and likes and allow other users to interact with said information
+- To keep records of what you are doing within Peek
+- If you are in violation of our Terms of Service, then your peeks, uploaded images, comments, and likes in our database may be removed.
+
+
+Information We Do Not Collect
+
+Peek does not collect or store the following sensitive information without any prior consent from the user:
+- health information
+- any other application’s data that is on your device or iCloud account other than your account itself
+- Social Security numbers, credit cards, bank information
+- Any other private or sensitive data deemed by the user
+
+How We Secure Your Information
+
+Peek takes all measures reasonably necessary to protect User Personal Information from unauthorized access, alteration, or destruction; maintain data accuracy; and help ensure the appropriate use of User Personal Information. We follow generally accepted industry standards to protect the personal information submitted to us, both during transmission and once we receive it.
+
+No method of transmission, or method of electronic storage, is 100% secure though.
+
+Resolving Complaints
+If you have concerns about the way Peek is handling your Information, please let us know immediately. We want to help. You may contact us by filling out the form in the “More” section of Peek. You may also email us directly at: peekapp.contact@gmail.com  with the subject line "Privacy Concerns." We will respond within 30 days at the latest.</mutableString>
+                                <color key="textColor" red="1" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25879135727882385" green="0.2588421106338501" blue="0.25878816843032837" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="hQX-MR-721" secondAttribute="trailing" id="3sh-V7-kBe"/>
+                            <constraint firstItem="9ju-vz-j70" firstAttribute="top" secondItem="hQX-MR-721" secondAttribute="bottom" id="ABc-aV-PkD"/>
+                            <constraint firstItem="hQX-MR-721" firstAttribute="top" secondItem="Cu3-XE-9JB" secondAttribute="bottom" id="lg5-Wc-pcI"/>
+                            <constraint firstItem="hQX-MR-721" firstAttribute="leading" secondItem="otR-aU-f0M" secondAttribute="leadingMargin" id="mPv-Ci-K91"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Privacy Policy" id="hjw-yJ-0nb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cw0-ol-5g1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4556" y="914"/>
         </scene>
         <!--PEEKS-->
         <scene sceneID="TWp-Hg-9Sn">
@@ -451,7 +631,11 @@ If you have any questions about these Terms, please contact us at peek app.conta
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="FO0-lV-LrJ">
-                        <barButtonItem key="rightBarButtonItem" image="More icon" id="7Mi-uk-JAy"/>
+                        <barButtonItem key="rightBarButtonItem" image="More icon" id="7Mi-uk-JAy">
+                            <connections>
+                                <action selector="reportButtonTapped:" destination="5ig-UZ-aRR" id="LLL-rG-RHQ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="peekImageView" destination="byL-ms-0Uf" id="JK8-y4-Oj1"/>

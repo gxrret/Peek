@@ -47,8 +47,8 @@ class Peek: CloudKitSyncable {
         
         guard let timestamp = record.creationDate,
             let photoAsset = record[Peek.kPhotoData] as? CKAsset,
-        let text = record[Peek.kText] as? String,
-        let title = record[Peek.kTitle] as? String else { return nil }
+        let title = record[Peek.kTitle] as? String,
+        let text = record[Peek.kText] as? String else { return nil }
         let photoData = try? Data(contentsOf: photoAsset.fileURL)
         self.init(title: title, timestamp: timestamp, text: text, photoData: photoData)
         cloudKitRecordID = record.recordID
@@ -71,6 +71,8 @@ extension CKRecord {
         let recordID = CKRecordID(recordName: UUID().uuidString)
         self.init(recordType: peek.recordType, recordID: recordID)
         
+        self[Peek.kTitle] = peek.title as String? as CKRecordValue?
+        self[Peek.kText] = peek.text as String? as CKRecordValue?
         self[Peek.kTimeStamp] = peek.timestamp as CKRecordValue?
         self[Peek.kPhotoData] = CKAsset(fileURL: peek.temporaryPhotoURL)
     }

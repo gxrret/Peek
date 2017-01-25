@@ -12,34 +12,69 @@ class MainPeekViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var tableView: UITableView!
     
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(handleRefresh(refreshControl:)), for: UIControlEvents.valueChanged)
+        
+        return refreshControl
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        requestFullSync()
+        
+        let nc = NotificationCenter.default
+        nc.addObserver(self, selector: #selector(postsChanged(_:)), name: PeekController.PeeksChangedNotification, object: nil)
+        
+        self.tableView.addSubview(self.refreshControl)
+        
     }
-
+    
+    func postsChanged(_ notification: Notification) {
+        tableView.reloadData()
+    }
+    
+    func handleRefresh(refreshControl: UIRefreshControl) {
+        requestFullSync {
+            self.refreshControl.endRefreshing()
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return PeekController.sharedController.peeks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "peekCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "peekCell", for: indexPath) as? PeekTableViewCell
         
-        cell.textLabel?.text = "hello"
-        return cell
+        let peek = PeekController.sharedController.peeks[indexPath.row]
+        cell?.updateWithPeek(peek: peek)
+        return cell ?? UITableViewCell()
+        
     }
     
-    
+    func requestFullSync(_ completion: (() -> Void)? = nil) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        
+        PeekController.sharedController.performFullSync {
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            completion?()
+        }
+    }
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "toPeekDetail" {
+            
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let peek = PeekController.sharedController.peeks[indexPath.row]
+                if let detailVC = segue.destination as? PeekDetailViewController {
+                    detailVC.peek = peek
+                }
+            }
+        }
     }
-    */
-
 }

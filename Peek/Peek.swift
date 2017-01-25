@@ -15,10 +15,8 @@ class Peek: CloudKitSyncable {
     static let kPhotoData = "photoData"
     static let kTimeStamp = "timestamp"
     static let kTitle = "title"
-    static let kText = "text"
     
     let title: String
-    let text: String
     let photoData: Data?
     let timestamp: Date
     var comments: [Comment]
@@ -29,10 +27,9 @@ class Peek: CloudKitSyncable {
         return UIImage(data: photoData)
     }
     
-    init(title: String, timestamp: Date = Date(), text: String, photoData: Data?, comments: [Comment] = []) {
+    init(title: String, timestamp: Date = Date(), photoData: Data?, comments: [Comment] = []) {
         self.title = title
         self.timestamp = timestamp
-        self.text = text
         self.photoData = photoData
         self.comments = comments
     }
@@ -47,10 +44,9 @@ class Peek: CloudKitSyncable {
         
         guard let timestamp = record.creationDate,
             let photoAsset = record[Peek.kPhotoData] as? CKAsset,
-        let text = record[Peek.kText] as? String,
         let title = record[Peek.kTitle] as? String else { return nil }
         let photoData = try? Data(contentsOf: photoAsset.fileURL)
-        self.init(title: title, timestamp: timestamp, text: text, photoData: photoData)
+        self.init(title: title, timestamp: timestamp, photoData: photoData)
         cloudKitRecordID = record.recordID
     }
     

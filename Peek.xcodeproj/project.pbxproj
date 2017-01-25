@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC1CBBAD1E38102500F77E01 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1CBBAC1E38102500F77E01 /* CloudKit.framework */; };
+		AC1CBBAF1E3812E900F77E01 /* PeekTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1CBBAE1E3812E900F77E01 /* PeekTableViewCell.swift */; };
+		AC1CBBB11E38177B00F77E01 /* PeekDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1CBBB01E38177B00F77E01 /* PeekDetailViewController.swift */; };
+		AC1CBBB31E381C5E00F77E01 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1CBBB21E381C5E00F77E01 /* CommentTableViewCell.swift */; };
 		AC84A15D1E37B5440053C77F /* Peek.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84A15C1E37B5440053C77F /* Peek.swift */; };
 		AC84A1601E37B5630053C77F /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84A15F1E37B5630053C77F /* CloudKitManager.swift */; };
 		AC84A1631E37B5790053C77F /* CloudKitSyncable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84A1621E37B5790053C77F /* CloudKitSyncable.swift */; };
@@ -17,7 +21,6 @@
 		ACACADC01E36A8FC00575BB0 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACACADBF1E36A8FC00575BB0 /* MoreTableViewController.swift */; };
 		ACACADC21E36BB9800575BB0 /* AddPeekTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACACADC11E36BB9800575BB0 /* AddPeekTableViewController.swift */; };
 		ACACADC41E36BBB900575BB0 /* PhotoSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACACADC31E36BBB900575BB0 /* PhotoSelectViewController.swift */; };
-		ACACADC61E36BE5300575BB0 /* PeekDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACACADC51E36BE5300575BB0 /* PeekDetailTableViewController.swift */; };
 		ACB78A451E355E6000AA1D00 /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB78A441E355E6000AA1D00 /* TermsAndConditionsViewController.swift */; };
 		ACD8EDE71E36D9290033AB17 /* CommentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD8EDE61E36D9290033AB17 /* CommentsTableViewController.swift */; };
 		ACD8EDE91E36DA360033AB17 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD8EDE81E36DA360033AB17 /* RulesViewController.swift */; };
@@ -28,6 +31,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC1CBBAA1E38102200F77E01 /* Peek.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Peek.entitlements; sourceTree = "<group>"; };
+		AC1CBBAC1E38102500F77E01 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		AC1CBBAE1E3812E900F77E01 /* PeekTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeekTableViewCell.swift; sourceTree = "<group>"; };
+		AC1CBBB01E38177B00F77E01 /* PeekDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeekDetailViewController.swift; sourceTree = "<group>"; };
+		AC1CBBB21E381C5E00F77E01 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		AC84A15C1E37B5440053C77F /* Peek.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Peek.swift; sourceTree = "<group>"; };
 		AC84A15F1E37B5630053C77F /* CloudKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
 		AC84A1621E37B5790053C77F /* CloudKitSyncable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitSyncable.swift; sourceTree = "<group>"; };
@@ -38,7 +46,6 @@
 		ACACADBF1E36A8FC00575BB0 /* MoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
 		ACACADC11E36BB9800575BB0 /* AddPeekTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPeekTableViewController.swift; sourceTree = "<group>"; };
 		ACACADC31E36BBB900575BB0 /* PhotoSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSelectViewController.swift; sourceTree = "<group>"; };
-		ACACADC51E36BE5300575BB0 /* PeekDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeekDetailTableViewController.swift; sourceTree = "<group>"; };
 		ACB78A441E355E6000AA1D00 /* TermsAndConditionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsViewController.swift; sourceTree = "<group>"; };
 		ACD8EDE61E36D9290033AB17 /* CommentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsTableViewController.swift; sourceTree = "<group>"; };
 		ACD8EDE81E36DA360033AB17 /* RulesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
@@ -55,12 +62,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC1CBBAD1E38102500F77E01 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC1CBBAB1E38102500F77E01 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC1CBBAC1E38102500F77E01 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AC84A15E1E37B5480053C77F /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,11 +106,11 @@
 		ACACADBA1E36A86B00575BB0 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AC1CBBB01E38177B00F77E01 /* PeekDetailViewController.swift */,
 				ACA71FEF1E370F4C000563F1 /* TabBarViewController.swift */,
 				ACD8EDE81E36DA360033AB17 /* RulesViewController.swift */,
 				ACD8EDE61E36D9290033AB17 /* CommentsTableViewController.swift */,
 				ACACADC31E36BBB900575BB0 /* PhotoSelectViewController.swift */,
-				ACACADC51E36BE5300575BB0 /* PeekDetailTableViewController.swift */,
 				ACACADC11E36BB9800575BB0 /* AddPeekTableViewController.swift */,
 				ACACADBF1E36A8FC00575BB0 /* MoreTableViewController.swift */,
 				ACB78A441E355E6000AA1D00 /* TermsAndConditionsViewController.swift */,
@@ -108,6 +124,7 @@
 			children = (
 				ACE797411E33FC08007DB33C /* Peek */,
 				ACE797401E33FC08007DB33C /* Products */,
+				AC1CBBAB1E38102500F77E01 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,8 +139,11 @@
 		ACE797411E33FC08007DB33C /* Peek */ = {
 			isa = PBXGroup;
 			children = (
+				AC1CBBAA1E38102200F77E01 /* Peek.entitlements */,
 				ACE797421E33FC08007DB33C /* AppDelegate.swift */,
 				ACE797461E33FC08007DB33C /* Main.storyboard */,
+				AC1CBBB21E381C5E00F77E01 /* CommentTableViewCell.swift */,
+				AC1CBBAE1E3812E900F77E01 /* PeekTableViewCell.swift */,
 				AC84A1611E37B5680053C77F /* CloudKit */,
 				AC84A15E1E37B5480053C77F /* Model */,
 				AC84A1661E37B8DE0053C77F /* Model Controller */,
@@ -169,6 +189,14 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = KDJV5MMQDA;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -208,19 +236,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC1CBBB11E38177B00F77E01 /* PeekDetailViewController.swift in Sources */,
 				ACB78A451E355E6000AA1D00 /* TermsAndConditionsViewController.swift in Sources */,
 				ACE797431E33FC08007DB33C /* AppDelegate.swift in Sources */,
 				AC84A1601E37B5630053C77F /* CloudKitManager.swift in Sources */,
 				ACACADC41E36BBB900575BB0 /* PhotoSelectViewController.swift in Sources */,
 				AC84A1631E37B5790053C77F /* CloudKitSyncable.swift in Sources */,
+				AC1CBBB31E381C5E00F77E01 /* CommentTableViewCell.swift in Sources */,
 				ACACAD961E3664E600575BB0 /* MainPeekViewController.swift in Sources */,
 				AC84A1651E37B8DB0053C77F /* PeekController.swift in Sources */,
 				ACD8EDE91E36DA360033AB17 /* RulesViewController.swift in Sources */,
 				ACD8EDE71E36D9290033AB17 /* CommentsTableViewController.swift in Sources */,
 				ACACADC01E36A8FC00575BB0 /* MoreTableViewController.swift in Sources */,
+				AC1CBBAF1E3812E900F77E01 /* PeekTableViewCell.swift in Sources */,
 				AC84A1681E37BF3B0053C77F /* Comment.swift in Sources */,
 				AC84A15D1E37B5440053C77F /* Peek.swift in Sources */,
-				ACACADC61E36BE5300575BB0 /* PeekDetailTableViewController.swift in Sources */,
 				ACA71FF01E370F4C000563F1 /* TabBarViewController.swift in Sources */,
 				ACACADC21E36BB9800575BB0 /* AddPeekTableViewController.swift in Sources */,
 			);
@@ -343,6 +373,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Peek/Peek.entitlements;
 				DEVELOPMENT_TEAM = KDJV5MMQDA;
 				INFOPLIST_FILE = Peek/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -356,6 +387,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Peek/Peek.entitlements;
 				DEVELOPMENT_TEAM = KDJV5MMQDA;
 				INFOPLIST_FILE = Peek/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

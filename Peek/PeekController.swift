@@ -10,7 +10,9 @@ import UIKit
 import CloudKit
 
 extension PeekController {
-    static let PostsChangedNotification = Notification.Name("PostsChangedNotification")
+    static let PeeksChangedNotification = Notification.Name("PeeksChangedNotification")
+    static let PeekCommentsChangedNotification = Notification.Name("PeekCommentsChangedNotification")
+
 }
 
 class PeekController {
@@ -20,7 +22,7 @@ class PeekController {
         didSet {
             DispatchQueue.main.async {
                 let nc = NotificationCenter.default
-                nc.post(name: PeekController.PostsChangedNotification, object: nil)
+                nc.post(name: PeekController.PeeksChangedNotification, object: nil)
             }
         }
     }
@@ -43,16 +45,17 @@ class PeekController {
         performFullSync()
     }
     
-    func createPeek(title: String, text: String, image: UIImage, completion: ((Peek) -> Void)? = nil) {
+    func createPeek(title: String, caption: String, image: UIImage, completion: ((Peek) -> Void)? = nil) {
         
         guard let data = UIImageJPEGRepresentation(image, 0.8) else { return }
-        let peek = Peek(title: title, text: text, photoData: data)
+        let peek = Peek(title: title, photoData: data)
         
         peeks.insert(peek, at: 0)
         
         cloudKitManager.saveRecord(CKRecord(peek)) { (record, error) in
             guard let record = record else { return }
             peek.cloudKitRecordID = record.recordID
+            let _ = self.addComment(peek: peek, commentText: caption)
             if let error = error {
                 print("Error saving new peek to CloudKit: \(error)")
             }
@@ -71,6 +74,11 @@ class PeekController {
             }
             comment.cloudKitRecordID = record?.recordID
             completion(comment)
+            
+            DispatchQueue.main.async {
+                let nc = NotificationCenter.default
+                nc.post(name: PeekController.PeekCommentsChangedNotification, object: peek)
+            }
         }
         return comment
     }

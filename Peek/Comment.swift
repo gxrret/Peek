@@ -14,13 +14,16 @@ class Comment: CloudKitSyncable {
     static let kType = "Comment"
     static let kText = "text"
     static let kPeek = "peek"
+    static let kTimestamp = "timestamp"
     
-    let text: String
-    let peek: Peek?
+    var text: String
+    var peek: Peek?
+    var timestamp: Date
     
-    init(text: String, peek: Peek?) {
+    init(text: String, peek: Peek?, timestamp: Date = Date()) {
         self.text = text
         self.peek = peek
+        self.timestamp = timestamp
     }
     
     var cloudKitRecordID: CKRecordID?
@@ -29,8 +32,9 @@ class Comment: CloudKitSyncable {
     }
     
     convenience required init?(record: CKRecord) {
-        guard let text = record[Comment.kText] as? String else { return nil }
-        self.init(text: text, peek: nil)
+        guard let timestamp = record.creationDate,
+        let text = record[Comment.kText] as? String else { return nil }
+        self.init(text: text, peek: nil, timestamp: timestamp)
         cloudKitRecordID = record.recordID
     }
 }
@@ -46,6 +50,8 @@ extension CKRecord {
         let recordID = CKRecordID(recordName: UUID().uuidString)
         
         self.init(recordType: comment.recordType, recordID: recordID)
+        
+        self[Comment.kTimestamp] = comment.timestamp as CKRecordValue?
         self[Comment.kText] = comment.text as CKRecordValue?
         self[Comment.kPeek] = CKReference(recordID: peekRecordID, action: .deleteSelf)
         

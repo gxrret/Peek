@@ -28,6 +28,7 @@ class PeekListTableViewController: UITableViewController {
     
     @IBAction func refreshControlPulled(_ sender: UIRefreshControl) {
         
+        refreshControl?.tintColor = UIColor(red: 30/255, green: 215/255, blue: 96/255, alpha: 1.0)
         requestFullSync {
             self.refreshControl?.endRefreshing()
         }

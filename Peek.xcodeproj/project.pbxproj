@@ -77,6 +77,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AC2871B61E3933F90014151E /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AC1CBBB21E381C5E00F77E01 /* CommentTableViewCell.swift */,
+				AC1CBBAE1E3812E900F77E01 /* PeekTableViewCell.swift */,
+			);
+			name = "Custom Cells";
+			sourceTree = "<group>";
+		};
 		AC84A15E1E37B5480053C77F /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,12 +151,11 @@
 				AC1CBBAA1E38102200F77E01 /* Peek.entitlements */,
 				ACE797421E33FC08007DB33C /* AppDelegate.swift */,
 				ACE797461E33FC08007DB33C /* Main.storyboard */,
-				AC1CBBB21E381C5E00F77E01 /* CommentTableViewCell.swift */,
-				AC1CBBAE1E3812E900F77E01 /* PeekTableViewCell.swift */,
 				AC84A1611E37B5680053C77F /* CloudKit */,
 				AC84A15E1E37B5480053C77F /* Model */,
 				AC84A1661E37B8DE0053C77F /* Model Controller */,
 				ACACADBA1E36A86B00575BB0 /* View Controllers */,
+				AC2871B61E3933F90014151E /* Custom Cells */,
 				ACE797491E33FC08007DB33C /* Assets.xcassets */,
 				ACE7974B1E33FC08007DB33C /* LaunchScreen.storyboard */,
 				ACE7974E1E33FC08007DB33C /* Info.plist */,

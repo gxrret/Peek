@@ -18,20 +18,34 @@ class PeekListTableViewController: UITableViewController {
         let nc = NotificationCenter.default
         nc.addObserver(self, selector: #selector(postsChanged(_:)), name: PeekController.PeeksChangedNotification, object: nil)
         
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        imageView.contentMode = .scaleAspectFit
+        let image = #imageLiteral(resourceName: "tabBarLogo")
+        imageView.image = image
+        navigationItem.titleView = imageView
+        
     }
     
-    @IBAction func refreshControlPulled(_ sender: Any) {
+    @IBAction func refreshControlPulled(_ sender: UIRefreshControl) {
         
         requestFullSync {
             self.refreshControl?.endRefreshing()
         }
     }
     
-    
     func postsChanged(_ notification: Notification) {
         tableView.reloadData()
     }
     
+    //MARK: - TableViewDataSource and Delegate Functions
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Newest Peeks"
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return PeekController.sharedController.peeks.count
@@ -47,6 +61,7 @@ class PeekListTableViewController: UITableViewController {
     }
     
     func requestFullSync(_ completion: (() -> Void)? = nil) {
+        
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
         PeekController.sharedController.performFullSync {

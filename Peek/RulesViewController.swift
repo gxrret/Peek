@@ -14,4 +14,7 @@ class RulesViewController: UIViewController {
         super.viewDidLoad()
         
     }
+    @IBAction func closeRulesTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }

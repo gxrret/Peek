@@ -16,11 +16,6 @@ class AddPeekTableViewController: UITableViewController {
     
     var image: UIImage?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
     @IBAction func addButtonTapped(_ sender: Any) {
         
         if let title = titleTextField.text,

@@ -12,7 +12,7 @@ import CloudKit
 extension PeekController {
     static let PeeksChangedNotification = Notification.Name("PeeksChangedNotification")
     static let PeekCommentsChangedNotification = Notification.Name("PeekCommentsChangedNotification")
-
+    
 }
 
 class PeekController {
@@ -106,8 +106,8 @@ class PeekController {
         
         var predicate: NSPredicate
         
-        referencesToExclude = self.syncedRecords(ofType: type).flatMap {$0.cloudKitReference}
-        predicate = NSPredicate(format: "NOT(recordID in %@)", argumentArray: [referencesToExclude])
+        referencesToExclude = self.syncedRecords(ofType: type).flatMap {$0.cloudKitReference }
+        predicate = NSPredicate(format: "NOT(recordID IN %@)", argumentArray: [referencesToExclude])
         
         if referencesToExclude.isEmpty {
             predicate = NSPredicate(value: true)
@@ -116,17 +116,18 @@ class PeekController {
         cloudKitManager.fetchRecordsWithType(type, predicate: predicate, recordFetchedBlock: { (record) in
             switch type {
             case Peek.kType:
-                if let peek = Peek(record: record) {
-                    self.peeks.append(peek)
+                if let post = Peek(record: record) {
+                    self.peeks.append(post)
                 }
             case Comment.kType:
-                guard let peekReference = record[Comment.kPeek] as? CKReference,
+                guard let postReference = record[Comment.kPeek] as? CKReference,
                     let comment = Comment(record: record) else { return }
-                let matchingPeek = PeekController.sharedController.peeks.filter({$0.cloudKitRecordID == peekReference.recordID}).first
+                let matchingPeek = PeekController.sharedController.peeks.filter({$0.cloudKitRecordID == postReference.recordID}).first
                 matchingPeek?.comments.append(comment)
             default:
                 return
             }
+            
         }) { (records, error) in
             if let error = error {
                 print("Error fetching CloudKit records of type \(type): \(error)")
@@ -187,9 +188,6 @@ class PeekController {
         }
     }
 }
-
-
-
 
 
 

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -153,109 +154,6 @@ If you have any questions about these Terms, please contact us at peek app.conta
             </objects>
             <point key="canvasLocation" x="672.79999999999995" y="60.719640179910051"/>
         </scene>
-        <!--Peeks-->
-        <scene sceneID="4ug-vb-Cd5">
-            <objects>
-                <viewController id="KFj-Nl-LXy" customClass="MainPeekViewController" customModule="Peek" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="AzT-cQ-k8r"/>
-                        <viewControllerLayoutGuide type="bottom" id="v9n-k0-bCL"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="hAL-4Q-Qxg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="81" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jfW-7a-gAz">
-                                <rect key="frame" x="0.0" y="147" width="375" height="471"/>
-                                <color key="backgroundColor" red="0.25950539112091064" green="0.25973057746887207" blue="0.25954025983810425" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="separatorColor" red="0.62876822683388078" green="0.63499365482233505" blue="0.63499365482233505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="sectionIndexBackgroundColor" red="0.54367325134368472" green="0.54905615482233505" blue="0.54905615482233505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="peekCell" rowHeight="81" id="HWC-o4-gaK" customClass="PeekTableViewCell" customModule="Peek" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="81"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HWC-o4-gaK" id="hhT-YN-rYH">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehg-O2-b3c">
-                                                    <rect key="frame" x="8" y="30" width="166" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="166" id="EZt-Nh-NdZ"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZC-HR-fKt">
-                                                    <rect key="frame" x="239" y="31" width="107" height="21"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.35485036733602071" green="0.35836373730964466" blue="0.35836373730964466" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <constraints>
-                                                <constraint firstItem="JZC-HR-fKt" firstAttribute="top" secondItem="hhT-YN-rYH" secondAttribute="topMargin" constant="23" id="HLb-wb-xej"/>
-                                                <constraint firstItem="ehg-O2-b3c" firstAttribute="leading" secondItem="hhT-YN-rYH" secondAttribute="leadingMargin" id="NG7-1g-cV5"/>
-                                                <constraint firstItem="ehg-O2-b3c" firstAttribute="centerY" secondItem="hhT-YN-rYH" secondAttribute="centerY" id="NvF-da-Du1"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="JZC-HR-fKt" secondAttribute="trailing" constant="21" id="PNW-bw-imD"/>
-                                                <constraint firstItem="JZC-HR-fKt" firstAttribute="leading" secondItem="ehg-O2-b3c" secondAttribute="trailing" constant="65" id="tll-eH-2zN"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.25950539112091064" green="0.25973057746887207" blue="0.25954025983810425" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="tintColor" red="0.25950539112091064" green="0.25973057746887207" blue="0.25954025983810425" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="ehg-O2-b3c" secondAttribute="bottom" constant="30" id="L0a-RH-k5R"/>
-                                            <constraint firstItem="JZC-HR-fKt" firstAttribute="centerY" secondItem="HWC-o4-gaK" secondAttribute="centerY" constant="1" id="yZp-At-2Ze"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="peekTitleLabel" destination="ehg-O2-b3c" id="Izm-cJ-b2L"/>
-                                            <outlet property="timeLabel" destination="JZC-HR-fKt" id="GFc-Sa-qF6"/>
-                                            <segue destination="5ig-UZ-aRR" kind="show" identifier="toPeekDetail" id="0Hi-Fh-9De"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="KFj-Nl-LXy" id="J8l-YZ-QXN"/>
-                                    <outlet property="delegate" destination="KFj-Nl-LXy" id="uED-xg-aAR"/>
-                                </connections>
-                            </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Newest Peeks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcQ-bK-3e8">
-                                <rect key="frame" x="16" y="118" width="108" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="108" id="3Vy-ZJ-wza"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
-                                <color key="textColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.18740774952880043" green="0.18926327180136282" blue="0.18926327180136282" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="jfW-7a-gAz" firstAttribute="bottom" secondItem="v9n-k0-bCL" secondAttribute="top" id="Akj-91-Nwy"/>
-                            <constraint firstItem="bcQ-bK-3e8" firstAttribute="leading" secondItem="hAL-4Q-Qxg" secondAttribute="leadingMargin" id="Gbd-iO-FpG"/>
-                            <constraint firstItem="jfW-7a-gAz" firstAttribute="top" secondItem="bcQ-bK-3e8" secondAttribute="bottom" constant="8" symbolic="YES" id="Gvi-hG-U0h"/>
-                            <constraint firstItem="jfW-7a-gAz" firstAttribute="leading" secondItem="hAL-4Q-Qxg" secondAttribute="leading" id="SxJ-qy-dqj"/>
-                            <constraint firstAttribute="trailing" secondItem="jfW-7a-gAz" secondAttribute="trailing" id="rxq-XN-m3w"/>
-                            <constraint firstItem="bcQ-bK-3e8" firstAttribute="top" secondItem="AzT-cQ-k8r" secondAttribute="bottom" constant="54" id="t7G-4G-hVe"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Peeks" id="OKc-XH-Wwz">
-                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="3xe-qS-bUq">
-                            <connections>
-                                <segue destination="d7o-Fg-nyx" kind="presentation" id="XF8-Zx-NTQ"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="tableView" destination="jfW-7a-gAz" id="tws-ds-OYx"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="z5Z-Fg-HdN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3674.4000000000001" y="59.820089955022496"/>
-        </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="cgS-uN-rEU">
             <objects>
@@ -289,7 +187,7 @@ If you have any questions about these Terms, please contact us at peek app.conta
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="KFj-Nl-LXy" kind="relationship" relationship="rootViewController" id="cAG-Hl-Owi"/>
+                        <segue destination="v4G-UX-vZT" kind="relationship" relationship="rootViewController" id="d0R-4x-2RY"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hYd-QN-aev" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -374,6 +272,79 @@ If you have any questions about these Terms, please contact us at peek app.conta
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gD6-Rk-bRh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2882" y="905"/>
+        </scene>
+        <!--PEEKS-->
+        <scene sceneID="TWp-Hg-9Sn">
+            <objects>
+                <tableViewController id="v4G-UX-vZT" customClass="PeekListTableViewController" customModule="Peek" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="59" sectionHeaderHeight="18" sectionFooterHeight="18" id="7Qp-lS-cam">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.25879135727882385" green="0.2588421106338501" blue="0.25878816843032837" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="peekCell" rowHeight="59" id="OTS-hB-8nl" customClass="PeekTableViewCell" customModule="Peek" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="56" width="375" height="59"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OTS-hB-8nl" id="fqG-iv-Uxx">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="58"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fuz-8D-oCA">
+                                            <rect key="frame" x="8" y="19" width="178" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="178" id="C9G-5M-ope"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                            <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZM-wX-QdW">
+                                            <rect key="frame" x="261" y="19" width="106" height="21"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                            <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="DZM-wX-QdW" firstAttribute="trailing" secondItem="fqG-iv-Uxx" secondAttribute="trailingMargin" id="1ic-dh-Kdo"/>
+                                        <constraint firstItem="DZM-wX-QdW" firstAttribute="baseline" secondItem="fuz-8D-oCA" secondAttribute="baseline" id="ITl-MJ-njU"/>
+                                        <constraint firstItem="DZM-wX-QdW" firstAttribute="leading" secondItem="fuz-8D-oCA" secondAttribute="trailing" constant="75" id="VSU-eq-JgR"/>
+                                        <constraint firstItem="fuz-8D-oCA" firstAttribute="leading" secondItem="fqG-iv-Uxx" secondAttribute="leadingMargin" id="Xb4-0q-agK"/>
+                                        <constraint firstItem="DZM-wX-QdW" firstAttribute="firstBaseline" secondItem="fuz-8D-oCA" secondAttribute="firstBaseline" id="eNk-g8-GUN"/>
+                                        <constraint firstItem="fuz-8D-oCA" firstAttribute="top" secondItem="fqG-iv-Uxx" secondAttribute="topMargin" constant="11" id="r4j-jt-OQJ"/>
+                                        <constraint firstItem="fuz-8D-oCA" firstAttribute="centerY" secondItem="fqG-iv-Uxx" secondAttribute="centerY" id="wUI-5B-TmX"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.25879135727882385" green="0.2588421106338501" blue="0.25878816843032837" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="peekTimeLabel" destination="DZM-wX-QdW" id="mE7-ob-Dhz"/>
+                                    <outlet property="peekTitleLabel" destination="fuz-8D-oCA" id="nF1-L3-de5"/>
+                                    <segue destination="5ig-UZ-aRR" kind="show" identifier="toPeekDetail" id="5ij-SU-gaW"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="v4G-UX-vZT" id="2a4-K4-TX8"/>
+                            <outlet property="delegate" destination="v4G-UX-vZT" id="fX6-6n-qVI"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="PEEKS" id="hDK-zu-fiO">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="RMg-28-e0B">
+                            <connections>
+                                <segue destination="d7o-Fg-nyx" kind="show" id="593-d5-PiJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="IwJ-0g-gf0">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <action selector="refreshControlPulled:" destination="v4G-UX-vZT" eventType="valueChanged" id="7b6-xw-o7k"/>
+                        </connections>
+                    </refreshControl>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AN7-OU-3tN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3688.8000000000002" y="60.719640179910051"/>
         </scene>
         <!--Title-->
         <scene sceneID="Xjz-m4-3x3">

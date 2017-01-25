@@ -39,13 +39,6 @@ class PeekDetailViewController: UIViewController, MFMailComposeViewControllerDel
         
     }
     
-    
-    
-    @IBAction func commentButtonTapped(_ sender: Any) {
-        performSegue(withIdentifier: "toComments", sender: sender)
-    }
-    
-    
     @IBAction func reportButtonTapped(_ sender: Any) {
         
         if MFMailComposeViewController.canSendMail() {
@@ -93,5 +86,15 @@ class PeekDetailViewController: UIViewController, MFMailComposeViewControllerDel
     @IBAction func shareButtonTapped(_ sender: Any) {
         
         presentActivityViewController()
+    }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toComments" {
+            if let commentTVC = segue.destination.childViewControllers.first as? CommentsTableViewController {
+                commentTVC.peek = peek
+            }
+        }
     }
 }

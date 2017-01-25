@@ -68,12 +68,11 @@ class PeekController {
             }
             comment.cloudKitRecordID = record?.recordID
             completion(comment)
-            
+        }
             DispatchQueue.main.async {
                 let nc = NotificationCenter.default
                 nc.post(name: PeekController.PeekCommentsChangedNotification, object: peek)
             }
-        }
         return comment
     }
     
@@ -92,7 +91,7 @@ class PeekController {
         return recordsOf(type: type).filter { $0.isSynced }
     }
     
-    func unsyncedRecorsd(ofType type: String) -> [CloudKitSyncable] {
+    func unsyncedRecords(ofType type: String) -> [CloudKitSyncable] {
         return recordsOf(type: type).filter { !$0.isSynced }
     }
     
@@ -135,8 +134,8 @@ class PeekController {
     
     func pushChangesToCloudKit(completion: @escaping ((_ success: Bool, Error?) -> Void) = { _,_ in }) {
         
-        let unsavedPeeks = unsyncedRecorsd(ofType: Peek.kType) as? [Peek] ?? []
-        let unsavedComments = unsyncedRecorsd(ofType: Comment.kType) as? [Comment] ?? []
+        let unsavedPeeks = unsyncedRecords(ofType: Peek.kType) as? [Peek] ?? []
+        let unsavedComments = unsyncedRecords(ofType: Comment.kType) as? [Comment] ?? []
         var unsavedObjectsByRecord = [CKRecord: CloudKitSyncable]()
         
         for peek in unsavedPeeks {

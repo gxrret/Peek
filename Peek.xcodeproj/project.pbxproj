@@ -10,7 +10,6 @@
 		AC1CBBAD1E38102500F77E01 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1CBBAC1E38102500F77E01 /* CloudKit.framework */; };
 		AC1CBBAF1E3812E900F77E01 /* PeekTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1CBBAE1E3812E900F77E01 /* PeekTableViewCell.swift */; };
 		AC1CBBB11E38177B00F77E01 /* PeekDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1CBBB01E38177B00F77E01 /* PeekDetailViewController.swift */; };
-		AC1CBBB31E381C5E00F77E01 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1CBBB21E381C5E00F77E01 /* CommentTableViewCell.swift */; };
 		AC1CBBB51E39015400F77E01 /* PeekListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1CBBB41E39015400F77E01 /* PeekListTableViewController.swift */; };
 		AC84A15D1E37B5440053C77F /* Peek.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84A15C1E37B5440053C77F /* Peek.swift */; };
 		AC84A1601E37B5630053C77F /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84A15F1E37B5630053C77F /* CloudKitManager.swift */; };
@@ -35,7 +34,6 @@
 		AC1CBBAC1E38102500F77E01 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		AC1CBBAE1E3812E900F77E01 /* PeekTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeekTableViewCell.swift; sourceTree = "<group>"; };
 		AC1CBBB01E38177B00F77E01 /* PeekDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeekDetailViewController.swift; sourceTree = "<group>"; };
-		AC1CBBB21E381C5E00F77E01 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		AC1CBBB41E39015400F77E01 /* PeekListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeekListTableViewController.swift; sourceTree = "<group>"; };
 		AC84A15C1E37B5440053C77F /* Peek.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Peek.swift; sourceTree = "<group>"; };
 		AC84A15F1E37B5630053C77F /* CloudKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
@@ -80,7 +78,6 @@
 		AC2871B61E3933F90014151E /* Custom Cells */ = {
 			isa = PBXGroup;
 			children = (
-				AC1CBBB21E381C5E00F77E01 /* CommentTableViewCell.swift */,
 				AC1CBBAE1E3812E900F77E01 /* PeekTableViewCell.swift */,
 			);
 			name = "Custom Cells";
@@ -250,7 +247,6 @@
 				AC84A1601E37B5630053C77F /* CloudKitManager.swift in Sources */,
 				ACACADC41E36BBB900575BB0 /* PhotoSelectViewController.swift in Sources */,
 				AC84A1631E37B5790053C77F /* CloudKitSyncable.swift in Sources */,
-				AC1CBBB31E381C5E00F77E01 /* CommentTableViewCell.swift in Sources */,
 				AC84A1651E37B8DB0053C77F /* PeekController.swift in Sources */,
 				ACD8EDE91E36DA360033AB17 /* RulesViewController.swift in Sources */,
 				ACD8EDE71E36D9290033AB17 /* CommentsTableViewController.swift in Sources */,

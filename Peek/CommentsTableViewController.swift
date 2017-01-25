@@ -10,45 +10,39 @@ import UIKit
 
 class CommentsTableViewController: UITableViewController {
     
-    var comment: Comment?
-    
     var peek: Peek?
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        PeekController.sharedController.performFullSync()
         
         let nc = NotificationCenter.default
         nc.addObserver(self, selector: #selector(postCommentsChanged(notification:)), name: PeekController.PeekCommentsChangedNotification, object: nil)
         
     }
-    
+
     func postCommentsChanged(notification: Notification) {
         guard let notificationPost = notification.object as? Peek,
             let peek = peek, notificationPost === peek else { return }
-        
+        tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return PeekController.sharedController.comments.count
+        return peek?.comments.count ?? 0
     }
     
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "commentCell", for: indexPath) as? CommentTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "commentCell", for: indexPath)
         
-        let comment = PeekController.sharedController.comments[indexPath.row]
-        cell?.updateWithComment(comment: comment)
+        guard let comment = peek?.comments[indexPath.row] else { return cell }
         
-        return cell ?? UITableViewCell()
+        cell.textLabel?.text = comment.text
+        
+        return cell
     }
     
     @IBAction func addCommentButtonTapped(_ sender: Any) {
         presentAlert()
     }
-    
     
     func presentAlert() {
         
@@ -65,8 +59,9 @@ class CommentsTableViewController: UITableViewController {
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
         let postAction = UIAlertAction(title: "Post", style: .default) { (_) in
-            guard let comment = commentTextField?.text, !comment.isEmpty,
-                let peek = self.peek else { return }
+            guard let comment = commentTextField?.text,
+                let peek = self.peek else {
+                    return }
             
             let _ = PeekController.sharedController.addComment(peek: peek, commentText: comment)
             self.tableView.reloadData()
@@ -81,8 +76,4 @@ class CommentsTableViewController: UITableViewController {
     @IBAction func backButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
-    
-    
-    
 }

@@ -23,6 +23,9 @@ class PeekDetailViewController: UIViewController, MFMailComposeViewControllerDel
     
     @IBOutlet weak var peekImageView: UIImageView!
     
+    @IBOutlet weak var likeCounterLabel: UILabel!
+    
+    var clickCounter = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +59,14 @@ class PeekDetailViewController: UIViewController, MFMailComposeViewControllerDel
             self.presentErrorAlert()
         }
     }
+    
+    @IBAction func likeButtonTapped(_ sender: Any) {
+        
+        clickCounter += 1
+        likeCounterLabel.text = "\(clickCounter) Likes"
+    }
+    
+    
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         dismiss(animated: true, completion: nil)

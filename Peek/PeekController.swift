@@ -31,6 +31,10 @@ class PeekController {
         return peeks.flatMap { $0.comments }
     }
     
+    var sortedPeeks: [Peek] {
+        return peeks.sorted(by: { return $0.timestamp.compare($1.timestamp as Date) == .orderedDescending })
+    }
+    
     var isSyncing: Bool = false
     
     var cloudKitManager = CloudKitManager()
@@ -60,7 +64,7 @@ class PeekController {
     
     func addComment(peek: Peek, commentText: String, completion: @escaping ((Comment) -> Void) = { _ in }) -> Comment {
         let comment = Comment(text: commentText, peek: peek)
-        peek.comments.append(comment)
+        peek.comments.insert(comment, at: 0)
         
         cloudKitManager.saveRecord(CKRecord(comment)) { (record, error) in
             if let error = error {

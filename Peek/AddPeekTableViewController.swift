@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddPeekTableViewController: UITableViewController {
+class AddPeekTableViewController: UITableViewController, UITextFieldDelegate {
     
     @IBOutlet weak var titleTextField: UITextField!
     
@@ -40,6 +40,12 @@ class AddPeekTableViewController: UITableViewController {
         present(alertController, animated: true, completion: nil)
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == self.titleTextField {
+            self.titleTextField.resignFirstResponder()
+        }
+        return true
+    }
     
     
     @IBAction func cancelButtonTapped(_ sender: Any) {

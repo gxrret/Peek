@@ -10,6 +10,8 @@ import UIKit
 
 class PeekListTableViewController: UITableViewController {
     
+    var peek: Peek?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,8 +36,23 @@ class PeekListTableViewController: UITableViewController {
         }
     }
     
+    @IBAction func commentsButtonTapped(_ sender: Any) {
+        
+    }
+    
+    
     func postsChanged(_ notification: Notification) {
         tableView.reloadData()
+    }
+    
+    func requestFullSync(_ completion: (() -> Void)? = nil) {
+        
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        
+        PeekController.sharedController.performFullSync {
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            completion?()
+        }
     }
     
     //MARK: - TableViewDataSource and Delegate Functions
@@ -61,27 +78,13 @@ class PeekListTableViewController: UITableViewController {
         
     }
     
-    func requestFullSync(_ completion: (() -> Void)? = nil) {
-        
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        
-        PeekController.sharedController.performFullSync {
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
-            completion?()
-        }
-    }
-    
     // MARK: - Navigation
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toPeekDetail" {
-            
-            if let indexPath = tableView.indexPathForSelectedRow {
-                let peek = PeekController.sharedController.peeks[indexPath.row]
-                if let detailVC = segue.destination as? PeekDetailViewController {
-                    detailVC.peek = peek
-                }
+        if segue.identifier == "toComments" {
+            if let commentTVC = segue.destination.childViewControllers.first as? CommentsTableViewController {
+                commentTVC.peek = peek
             }
         }
     }

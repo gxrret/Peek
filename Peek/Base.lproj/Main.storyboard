@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,11 +19,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7CA-2J-FIB">
-                                <rect key="frame" x="20" y="98" width="279" height="378"/>
+                                <rect key="frame" x="20" y="98" width="334" height="477"/>
                                 <string key="text">Terms and Conditions
 
 Last updated: January 22nd, 2016
@@ -116,7 +116,7 @@ If you have any questions about these Terms, please contact us at peek app.conta
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGu-f8-zyu">
-                                <rect key="frame" x="39" y="502" width="242" height="33"/>
+                                <rect key="frame" x="39" y="601" width="297" height="33"/>
                                 <state key="normal" image="accept button"/>
                                 <connections>
                                     <action selector="acceptButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AAZ-p8-1Jo"/>
@@ -124,7 +124,7 @@ If you have any questions about these Terms, please contact us at peek app.conta
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms &amp; Conditions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wU-MH-IOm">
-                                <rect key="frame" x="69" y="28" width="182" height="35"/>
+                                <rect key="frame" x="69" y="28" width="237" height="35"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -199,21 +199,21 @@ If you have any questions about these Terms, please contact us at peek app.conta
             <objects>
                 <tableViewController id="PoP-NH-DrK" customClass="MoreTableViewController" customModule="Peek" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="fjP-kt-ne8">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
                             <tableViewSection headerTitle="Support" id="5Zc-cx-RAN">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="BrY-lp-f1A" style="IBUITableViewCellStyleDefault" id="yDJ-lx-hnI">
-                                        <rect key="frame" x="0.0" y="56" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="56" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yDJ-lx-hnI" id="FDD-9o-Ino">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="📃 Terms &amp; Conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BrY-lp-f1A">
-                                                    <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -227,14 +227,14 @@ If you have any questions about these Terms, please contact us at peek app.conta
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="aXP-pl-I4a" style="IBUITableViewCellStyleDefault" id="wjy-HD-txO">
-                                        <rect key="frame" x="0.0" y="100" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="100" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wjy-HD-txO" id="TQO-3d-0cw">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="🔑 Privacy Policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aXP-pl-I4a">
-                                                    <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -248,14 +248,14 @@ If you have any questions about these Terms, please contact us at peek app.conta
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="pan-97-RBO">
-                                        <rect key="frame" x="0.0" y="144" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="144" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pan-97-RBO" id="MJp-gE-mWl">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hqs-aQ-i9V">
-                                                    <rect key="frame" x="15" y="0.0" width="305" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="360" height="43"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                     <state key="normal" title="🏳️ Report a Problem">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -297,11 +297,11 @@ If you have any questions about these Terms, please contact us at peek app.conta
                         <viewControllerLayoutGuide type="bottom" id="qnQ-N2-EQl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="PdG-ey-s5s">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gcg-ot-ZLZ">
-                                <rect key="frame" x="16" y="64" width="288" height="447"/>
+                                <rect key="frame" x="16" y="64" width="343" height="546"/>
                                 <string key="text">Last updated: January 22nd, 2016
 
 Please read these Terms and Conditions carefully before using Peek operated by us.
@@ -415,11 +415,11 @@ If you have any questions about these Terms, please contact us at: peekapp.conta
                         <viewControllerLayoutGuide type="bottom" id="9ju-vz-j70"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="otR-aU-f0M">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hQX-MR-721">
-                                <rect key="frame" x="16" y="64" width="288" height="455"/>
+                                <rect key="frame" x="16" y="64" width="343" height="554"/>
                                 <string key="text">
 Thank you for using Peek! As Peek is a social media app where there is no private information shared with others, We still require you to have an iCloud account set up on your device. Holding onto your information, including your peeks, comments, and likes is a serious responsibility, and we want to let you know how we handle it.
 
@@ -487,73 +487,70 @@ If you have concerns about the way Peek is handling your Information, please let
         <scene sceneID="TWp-Hg-9Sn">
             <objects>
                 <tableViewController id="v4G-UX-vZT" customClass="PeekListTableViewController" customModule="Peek" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" allowsSelection="NO" rowHeight="485" sectionHeaderHeight="18" sectionFooterHeight="18" id="7Qp-lS-cam">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="485" sectionHeaderHeight="18" sectionFooterHeight="18" id="7Qp-lS-cam">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.89381009340286255" green="0.90204864740371704" blue="0.90194469690322876" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="separatorColor" red="0.49721387603264655" green="0.50715815355329952" blue="0.50715815355329952" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="peekCell" rowHeight="485" id="OTS-hB-8nl" customClass="PeekTableViewCell" customModule="Peek" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="55.5" width="320" height="485"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="485"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OTS-hB-8nl" id="fqG-iv-Uxx">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="484"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="484"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7gS-XZ-k3n">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="377"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="374"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fuz-8D-oCA">
-                                            <rect key="frame" x="8" y="388" width="218" height="21"/>
+                                            <rect key="frame" x="8" y="385" width="273" height="21"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="pdo-Nf-lo1"/>
+                                                <constraint firstAttribute="height" constant="21" id="xK8-Ok-5Wt"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CB0-Vm-1xD">
-                                            <rect key="frame" x="243" y="456" width="69" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="69" id="eYG-Nq-73S"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="10"/>
-                                            <state key="normal" title="Comments">
-                                                <color key="titleColor" red="0.45026967005076146" green="0.45026967005076146" blue="0.45026967005076146" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </state>
-                                            <connections>
-                                                <segue destination="vpC-iT-NqJ" kind="show" id="ZdA-tP-s5e"/>
-                                            </connections>
-                                        </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZM-wX-QdW">
-                                            <rect key="frame" x="8" y="459" width="150" height="17"/>
+                                            <rect key="frame" x="8" y="459" width="31" height="17"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="17" id="VYR-Ql-PMd"/>
+                                                <constraint firstAttribute="height" constant="17" id="yDk-6G-Ecf"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
                                             <color key="textColor" red="0.64868835184281537" green="0.6551110087917541" blue="0.6551110087917541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" text="text" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edm-dw-PZh">
-                                            <rect key="frame" x="8" y="417" width="204" height="34"/>
+                                            <rect key="frame" x="8" y="414" width="204" height="39"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="204" id="1Ha-tO-JWI"/>
+                                                <constraint firstAttribute="width" constant="204" id="KLD-N7-SvZ"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="9"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="10"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                         <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XqF-Z2-8LR">
-                                            <rect key="frame" x="223" y="457" width="20" height="20"/>
+                                            <rect key="frame" x="255" y="454" width="20" height="20"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="20" id="De9-7n-fuC"/>
+                                                <constraint firstAttribute="width" constant="20" id="Neo-Y3-mrS"/>
                                             </constraints>
                                             <state key="normal" image="Comment Icon"/>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wS-Us-5WI">
-                                            <rect key="frame" x="290" y="385" width="22" height="6"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GP0-B9-VkC">
+                                            <rect key="frame" x="283" y="455" width="84" height="19"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="22" id="lSG-vK-kly"/>
+                                                <constraint firstAttribute="width" constant="84" id="Mom-in-kJn"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="11"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wS-Us-5WI">
+                                            <rect key="frame" x="337" y="382" width="30" height="8"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="8" id="FXY-4g-sMw"/>
+                                                <constraint firstAttribute="width" constant="30" id="shS-RM-JYO"/>
                                             </constraints>
                                             <state key="normal" image="More iconselected"/>
                                             <connections>
@@ -562,37 +559,36 @@ If you have concerns about the way Peek is handling your Information, please let
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="fuz-8D-oCA" firstAttribute="top" secondItem="7gS-XZ-k3n" secondAttribute="bottom" constant="11" id="3P7-wr-xkk"/>
-                                        <constraint firstItem="XqF-Z2-8LR" firstAttribute="leading" secondItem="DZM-wX-QdW" secondAttribute="trailing" constant="65" id="3gU-lB-Dd4"/>
-                                        <constraint firstItem="XqF-Z2-8LR" firstAttribute="bottom" secondItem="CB0-Vm-1xD" secondAttribute="bottom" id="3yL-VB-6Ac"/>
-                                        <constraint firstItem="6wS-Us-5WI" firstAttribute="top" secondItem="7gS-XZ-k3n" secondAttribute="bottom" constant="8" symbolic="YES" id="8iJ-gV-6id"/>
-                                        <constraint firstItem="fuz-8D-oCA" firstAttribute="leading" secondItem="fqG-iv-Uxx" secondAttribute="leadingMargin" id="Avo-px-Dmz"/>
-                                        <constraint firstItem="6wS-Us-5WI" firstAttribute="trailing" secondItem="fqG-iv-Uxx" secondAttribute="trailingMargin" id="Bmd-8E-aka"/>
-                                        <constraint firstItem="6wS-Us-5WI" firstAttribute="trailing" secondItem="CB0-Vm-1xD" secondAttribute="trailing" id="CTe-QA-qIp"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="XqF-Z2-8LR" secondAttribute="bottom" constant="-1" id="CkL-mT-bbt"/>
-                                        <constraint firstItem="XqF-Z2-8LR" firstAttribute="top" secondItem="7gS-XZ-k3n" secondAttribute="bottom" constant="80" id="DFF-TX-JKW"/>
-                                        <constraint firstAttribute="trailing" secondItem="7gS-XZ-k3n" secondAttribute="trailing" id="I6X-qh-iJN"/>
-                                        <constraint firstItem="CB0-Vm-1xD" firstAttribute="top" secondItem="6wS-Us-5WI" secondAttribute="bottom" constant="65" id="Lcp-C6-jCZ"/>
-                                        <constraint firstItem="DZM-wX-QdW" firstAttribute="bottom" secondItem="fqG-iv-Uxx" secondAttribute="bottomMargin" id="LjA-O9-DYT"/>
-                                        <constraint firstItem="edm-dw-PZh" firstAttribute="top" secondItem="fuz-8D-oCA" secondAttribute="bottom" constant="8" symbolic="YES" id="Mf0-qj-Ts7"/>
-                                        <constraint firstItem="CB0-Vm-1xD" firstAttribute="leading" secondItem="XqF-Z2-8LR" secondAttribute="trailing" id="Q3b-DB-vrk"/>
-                                        <constraint firstItem="XqF-Z2-8LR" firstAttribute="centerY" secondItem="CB0-Vm-1xD" secondAttribute="centerY" id="Vud-mG-Ioo"/>
-                                        <constraint firstItem="DZM-wX-QdW" firstAttribute="top" secondItem="edm-dw-PZh" secondAttribute="bottom" constant="8" symbolic="YES" id="Yvp-be-5Wx"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="fuz-8D-oCA" secondAttribute="trailing" constant="86" id="dRZ-3x-auf"/>
-                                        <constraint firstItem="edm-dw-PZh" firstAttribute="leading" secondItem="DZM-wX-QdW" secondAttribute="leading" id="idc-Ha-X4I"/>
-                                        <constraint firstItem="DZM-wX-QdW" firstAttribute="centerY" secondItem="XqF-Z2-8LR" secondAttribute="centerY" id="olx-XC-nvp"/>
-                                        <constraint firstItem="7gS-XZ-k3n" firstAttribute="top" secondItem="fqG-iv-Uxx" secondAttribute="top" id="sNV-9k-By2"/>
-                                        <constraint firstItem="7gS-XZ-k3n" firstAttribute="leading" secondItem="fqG-iv-Uxx" secondAttribute="leading" id="yDz-k7-DTJ"/>
-                                        <constraint firstItem="fuz-8D-oCA" firstAttribute="leading" secondItem="edm-dw-PZh" secondAttribute="leading" id="yw9-IK-6gc"/>
+                                        <constraint firstItem="GP0-B9-VkC" firstAttribute="trailing" secondItem="fqG-iv-Uxx" secondAttribute="trailingMargin" id="2lj-Av-RHL"/>
+                                        <constraint firstItem="XqF-Z2-8LR" firstAttribute="bottom" secondItem="GP0-B9-VkC" secondAttribute="bottom" id="4Z7-vw-ugE"/>
+                                        <constraint firstItem="fuz-8D-oCA" firstAttribute="leading" secondItem="edm-dw-PZh" secondAttribute="leading" id="5q6-to-cQ4"/>
+                                        <constraint firstItem="DZM-wX-QdW" firstAttribute="top" secondItem="edm-dw-PZh" secondAttribute="bottom" constant="6" id="AKI-dB-5SU"/>
+                                        <constraint firstAttribute="trailing" secondItem="7gS-XZ-k3n" secondAttribute="trailing" id="BOQ-wp-swn"/>
+                                        <constraint firstItem="XqF-Z2-8LR" firstAttribute="centerY" secondItem="GP0-B9-VkC" secondAttribute="centerY" id="GSF-Bh-apm"/>
+                                        <constraint firstItem="GP0-B9-VkC" firstAttribute="top" secondItem="6wS-Us-5WI" secondAttribute="bottom" constant="65" id="HgC-7K-s8x"/>
+                                        <constraint firstItem="fuz-8D-oCA" firstAttribute="top" secondItem="7gS-XZ-k3n" secondAttribute="bottom" constant="11" id="Ip7-g4-coq"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="6wS-Us-5WI" secondAttribute="trailing" id="JFk-Wx-oZQ"/>
+                                        <constraint firstItem="GP0-B9-VkC" firstAttribute="leading" secondItem="XqF-Z2-8LR" secondAttribute="trailing" constant="8" symbolic="YES" id="LPv-Og-WuG"/>
+                                        <constraint firstItem="DZM-wX-QdW" firstAttribute="bottom" secondItem="fqG-iv-Uxx" secondAttribute="bottomMargin" id="OCr-Qd-JdR"/>
+                                        <constraint firstItem="fuz-8D-oCA" firstAttribute="leading" secondItem="fqG-iv-Uxx" secondAttribute="leadingMargin" id="PO3-uW-KY0"/>
+                                        <constraint firstItem="edm-dw-PZh" firstAttribute="top" secondItem="fuz-8D-oCA" secondAttribute="bottom" constant="8" symbolic="YES" id="YDZ-pk-G94"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="XqF-Z2-8LR" secondAttribute="bottom" constant="2" id="YJH-Qc-51L"/>
+                                        <constraint firstItem="edm-dw-PZh" firstAttribute="leading" secondItem="DZM-wX-QdW" secondAttribute="leading" id="e6s-sK-DGX"/>
+                                        <constraint firstItem="6wS-Us-5WI" firstAttribute="leading" secondItem="fuz-8D-oCA" secondAttribute="trailing" constant="56" id="gar-rs-2bk"/>
+                                        <constraint firstItem="7gS-XZ-k3n" firstAttribute="top" secondItem="fqG-iv-Uxx" secondAttribute="top" id="jOB-YM-qF1"/>
+                                        <constraint firstItem="XqF-Z2-8LR" firstAttribute="top" secondItem="edm-dw-PZh" secondAttribute="bottom" constant="1" id="rfc-sG-VOP"/>
+                                        <constraint firstItem="6wS-Us-5WI" firstAttribute="top" secondItem="7gS-XZ-k3n" secondAttribute="bottom" constant="8" id="xJP-qz-gW7"/>
+                                        <constraint firstItem="7gS-XZ-k3n" firstAttribute="leading" secondItem="fqG-iv-Uxx" secondAttribute="leading" id="ygZ-Sg-Zke"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <outlet property="commentsButton" destination="CB0-Vm-1xD" id="RzL-T7-ep3"/>
+                                    <outlet property="commentsLabel" destination="GP0-B9-VkC" id="5Qr-7H-nhf"/>
                                     <outlet property="peekImageView" destination="7gS-XZ-k3n" id="Pdj-oM-G1a"/>
                                     <outlet property="peekTextView" destination="edm-dw-PZh" id="wIK-KH-wlu"/>
                                     <outlet property="peekTimeLabel" destination="DZM-wX-QdW" id="mE7-ob-Dhz"/>
                                     <outlet property="peekTitleLabel" destination="fuz-8D-oCA" id="nF1-L3-de5"/>
+                                    <segue destination="vpC-iT-NqJ" kind="show" identifier="toComments" id="qVz-1W-1ME"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -624,20 +620,20 @@ If you have concerns about the way Peek is handling your Information, please let
         <scene sceneID="Nqi-jn-3d0">
             <objects>
                 <tableViewController id="vpC-iT-NqJ" customClass="CommentsTableViewController" customModule="Peek" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" id="Yi9-zp-Mza">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="35" sectionHeaderHeight="28" sectionFooterHeight="28" id="Yi9-zp-Mza">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentCell" textLabel="KkI-O0-oz9" rowHeight="64" style="IBUITableViewCellStyleDefault" id="9XU-7U-QL3" customClass="CommentTableViewCell" customModule="Peek" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="64"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentCell" textLabel="KkI-O0-oz9" rowHeight="35" style="IBUITableViewCellStyleDefault" id="9XU-7U-QL3" customClass="CommentTableViewCell" customModule="Peek" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="35"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9XU-7U-QL3" id="cM0-ni-0Sq">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="34"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KkI-O0-oz9">
-                                            <rect key="frame" x="15" y="0.0" width="290" height="63"/>
+                                            <rect key="frame" x="15" y="0.0" width="345" height="34"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -664,28 +660,28 @@ If you have concerns about the way Peek is handling your Information, please let
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DAD-HE-kqp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4836" y="74"/>
+            <point key="canvasLocation" x="4836" y="73.313343328335833"/>
         </scene>
         <!--Post a Peek-->
         <scene sceneID="Q1j-0d-Ukh">
             <objects>
                 <tableViewController id="rmD-aW-LY1" customClass="AddPeekTableViewController" customModule="Peek" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="K6T-8j-IlC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.89371321974221163" green="0.90256186548223349" blue="0.90256186548223349" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
                             <tableViewSection id="8eG-Xp-YAv">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="69" id="GbG-FY-Sn4">
-                                        <rect key="frame" x="0.0" y="35" width="320" height="69"/>
+                                        <rect key="frame" x="0.0" y="35" width="375" height="69"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GbG-FY-Sn4" id="LNn-3Z-9YM">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="An amusing title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yHG-4x-rqM">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
                                                     <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
@@ -714,14 +710,14 @@ If you have concerns about the way Peek is handling your Information, please let
                             <tableViewSection id="Shh-Y9-2Lm">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="160" id="dOi-DJ-2tk">
-                                        <rect key="frame" x="0.0" y="140" width="320" height="160"/>
+                                        <rect key="frame" x="0.0" y="140" width="375" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dOi-DJ-2tk" id="QG0-qT-uLY">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter some text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="G4W-36-8n9">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="159.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="159.5"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert"/>
@@ -740,14 +736,14 @@ If you have concerns about the way Peek is handling your Information, please let
                             <tableViewSection id="lWl-w7-yqf">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="375" id="BBe-sb-YH9">
-                                        <rect key="frame" x="0.0" y="336" width="320" height="375"/>
+                                        <rect key="frame" x="0.0" y="336" width="375" height="375"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BBe-sb-YH9" id="g3V-EN-DCZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="375"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6C6-gr-FUK">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="375"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                                                     <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <connections>
                                                         <segue destination="Qaf-h2-bxh" kind="embed" identifier="embedPhotoSelect" id="esu-9T-fpE"/>
@@ -767,14 +763,14 @@ If you have concerns about the way Peek is handling your Information, please let
                             <tableViewSection id="Hzd-Fl-baZ">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="66" id="LII-WB-4FH">
-                                        <rect key="frame" x="0.0" y="747" width="320" height="66"/>
+                                        <rect key="frame" x="0.0" y="747" width="375" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LII-WB-4FH" id="SXS-w2-A4n">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jd3-X8-vJc">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                     <state key="normal" title="RULES">
                                                         <color key="titleColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -831,11 +827,11 @@ If you have concerns about the way Peek is handling your Information, please let
                         <viewControllerLayoutGuide type="bottom" id="gLL-f7-e8l"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kQc-qv-EBf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7n-rh-EUk">
-                                <rect key="frame" x="16" y="167" width="288" height="297"/>
+                                <rect key="frame" x="16" y="167" width="343" height="396"/>
                                 <string key="text">Content
 
 Our Service allows you to post, upload images, share information, and otherwise make available other certain information, text, graphics or other material (“Content”). You are responsible for the information you post. The rules for using the app are as follows . You agree to not use the Service:
@@ -853,7 +849,7 @@ Our Service allows you to post, upload images, share information, and otherwise 
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hv7-y3-mKt">
-                                <rect key="frame" x="119" y="67" width="83" height="30"/>
+                                <rect key="frame" x="146.5" y="67" width="83" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="83" id="3s1-tU-vrw"/>
                                     <constraint firstAttribute="height" constant="30" id="hJx-P1-5Gk"/>
@@ -912,14 +908,14 @@ Our Service allows you to post, upload images, share information, and otherwise 
                         <viewControllerLayoutGuide type="bottom" id="VLq-k9-oJh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IWm-Ka-MyC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5xd-Hz-Gfs">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="375"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAW-Yf-UWj">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="375"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="Select a Photo">
                                     <color key="titleColor" red="0.47302910694734746" green="0.4777125634517766" blue="0.4777125634517766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

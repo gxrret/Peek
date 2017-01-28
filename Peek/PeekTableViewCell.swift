@@ -14,7 +14,7 @@ class PeekTableViewCell: UITableViewCell {
     @IBOutlet weak var peekTimeLabel: UILabel!
     @IBOutlet weak var peekImageView: UIImageView!
     @IBOutlet weak var peekTextView: UITextView!
-    @IBOutlet weak var commentsButton: UIButton!
+    @IBOutlet weak var commentsLabel: UILabel!
     
     func updateWithPeek(peek: Peek) {
         peekTitleLabel.text = peek.title
@@ -32,7 +32,14 @@ class PeekTableViewCell: UITableViewCell {
         
         peekImageView.image = peek.photo
         peekImageView.layer.cornerRadius = 1.0
-        commentsButton.setTitle("\(peek.comments.count) Comments", for: .normal)
+        
+        if peek.comments.count == 0 {
+            commentsLabel.text = "0 comments 😢"
+        } else if peek.comments.count == 1 {
+            commentsLabel.text = "1 comment"
+        } else {
+            commentsLabel.text = "\(peek.comments.count) Comments"
+        }
     }
     
     var peek: Peek? {

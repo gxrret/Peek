@@ -105,13 +105,13 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return PeekController.sharedController.peeks.count
+        return PeekController.sharedController.sortedPeeks.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "peekCell", for: indexPath) as? PeekTableViewCell
         
-        let peek = PeekController.sharedController.peeks[indexPath.row]
+        let peek = PeekController.sharedController.sortedPeeks[indexPath.row]
         cell?.updateWithPeek(peek: peek)
         return cell ?? UITableViewCell()
         
@@ -122,9 +122,12 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toComments" {
-            if let commentTVC = segue.destination as? CommentsTableViewController {
-                commentTVC.peek = peek
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let peek = PeekController.sharedController.peeks[indexPath.row]
+                let commentsTVC = segue.destination as? CommentsTableViewController
+                commentsTVC?.peek = peek
             }
         }
     }
 }
+

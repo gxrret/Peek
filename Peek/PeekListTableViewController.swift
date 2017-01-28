@@ -122,7 +122,7 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toComments" {
-            if let commentTVC = segue.destination.childViewControllers.first as? CommentsTableViewController {
+            if let commentTVC = segue.destination as? CommentsTableViewController {
                 commentTVC.peek = peek
             }
         }

@@ -71,8 +71,4 @@ class CommentsTableViewController: UITableViewController {
         
         present(alertController, animated: true, completion: nil)
     }
-    
-    @IBAction func backButtonTapped(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
 }

@@ -522,7 +522,7 @@ If you have concerns about the way Peek is handling your Information, please let
                                                 <color key="titleColor" red="0.45026967005076146" green="0.45026967005076146" blue="0.45026967005076146" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
                                             <connections>
-                                                <segue destination="3UN-Xj-WqC" kind="show" identifier="toComments" id="qTT-66-6p8"/>
+                                                <segue destination="vpC-iT-NqJ" kind="show" id="ZdA-tP-s5e"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZM-wX-QdW">
@@ -655,11 +655,6 @@ If you have concerns about the way Peek is handling your Information, please let
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="💬 Comments" id="zi0-Fx-9Mx">
-                        <barButtonItem key="leftBarButtonItem" title="BACK" id="mJa-Vi-bYs">
-                            <connections>
-                                <action selector="backButtonTapped:" destination="vpC-iT-NqJ" id="5He-jm-ZwQ"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZNV-Mk-JvR">
                             <connections>
                                 <action selector="addCommentButtonTapped:" destination="vpC-iT-NqJ" id="RkC-n1-hsi"/>
@@ -669,7 +664,7 @@ If you have concerns about the way Peek is handling your Information, please let
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DAD-HE-kqp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6470.625" y="70.774647887323951"/>
+            <point key="canvasLocation" x="4836" y="74"/>
         </scene>
         <!--Post a Peek-->
         <scene sceneID="Q1j-0d-Ukh">
@@ -972,24 +967,6 @@ Our Service allows you to post, upload images, share information, and otherwise 
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iG4-W9-jXK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4610.3999999999996" y="-708.39580209895053"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="dNa-a9-P93">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3UN-Xj-WqC" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4KW-ei-lgj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="vpC-iT-NqJ" kind="relationship" relationship="rootViewController" id="ciZ-Vr-l0G"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="r5A-FO-g1Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5550" y="74"/>
         </scene>
     </scenes>
     <resources>

@@ -36,8 +36,15 @@ class PeekListTableViewController: UITableViewController {
         }
     }
     
-    @IBAction func commentsButtonTapped(_ sender: Any) {
+    @IBAction func reportButtonTapped(_ sender: Any) {
         
+        let alertController = UIAlertController(title: "Select an Option", message: nil, preferredStyle: .actionSheet)
+        
+        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        let reportButton = UIAlertAction(title: "Report", style: .destructive) { (_) in
+            <#code#>
+        }
     }
     
     

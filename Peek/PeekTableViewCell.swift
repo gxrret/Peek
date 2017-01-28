@@ -9,14 +9,16 @@
 import UIKit
 
 class PeekTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var peekTitleLabel: UILabel!
     @IBOutlet weak var peekTimeLabel: UILabel!
     @IBOutlet weak var peekImageView: UIImageView!
+    @IBOutlet weak var peekTextView: UITextView!
     @IBOutlet weak var commentsButton: UIButton!
     
     func updateWithPeek(peek: Peek) {
         peekTitleLabel.text = peek.title
+        peekTextView.text = peek.text
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
@@ -30,7 +32,6 @@ class PeekTableViewCell: UITableViewCell {
         
         peekImageView.image = peek.photo
         peekImageView.layer.cornerRadius = 1.0
-        
         commentsButton.setTitle("\(peek.comments.count) Comments", for: .normal)
     }
     
@@ -40,5 +41,5 @@ class PeekTableViewCell: UITableViewCell {
             updateWithPeek(peek: peek)
         }
     }
-
+    
 }

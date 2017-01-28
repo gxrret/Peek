@@ -17,7 +17,6 @@ class CommentsTableViewController: UITableViewController {
         
         let nc = NotificationCenter.default
         nc.addObserver(self, selector: #selector(postCommentsChanged(notification:)), name: PeekController.PeekCommentsChangedNotification, object: nil)
-        
     }
 
     func postCommentsChanged(notification: Notification) {

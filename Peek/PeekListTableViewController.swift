@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class PeekListTableViewController: UITableViewController {
+class PeekListTableViewController: UITableViewController, MFMailComposeViewControllerDelegate {
     
     var peek: Peek?
     
@@ -43,8 +44,39 @@ class PeekListTableViewController: UITableViewController {
         let cancelButton = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
         let reportButton = UIAlertAction(title: "Report", style: .destructive) { (_) in
-            <#code#>
+            if MFMailComposeViewController.canSendMail() {
+                
+                let messageBody = "Specify the abuse you saw from a user."
+                let toRecipients = ["peekapp.contact@gmail.com"]
+                let mc = MFMailComposeViewController()
+                mc.mailComposeDelegate = self
+                mc.setMessageBody(messageBody, isHTML: false)
+                mc.setToRecipients(toRecipients)
+                
+                self.present(mc, animated: true, completion: nil)
+                
+            } else {
+                self.presentErrorAlert()
+            }
         }
+        
+        alertController.addAction(cancelButton)
+        alertController.addAction(reportButton)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func presentErrorAlert() {
+        let errorAlert = UIAlertController(title: "Error Sending Email", message: "Check email configuration then try again.", preferredStyle: .alert)
+        
+        let dismissAction = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+        errorAlert.addAction(dismissAction)
+        
+        present(errorAlert, animated: true, completion: nil)
     }
     
     

@@ -13,9 +13,7 @@ class PhotoSelectViewController: UIViewController, UINavigationControllerDelegat
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var cameraButton: UIButton!
     @IBOutlet weak var photoLibraryButton: UIButton!
-    
-    
-    
+ 
     weak var delegate: PhotoSelectViewControllerDelegate?
     
     @IBAction func cameraButtonTapped(_ sender: Any) {

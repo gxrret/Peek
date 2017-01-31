@@ -177,7 +177,7 @@ If you have any questions about these Terms, please contact us at peek app.conta
         <scene sceneID="Xol-zW-ODr">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iE3-Ad-ohV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="1" title="Peeks" image="tabBarLogo" id="JhC-Yp-3FO">
+                    <tabBarItem key="tabBarItem" tag="1" title="Peeks" image="peek icon" id="JhC-Yp-3FO">
                         <inset key="imageInsets" minX="0.0" minY="1" maxX="0.0" maxY="-1"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -744,7 +744,6 @@ If you have concerns about the way Peek is handling your Information, please let
                                             <subviews>
                                                 <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6C6-gr-FUK">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
-                                                    <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <connections>
                                                         <segue destination="Qaf-h2-bxh" kind="embed" identifier="embedPhotoSelect" id="esu-9T-fpE"/>
                                                     </connections>
@@ -771,9 +770,9 @@ If you have concerns about the way Peek is handling your Information, please let
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jd3-X8-vJc">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                                                     <state key="normal" title="RULES">
-                                                        <color key="titleColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <connections>
                                                         <segue destination="h8j-my-0fm" kind="presentation" id="CFH-SD-IWi"/>
@@ -787,7 +786,7 @@ If you have concerns about the way Peek is handling your Information, please let
                                                 <constraint firstAttribute="bottom" secondItem="Jd3-X8-vJc" secondAttribute="bottom" id="yjf-26-slg"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.25879135727882385" green="0.2588421106338501" blue="0.25878816843032837" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -914,37 +913,45 @@ Our Service allows you to post, upload images, share information, and otherwise 
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5xd-Hz-Gfs">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAW-Yf-UWj">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                <state key="normal" title="Select a Photo">
-                                    <color key="titleColor" red="0.47302910694734746" green="0.4777125634517766" blue="0.4777125634517766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="selectImageButtonTapped:" destination="Qaf-h2-bxh" eventType="touchUpInside" id="h8g-gr-nAP"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="0Y1-Ju-I5J">
+                                <rect key="frame" x="88" y="150" width="200" height="75"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8o-vN-Uhd">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                        <state key="normal" image="Camera icon"/>
+                                        <connections>
+                                            <action selector="cameraButtonTapped:" destination="Qaf-h2-bxh" eventType="touchUpInside" id="4cy-FP-Li0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JV0-rp-coZ">
+                                        <rect key="frame" x="125" y="0.0" width="75" height="75"/>
+                                        <state key="normal" image="Photo Library Icon"/>
+                                        <connections>
+                                            <action selector="photoLibraryButtonTapped:" destination="Qaf-h2-bxh" eventType="touchUpInside" id="LTj-u5-GT0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="0Y1-Ju-I5J" firstAttribute="centerY" secondItem="IWm-Ka-MyC" secondAttribute="centerY" id="1uK-Ti-BiF"/>
                             <constraint firstItem="5xd-Hz-Gfs" firstAttribute="top" secondItem="IWm-Ka-MyC" secondAttribute="top" id="Hra-fb-QNl"/>
-                            <constraint firstAttribute="trailing" secondItem="KAW-Yf-UWj" secondAttribute="trailing" id="IiT-eh-MhA"/>
+                            <constraint firstItem="0Y1-Ju-I5J" firstAttribute="centerX" secondItem="IWm-Ka-MyC" secondAttribute="centerX" id="IMX-4f-ezl"/>
                             <constraint firstItem="5xd-Hz-Gfs" firstAttribute="leading" secondItem="IWm-Ka-MyC" secondAttribute="leading" id="Lbv-fR-GrD"/>
-                            <constraint firstItem="KAW-Yf-UWj" firstAttribute="leading" secondItem="IWm-Ka-MyC" secondAttribute="leading" id="Lgs-Rf-1VJ"/>
-                            <constraint firstAttribute="bottom" secondItem="KAW-Yf-UWj" secondAttribute="bottom" id="Mhb-sa-cm5"/>
                             <constraint firstAttribute="bottom" secondItem="5xd-Hz-Gfs" secondAttribute="bottom" id="cHy-lk-0b8"/>
                             <constraint firstAttribute="trailing" secondItem="5xd-Hz-Gfs" secondAttribute="trailing" id="q5c-vJ-rtA"/>
-                            <constraint firstItem="KAW-Yf-UWj" firstAttribute="top" secondItem="IWm-Ka-MyC" secondAttribute="top" id="uNj-vE-mce"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cameraButton" destination="L8o-vN-Uhd" id="ta4-rY-Xhh"/>
                         <outlet property="imageView" destination="5xd-Hz-Gfs" id="PGo-dr-mc9"/>
-                        <outlet property="selectImageButton" destination="KAW-Yf-UWj" id="lRe-Ft-Smg"/>
+                        <outlet property="photoLibraryButton" destination="JV0-rp-coZ" id="KC5-2h-f4r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mEW-Lm-QfU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6289" y="-1324"/>
+            <point key="canvasLocation" x="6288.8000000000002" y="-1324.5877061469266"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Sja-ma-xDj">
@@ -966,10 +973,12 @@ Our Service allows you to post, upload images, share information, and otherwise 
         </scene>
     </scenes>
     <resources>
+        <image name="Camera icon" width="75" height="75"/>
         <image name="Comment Icon" width="217" height="197"/>
         <image name="More icon" width="50" height="13"/>
         <image name="More iconselected" width="50" height="13"/>
+        <image name="Photo Library Icon" width="75" height="75"/>
         <image name="accept button" width="258" height="33"/>
-        <image name="tabBarLogo" width="30" height="30"/>
+        <image name="peek icon" width="32" height="24"/>
     </resources>
 </document>

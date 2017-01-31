@@ -22,7 +22,6 @@ class Peek: CloudKitSyncable {
     let photoData: Data?
     let timestamp: Date
     var comments: [Comment]
-    
     var photo: UIImage? {
         
         guard let photoData = self.photoData else { return nil }

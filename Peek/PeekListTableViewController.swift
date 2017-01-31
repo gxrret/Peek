@@ -21,12 +21,17 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
         let nc = NotificationCenter.default
         nc.addObserver(self, selector: #selector(postsChanged(_:)), name: PeekController.PeeksChangedNotification, object: nil)
         
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 75, height: 25))
         imageView.contentMode = .scaleAspectFit
-        let image = #imageLiteral(resourceName: "tabBarLogo")
+        let image = #imageLiteral(resourceName: "peek icon with text")
         imageView.image = image
         navigationItem.titleView = imageView
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.hidesBarsOnSwipe = true
     }
     
     @IBAction func refreshControlPulled(_ sender: UIRefreshControl) {

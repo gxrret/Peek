@@ -206,10 +206,10 @@ If you have any questions about these Terms, please contact us at peek app.conta
                             <tableViewSection headerTitle="Support" id="5Zc-cx-RAN">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="BrY-lp-f1A" style="IBUITableViewCellStyleDefault" id="yDJ-lx-hnI">
-                                        <rect key="frame" x="0.0" y="56" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yDJ-lx-hnI" id="FDD-9o-Ino">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="📃 Terms &amp; Conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BrY-lp-f1A">
@@ -227,10 +227,10 @@ If you have any questions about these Terms, please contact us at peek app.conta
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="aXP-pl-I4a" style="IBUITableViewCellStyleDefault" id="wjy-HD-txO">
-                                        <rect key="frame" x="0.0" y="100" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wjy-HD-txO" id="TQO-3d-0cw">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="🔑 Privacy Policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aXP-pl-I4a">
@@ -248,10 +248,10 @@ If you have any questions about these Terms, please contact us at peek app.conta
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="pan-97-RBO">
-                                        <rect key="frame" x="0.0" y="144" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="143.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pan-97-RBO" id="MJp-gE-mWl">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hqs-aQ-i9V">
@@ -497,7 +497,7 @@ If you have concerns about the way Peek is handling your Information, please let
                                 <rect key="frame" x="0.0" y="56" width="375" height="485"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OTS-hB-8nl" id="fqG-iv-Uxx">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="484"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="484.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7gS-XZ-k3n">
@@ -599,11 +599,7 @@ If you have concerns about the way Peek is handling your Information, please let
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="PEEKS" id="hDK-zu-fiO">
-                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="RMg-28-e0B">
-                            <connections>
-                                <segue destination="d7o-Fg-nyx" kind="show" id="593-d5-PiJ"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="RMg-28-e0B"/>
                     </navigationItem>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="IwJ-0g-gf0">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -614,6 +610,24 @@ If you have concerns about the way Peek is handling your Information, please let
                     </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AN7-OU-3tN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="ymL-qq-kTQ">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="75"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVO-mv-bvJ">
+                            <rect key="frame" x="97" y="23" width="46" height="30"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <segue destination="d7o-Fg-nyx" kind="show" id="0NK-a3-7B7"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="LVO-mv-bvJ" firstAttribute="centerX" secondItem="ymL-qq-kTQ" secondAttribute="centerX" id="sD1-IT-fkf"/>
+                        <constraint firstItem="LVO-mv-bvJ" firstAttribute="centerY" secondItem="ymL-qq-kTQ" secondAttribute="centerY" id="vwf-ti-GcV"/>
+                    </constraints>
+                </view>
             </objects>
             <point key="canvasLocation" x="3682.4000000000001" y="56.221889055472268"/>
         </scene>
@@ -710,25 +724,25 @@ If you have concerns about the way Peek is handling your Information, please let
                             </tableViewSection>
                             <tableViewSection id="Shh-Y9-2Lm">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="160" id="dOi-DJ-2tk">
-                                        <rect key="frame" x="0.0" y="140" width="375" height="160"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="72" id="dOi-DJ-2tk">
+                                        <rect key="frame" x="0.0" y="140" width="375" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dOi-DJ-2tk" id="QG0-qT-uLY">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter some text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="G4W-36-8n9">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="159.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="G4W-36-8n9" secondAttribute="trailing" id="274-e6-b6X"/>
-                                                <constraint firstItem="G4W-36-8n9" firstAttribute="leading" secondItem="QG0-qT-uLY" secondAttribute="leading" id="cIZ-9i-8Pr"/>
-                                                <constraint firstAttribute="bottom" secondItem="G4W-36-8n9" secondAttribute="bottom" id="kX3-Yx-Whe"/>
-                                                <constraint firstItem="G4W-36-8n9" firstAttribute="top" secondItem="QG0-qT-uLY" secondAttribute="top" id="zg4-qG-2U1"/>
+                                                <constraint firstAttribute="bottom" secondItem="G4W-36-8n9" secondAttribute="bottom" id="OfF-RH-sQS"/>
+                                                <constraint firstAttribute="trailing" secondItem="G4W-36-8n9" secondAttribute="trailing" id="Ple-Ii-ZjS"/>
+                                                <constraint firstItem="G4W-36-8n9" firstAttribute="top" secondItem="QG0-qT-uLY" secondAttribute="top" id="Tmk-Di-68k"/>
+                                                <constraint firstItem="G4W-36-8n9" firstAttribute="leading" secondItem="QG0-qT-uLY" secondAttribute="leading" id="lSA-Aj-saW"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -738,7 +752,7 @@ If you have concerns about the way Peek is handling your Information, please let
                             <tableViewSection id="lWl-w7-yqf">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="299" id="BBe-sb-YH9">
-                                        <rect key="frame" x="0.0" y="336" width="375" height="299"/>
+                                        <rect key="frame" x="0.0" y="248" width="375" height="299"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BBe-sb-YH9" id="g3V-EN-DCZ">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="299"/>
@@ -765,7 +779,7 @@ If you have concerns about the way Peek is handling your Information, please let
                             <tableViewSection id="Hzd-Fl-baZ">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="66" id="LII-WB-4FH">
-                                        <rect key="frame" x="0.0" y="671" width="375" height="66"/>
+                                        <rect key="frame" x="0.0" y="583" width="375" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LII-WB-4FH" id="SXS-w2-A4n">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
@@ -910,11 +924,11 @@ Our Service allows you to post, upload images, share information, and otherwise 
                         <viewControllerLayoutGuide type="bottom" id="VLq-k9-oJh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IWm-Ka-MyC">
-                        <rect key="frame" x="0.0" y="0.0" width="241" height="240"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="6bO-7O-tnL">
-                                <rect key="frame" x="33.5" y="83" width="175" height="75"/>
+                                <rect key="frame" x="100.5" y="306.5" width="175" height="75"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8o-vN-Uhd">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
@@ -933,7 +947,7 @@ Our Service allows you to post, upload images, share information, and otherwise 
                                 </subviews>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5xd-Hz-Gfs">
-                                <rect key="frame" x="0.0" y="0.0" width="241" height="240"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>

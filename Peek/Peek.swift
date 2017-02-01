@@ -77,11 +77,3 @@ extension CKRecord {
         self[Peek.kPhotoData] = CKAsset(fileURL: peek.temporaryPhotoURL)
     }
 }
-
-
-
-
-
-
-
-

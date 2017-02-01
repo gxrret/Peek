@@ -13,6 +13,10 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
     
     var peek: Peek?
     
+    let dimView = UIView()
+    
+    @IBOutlet var menuView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,6 +36,13 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         navigationController?.hidesBarsOnSwipe = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.menuView.removeFromSuperview()
+        self.dimView.removeFromSuperview()
+        self.tableView.isScrollEnabled = true
     }
     
     @IBAction func refreshControlPulled(_ sender: UIRefreshControl) {
@@ -85,6 +96,14 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
     }
     
     
+    @IBAction func composeButtonTapped(_ sender: Any) {
+        composeButtonMenuAnimation()
+    }
+    
+    @IBAction func exitButtonTapped(_ sender: Any) {
+        exitComposeMenu()
+    }
+    
     func postsChanged(_ notification: Notification) {
         tableView.reloadData()
     }
@@ -132,6 +151,39 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
                 let commentsTVC = segue.destination as? CommentsTableViewController
                 commentsTVC?.peek = peek
             }
+        }
+    }
+}
+
+extension PeekListTableViewController {
+    
+    func composeButtonMenuAnimation() {
+        self.view.addSubview(menuView)
+        menuView.layer.frame = CGRect(x: 0, y: -200, width: view.frame.size.width, height: menuView.frame.size.height)
+        menuView.layer.cornerRadius = 1
+        
+        dimView.frame = CGRect(x: view.frame.origin.x, y: view.frame.origin.y, width: view.frame.size.width, height: view.frame.size.height)
+        dimView.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.75)
+        dimView.alpha = 0
+        
+        UIView.animate(withDuration: 0.3) {
+            self.menuView.frame.origin.y = 0
+            self.view.addSubview(self.dimView)
+            self.dimView.alpha = 0.75
+            self.view.bringSubview(toFront: self.menuView)
+            self.tableView.isScrollEnabled = false
+        }
+    }
+    
+    func exitComposeMenu() {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.menuView.frame.origin.y = -200
+            self.dimView.alpha = 0
+        }) { (_) in
+            self.menuView.removeFromSuperview()
+            self.dimView.removeFromSuperview()
+            self.tableView.isScrollEnabled = true
+            
         }
     }
 }

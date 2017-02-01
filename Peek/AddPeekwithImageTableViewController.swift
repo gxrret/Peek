@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddPeekTableViewController: UITableViewController, UITextFieldDelegate {
+class AddPeekwithImageTableViewController: UITableViewController, UITextFieldDelegate {
     
     @IBOutlet weak var titleTextField: UITextField!
     
@@ -22,7 +22,7 @@ class AddPeekTableViewController: UITableViewController, UITextFieldDelegate {
             let text = peekTextView.text,
             let image = image {
             
-            PeekController.sharedController.createPeek(title: title, caption: text, image: image, completion: nil)
+            PeekController.sharedController.createPeekWithImage(title: title, caption: text, image: image, completion: nil)
             dismiss(animated: true, completion: nil)
             
         } else {
@@ -61,7 +61,7 @@ class AddPeekTableViewController: UITableViewController, UITextFieldDelegate {
     
 }
 
-extension AddPeekTableViewController: PhotoSelectViewControllerDelegate {
+extension AddPeekwithImageTableViewController: PhotoSelectViewControllerDelegate {
     func photoSelectViewControllerSelected(image: UIImage) {
         self.image = image
     }

@@ -19,7 +19,6 @@ class Peek: CloudKitSyncable {
     static let kTitle = "title"
     static let kText = "text"
     static let kLocation = "location"
-    static let kCity = "city"
     
     let title: String
     let text: String

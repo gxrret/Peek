@@ -70,6 +70,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC09DB211E451EFC00903897 /* Location Files */ = {
+			isa = PBXGroup;
+			children = (
+				ACD959CA1E43F1EA00A2D4F4 /* LocationManager.swift */,
+			);
+			name = "Location Files";
+			sourceTree = "<group>";
+		};
+		AC09DB221E451F1100903897 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ACE797491E33FC08007DB33C /* Assets.xcassets */,
+				ACE7974B1E33FC08007DB33C /* LaunchScreen.storyboard */,
+				ACE7974E1E33FC08007DB33C /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		AC1CBBAB1E38102500F77E01 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,7 +166,6 @@
 		ACE797411E33FC08007DB33C /* Peek */ = {
 			isa = PBXGroup;
 			children = (
-				ACD959CA1E43F1EA00A2D4F4 /* LocationManager.swift */,
 				AC1CBBAA1E38102200F77E01 /* Peek.entitlements */,
 				ACE797421E33FC08007DB33C /* AppDelegate.swift */,
 				ACE797461E33FC08007DB33C /* Main.storyboard */,
@@ -157,9 +174,8 @@
 				AC84A1661E37B8DE0053C77F /* Model Controller */,
 				ACACADBA1E36A86B00575BB0 /* View Controllers */,
 				AC2871B61E3933F90014151E /* Custom Cells */,
-				ACE797491E33FC08007DB33C /* Assets.xcassets */,
-				ACE7974B1E33FC08007DB33C /* LaunchScreen.storyboard */,
-				ACE7974E1E33FC08007DB33C /* Info.plist */,
+				AC09DB211E451EFC00903897 /* Location Files */,
+				AC09DB221E451F1100903897 /* Resources */,
 			);
 			path = Peek;
 			sourceTree = "<group>";

@@ -51,11 +51,11 @@ class CommentsTableViewController: UITableViewController {
         
         alertController.addTextField { (textField) in
             textField.placeholder = "Enter comment here"
-            textField.keyboardAppearance = .dark
             commentTextField = textField
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
         
         let postAction = UIAlertAction(title: "Post", style: .default) { (_) in
             guard let comment = commentTextField?.text,
@@ -68,6 +68,7 @@ class CommentsTableViewController: UITableViewController {
         
         alertController.addAction(cancelAction)
         alertController.addAction(postAction)
+        alertController.view.tintColor = UIColor(red: 30/255, green: 216/255, blue: 96/255, alpha: 1.0)
         
         present(alertController, animated: true, completion: nil)
     }

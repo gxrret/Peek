@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
 class PeekTableViewCell: UITableViewCell {
     
@@ -15,6 +17,7 @@ class PeekTableViewCell: UITableViewCell {
     @IBOutlet weak var peekImageView: UIImageView!
     @IBOutlet weak var peekTextView: UITextView!
     @IBOutlet weak var commentsLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
     
     func updateWithPeek(peek: Peek) {
         peekTitleLabel.text = peek.title
@@ -40,6 +43,16 @@ class PeekTableViewCell: UITableViewCell {
         } else {
             commentsLabel.text = "\(peek.comments.count) Comments"
         }
+        let geoCoder = CLGeocoder()
+        
+        geoCoder.reverseGeocodeLocation(peek.location) { (placemarks, error) in
+            guard let placemarks = placemarks else { return }
+            if placemarks.count > 0 {
+                guard let placemark = placemarks.first  else { return }
+                self.locationLabel.text = "\(placemark.locality!), \(placemark.administrativeArea!)"
+                
+            }
+        }
     }
     
     var peek: Peek? {
@@ -48,5 +61,4 @@ class PeekTableViewCell: UITableViewCell {
             updateWithPeek(peek: peek)
         }
     }
-    
 }

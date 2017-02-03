@@ -19,18 +19,19 @@ class AddPeekwithTextTableViewController: UITableViewController {
 
     }
     
-    @IBAction func postButtonTapped(_ sender: Any) {
-        if let title = titleTextField.text,
-            let text = peekTextView.text {
-            
-            PeekController.sharedController.createPeekWithText(title: title, caption: text, completion: nil)
-            dismiss(animated: true, completion: nil)
-        }
-    }
-    
-    @IBAction func cancelButtonTapped(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    
+//    @IBAction func postButtonTapped(_ sender: Any) {
+//        if let title = titleTextField.text,
+//            let text = peekTextView.text {
+//            
+////            PeekController.sharedController.createPeekWithText(title: title, caption: text, completion: nil)
+////            dismiss(animated: true, completion: nil)
+//        }
+//    }
+//    
+//    @IBAction func cancelButtonTapped(_ sender: Any) {
+//        dismiss(animated: true, completion: nil)
+//    }
+//    
+//    
+//}
 }

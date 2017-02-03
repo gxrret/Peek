@@ -8,6 +8,7 @@
 
 import UIKit
 import CloudKit
+import CoreLocation
 
 extension PeekController {
     static let PeeksChangedNotification = Notification.Name("PeeksChangedNotification")
@@ -45,9 +46,9 @@ class PeekController {
         performFullSync()
     }
     
-    func createPeekWithImage(title: String, caption: String, image: UIImage, completion: ((Peek) -> Void)? = nil) {
+    func createPeekWithImage(title: String, caption: String, image: UIImage, location: CLLocation, address: String, completion: ((Peek) -> Void)? = nil) {
         guard let data = UIImageJPEGRepresentation(image, 0.8) else { return }
-        let peek = Peek(title: title, text: caption, photoData: data)
+        let peek = Peek(title: title, text: caption, photoData: data, location: location)
         peeks.insert(peek, at: 0)
         
         cloudKitManager.saveRecord(CKRecord(peek)) { (record, error) in
@@ -61,9 +62,9 @@ class PeekController {
         
     }
     
-    func createPeekWithText(title: String, caption: String, completion: ((Peek) -> Void)? = nil) {
+    func createPeekWithText(title: String, caption: String, location: CLLocation, address: String, completion: ((Peek) -> Void)? = nil) {
         
-        let peek = Peek(title: title, text: caption, photoData: nil)
+        let peek = Peek(title: title, text: caption, photoData: nil, location: location)
         peeks.insert(peek, at: 0)
         
         cloudKitManager.saveRecord(CKRecord(peek)) { (record, error) in

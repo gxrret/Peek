@@ -16,18 +16,21 @@ class AddPeekwithImageTableViewController: UITableViewController, UITextFieldDel
     
     var image: UIImage?
     
+    let currentLocation = LocationManager.sharedInstance.currentLocation
+    
     @IBAction func addButtonTapped(_ sender: Any) {
         
-        if let title = titleTextField.text,
-            let text = peekTextView.text,
-            let image = image {
-            
-            PeekController.sharedController.createPeekWithImage(title: title, caption: text, image: image, completion: nil)
-            dismiss(animated: true, completion: nil)
-            
-        } else {
-            presentErrorAlert()
-        }
+//        if let title = titleTextField.text,
+//            let text = peekTextView.text,
+//            let image = image,
+//            let currentLocation = currentLocation {
+//            
+//            PeekController.sharedController.createPeekWithImage(title: title, caption: text, image: image, location: currentLocation, completion: nil)
+//            dismiss(animated: true, completion: nil)
+//            
+//        } else {
+//            presentErrorAlert()
+//        }
         
     }
     

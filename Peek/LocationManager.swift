@@ -34,6 +34,22 @@ extension LocationManager: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         currentLocation = locations.first
+        if let currentLocation = currentLocation {
+            let geoCoder = CLGeocoder()
+            geoCoder.reverseGeocodeLocation(currentLocation, completionHandler: { (placemarks, error) in
+                if error != nil {
+                    print("Reverse geocoder failed with error: \(error?.localizedDescription)")
+                }
+                guard let placemarks = placemarks else { return }
+                if placemarks.count > 0 {
+                    self.locationManager.stopUpdatingLocation()
+                    let pm = placemarks[0] as CLPlacemark
+                    if let currentLocation = pm.locality {
+                        print(currentLocation)
+                    }
+                }
+            })
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

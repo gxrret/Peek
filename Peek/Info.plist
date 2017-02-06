@@ -24,6 +24,8 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>Peek requires access to your camera in order to use this function.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Peek needs access to your location.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Peek requires access to your photo library in order to use this function.</string>
 	<key>UILaunchStoryboardName</key>
@@ -39,8 +41,8 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Peek needs access to your location.</string>
 </dict>
 </plist>

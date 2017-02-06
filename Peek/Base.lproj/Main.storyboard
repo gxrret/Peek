@@ -229,7 +229,7 @@ If you have any questions about these Terms, please contact us at peek app.conta
                                         <rect key="frame" x="0.0" y="144" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pan-97-RBO" id="MJp-gE-mWl">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hqs-aQ-i9V">
@@ -467,7 +467,7 @@ If you have concerns about the way Peek is handling your Information, please let
             </objects>
             <point key="canvasLocation" x="5646" y="905"/>
         </scene>
-        <!--PEEKS-->
+        <!--Peek List Table View Controller-->
         <scene sceneID="TWp-Hg-9Sn">
             <objects>
                 <tableViewController id="v4G-UX-vZT" customClass="PeekListTableViewController" customModule="Peek" customModuleProvider="target" sceneMemberID="viewController">
@@ -490,14 +490,14 @@ If you have concerns about the way Peek is handling your Information, please let
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fuz-8D-oCA">
                                             <rect key="frame" x="8" y="8" width="273" height="39"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="39" id="8M4-pO-77Z"/>
+                                                <constraint firstAttribute="height" constant="39" id="ePn-ih-aKv"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZM-wX-QdW">
-                                            <rect key="frame" x="8" y="478" width="119" height="29"/>
+                                            <rect key="frame" x="8" y="478" width="115" height="29"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="11"/>
                                             <color key="textColor" red="0.57647058823529407" green="0.58823529411764708" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -506,7 +506,7 @@ If you have concerns about the way Peek is handling your Information, please let
                                             <rect key="frame" x="8" y="55" width="217" height="44"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="217" id="Aov-e9-pdV"/>
+                                                <constraint firstAttribute="width" constant="217" id="1Oc-uH-4zP"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -514,7 +514,7 @@ If you have concerns about the way Peek is handling your Information, please let
                                         <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wS-Us-5WI">
                                             <rect key="frame" x="328" y="0.0" width="39" height="54"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="39" id="Gd7-KP-9yY"/>
+                                                <constraint firstAttribute="width" constant="39" id="JSg-Em-u5w"/>
                                             </constraints>
                                             <state key="normal" image="more button"/>
                                             <connections>
@@ -524,7 +524,7 @@ If you have concerns about the way Peek is handling your Information, please let
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GP0-B9-VkC">
                                             <rect key="frame" x="283" y="474" width="84" height="38"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="84" id="q1a-uG-SyL"/>
+                                                <constraint firstAttribute="width" constant="84" id="Fvo-Ga-xZX"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="11"/>
                                             <nil key="textColor"/>
@@ -533,44 +533,44 @@ If you have concerns about the way Peek is handling your Information, please let
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location icon" translatesAutoresizingMaskIntoConstraints="NO" id="j1Q-pJ-r9G">
                                             <rect key="frame" x="139" y="483" width="11" height="19"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="11" id="Mbm-pQ-noG"/>
-                                                <constraint firstAttribute="height" constant="19" id="lne-OQ-ElO"/>
+                                                <constraint firstAttribute="height" constant="19" id="5rX-PW-NcR"/>
+                                                <constraint firstAttribute="width" constant="11" id="QTU-ID-pcn"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMx-bS-Jbf">
                                             <rect key="frame" x="155" y="478" width="116" height="30"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="12"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="10"/>
                                             <color key="textColor" red="0.57647058823529407" green="0.58823529411764708" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="fuz-8D-oCA" firstAttribute="top" secondItem="fqG-iv-Uxx" secondAttribute="topMargin" id="15x-br-HGf"/>
-                                        <constraint firstItem="7gS-XZ-k3n" firstAttribute="top" secondItem="6wS-Us-5WI" secondAttribute="bottom" constant="49" id="69w-Cg-aA7"/>
-                                        <constraint firstItem="fuz-8D-oCA" firstAttribute="leading" secondItem="edm-dw-PZh" secondAttribute="leading" id="6kv-g3-R72"/>
-                                        <constraint firstItem="fuz-8D-oCA" firstAttribute="leading" secondItem="fqG-iv-Uxx" secondAttribute="leadingMargin" id="7xQ-D8-uAT"/>
-                                        <constraint firstItem="gMx-bS-Jbf" firstAttribute="centerY" secondItem="GP0-B9-VkC" secondAttribute="centerY" id="Dh6-xg-wqd"/>
-                                        <constraint firstItem="edm-dw-PZh" firstAttribute="leading" secondItem="DZM-wX-QdW" secondAttribute="leading" id="EoW-lq-fwt"/>
-                                        <constraint firstItem="j1Q-pJ-r9G" firstAttribute="centerY" secondItem="gMx-bS-Jbf" secondAttribute="centerY" id="Fac-mH-x1m"/>
-                                        <constraint firstItem="DZM-wX-QdW" firstAttribute="centerY" secondItem="j1Q-pJ-r9G" secondAttribute="centerY" id="HeO-QL-4h9"/>
-                                        <constraint firstItem="j1Q-pJ-r9G" firstAttribute="leading" secondItem="DZM-wX-QdW" secondAttribute="trailing" constant="12" id="MzI-lR-dsF"/>
-                                        <constraint firstItem="6wS-Us-5WI" firstAttribute="trailing" secondItem="fqG-iv-Uxx" secondAttribute="trailingMargin" id="QTF-Xa-3bn"/>
-                                        <constraint firstItem="6wS-Us-5WI" firstAttribute="top" secondItem="fqG-iv-Uxx" secondAttribute="top" id="Smi-fh-sKa"/>
-                                        <constraint firstItem="7gS-XZ-k3n" firstAttribute="top" secondItem="edm-dw-PZh" secondAttribute="bottom" constant="4" id="TPD-3Q-AgL"/>
-                                        <constraint firstItem="GP0-B9-VkC" firstAttribute="leading" secondItem="gMx-bS-Jbf" secondAttribute="trailing" constant="12" id="TR1-pl-MnE"/>
-                                        <constraint firstItem="7gS-XZ-k3n" firstAttribute="leading" secondItem="fqG-iv-Uxx" secondAttribute="leading" id="Tuq-8i-vvx"/>
-                                        <constraint firstItem="DZM-wX-QdW" firstAttribute="bottom" secondItem="fqG-iv-Uxx" secondAttribute="bottomMargin" id="U73-Xh-5Eo"/>
-                                        <constraint firstItem="DZM-wX-QdW" firstAttribute="top" secondItem="gMx-bS-Jbf" secondAttribute="top" id="ejn-Ha-NPG"/>
-                                        <constraint firstItem="gMx-bS-Jbf" firstAttribute="leading" secondItem="j1Q-pJ-r9G" secondAttribute="trailing" constant="5" id="fVi-ol-vV4"/>
-                                        <constraint firstItem="6wS-Us-5WI" firstAttribute="leading" secondItem="fuz-8D-oCA" secondAttribute="trailing" constant="47" id="gw7-Z1-SjD"/>
-                                        <constraint firstAttribute="trailing" secondItem="7gS-XZ-k3n" secondAttribute="trailing" id="luB-eS-PSX"/>
-                                        <constraint firstItem="DZM-wX-QdW" firstAttribute="top" secondItem="7gS-XZ-k3n" secondAttribute="bottom" constant="11" id="nrI-qH-IDu"/>
-                                        <constraint firstItem="GP0-B9-VkC" firstAttribute="top" secondItem="7gS-XZ-k3n" secondAttribute="bottom" constant="7" id="oSC-M5-m8E"/>
-                                        <constraint firstItem="fuz-8D-oCA" firstAttribute="centerX" secondItem="j1Q-pJ-r9G" secondAttribute="centerX" id="p6G-Qf-iyi"/>
-                                        <constraint firstItem="j1Q-pJ-r9G" firstAttribute="top" secondItem="7gS-XZ-k3n" secondAttribute="bottom" constant="16" id="sEN-2Y-1Pa"/>
-                                        <constraint firstItem="6wS-Us-5WI" firstAttribute="trailing" secondItem="GP0-B9-VkC" secondAttribute="trailing" id="uYP-BP-bAj"/>
-                                        <constraint firstItem="edm-dw-PZh" firstAttribute="top" secondItem="fuz-8D-oCA" secondAttribute="bottom" constant="8" symbolic="YES" id="xrV-ak-arW"/>
-                                        <constraint firstItem="fuz-8D-oCA" firstAttribute="centerY" secondItem="6wS-Us-5WI" secondAttribute="centerY" id="yhE-uo-lkz"/>
+                                        <constraint firstItem="GP0-B9-VkC" firstAttribute="top" secondItem="7gS-XZ-k3n" secondAttribute="bottom" constant="7" id="0Mv-rk-Bc8"/>
+                                        <constraint firstItem="6wS-Us-5WI" firstAttribute="trailing" secondItem="GP0-B9-VkC" secondAttribute="trailing" id="1eX-U8-eJn"/>
+                                        <constraint firstItem="fuz-8D-oCA" firstAttribute="centerY" secondItem="6wS-Us-5WI" secondAttribute="centerY" id="5aP-nx-0aV"/>
+                                        <constraint firstItem="7gS-XZ-k3n" firstAttribute="leading" secondItem="fqG-iv-Uxx" secondAttribute="leading" id="7mm-ze-ztq"/>
+                                        <constraint firstItem="DZM-wX-QdW" firstAttribute="top" secondItem="7gS-XZ-k3n" secondAttribute="bottom" constant="11" id="DUr-ZQ-kOf"/>
+                                        <constraint firstItem="7gS-XZ-k3n" firstAttribute="top" secondItem="edm-dw-PZh" secondAttribute="bottom" constant="4" id="F29-QU-UM5"/>
+                                        <constraint firstItem="gMx-bS-Jbf" firstAttribute="centerY" secondItem="GP0-B9-VkC" secondAttribute="centerY" id="Fee-N2-tJF"/>
+                                        <constraint firstItem="6wS-Us-5WI" firstAttribute="leading" secondItem="fuz-8D-oCA" secondAttribute="trailing" constant="47" id="KbB-MD-Ixq"/>
+                                        <constraint firstItem="fuz-8D-oCA" firstAttribute="centerX" secondItem="j1Q-pJ-r9G" secondAttribute="centerX" id="Mst-9j-t2Q"/>
+                                        <constraint firstItem="DZM-wX-QdW" firstAttribute="centerY" secondItem="j1Q-pJ-r9G" secondAttribute="centerY" id="OZB-dR-Nxq"/>
+                                        <constraint firstItem="j1Q-pJ-r9G" firstAttribute="leading" secondItem="DZM-wX-QdW" secondAttribute="trailing" constant="16" id="RPz-YG-CwF"/>
+                                        <constraint firstItem="j1Q-pJ-r9G" firstAttribute="top" secondItem="7gS-XZ-k3n" secondAttribute="bottom" constant="16" id="Wv2-kj-Bzo"/>
+                                        <constraint firstItem="edm-dw-PZh" firstAttribute="leading" secondItem="DZM-wX-QdW" secondAttribute="leading" id="X3C-Hu-lz4"/>
+                                        <constraint firstAttribute="trailing" secondItem="7gS-XZ-k3n" secondAttribute="trailing" id="Xev-S6-Gm2"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="gMx-bS-Jbf" secondAttribute="bottom" constant="-0.33333333333337123" id="cwI-vu-Ae0"/>
+                                        <constraint firstItem="GP0-B9-VkC" firstAttribute="leading" secondItem="gMx-bS-Jbf" secondAttribute="trailing" constant="12" id="dqy-yy-VEm"/>
+                                        <constraint firstItem="DZM-wX-QdW" firstAttribute="top" secondItem="gMx-bS-Jbf" secondAttribute="top" id="etU-pP-hbB"/>
+                                        <constraint firstItem="fuz-8D-oCA" firstAttribute="top" secondItem="fqG-iv-Uxx" secondAttribute="topMargin" id="fGI-Cm-pdU"/>
+                                        <constraint firstItem="fuz-8D-oCA" firstAttribute="leading" secondItem="fqG-iv-Uxx" secondAttribute="leadingMargin" id="iKg-eU-j6f"/>
+                                        <constraint firstItem="7gS-XZ-k3n" firstAttribute="top" secondItem="6wS-Us-5WI" secondAttribute="bottom" constant="49" id="jzx-vi-UyA"/>
+                                        <constraint firstItem="6wS-Us-5WI" firstAttribute="trailing" secondItem="fqG-iv-Uxx" secondAttribute="trailingMargin" id="nDb-hQ-gKy"/>
+                                        <constraint firstItem="6wS-Us-5WI" firstAttribute="top" secondItem="fqG-iv-Uxx" secondAttribute="top" id="nXY-DY-dwa"/>
+                                        <constraint firstItem="edm-dw-PZh" firstAttribute="top" secondItem="fuz-8D-oCA" secondAttribute="bottom" constant="8" symbolic="YES" id="q4a-q6-Rf1"/>
+                                        <constraint firstItem="fuz-8D-oCA" firstAttribute="leading" secondItem="edm-dw-PZh" secondAttribute="leading" id="qKT-Xx-Wi1"/>
+                                        <constraint firstItem="gMx-bS-Jbf" firstAttribute="leading" secondItem="j1Q-pJ-r9G" secondAttribute="trailing" constant="5" id="rRY-Os-5xP"/>
+                                        <constraint firstItem="j1Q-pJ-r9G" firstAttribute="centerY" secondItem="gMx-bS-Jbf" secondAttribute="centerY" id="wLY-qC-esF"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -590,12 +590,24 @@ If you have concerns about the way Peek is handling your Information, please let
                             <outlet property="delegate" destination="v4G-UX-vZT" id="fX6-6n-qVI"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="PEEKS" id="hDK-zu-fiO">
+                    <navigationItem key="navigationItem" id="hDK-zu-fiO">
+                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" systemItem="action" id="bLn-YV-Owa">
                             <connections>
                                 <segue destination="4SB-nV-Z88" kind="presentation" id="xLf-Ob-YvY"/>
                             </connections>
                         </barButtonItem>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="7ZB-fp-osA">
+                            <rect key="frame" x="113" y="7" width="150" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Newest"/>
+                                <segment title="Popular"/>
+                            </segments>
+                            <connections>
+                                <action selector="indexChanged:" destination="v4G-UX-vZT" eventType="valueChanged" id="tFM-CA-5Dj"/>
+                            </connections>
+                        </segmentedControl>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="RMg-28-e0B">
                             <connections>
                                 <action selector="composeButtonTapped:" destination="v4G-UX-vZT" id="Cn3-Od-Dda"/>
@@ -611,6 +623,7 @@ If you have concerns about the way Peek is handling your Information, please let
                     </refreshControl>
                     <connections>
                         <outlet property="menuView" destination="ymL-qq-kTQ" id="ejS-gT-f7N"/>
+                        <outlet property="segmentedControl" destination="7ZB-fp-osA" id="nJ8-5Q-vCf"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AN7-OU-3tN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -658,7 +671,7 @@ If you have concerns about the way Peek is handling your Information, please let
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="3680.8000000000002" y="55.322338830584712"/>
+            <point key="canvasLocation" x="3679.7101449275365" y="54.619565217391312"/>
         </scene>
         <!--💬 Comments-->
         <scene sceneID="Nqi-jn-3d0">
@@ -1043,7 +1056,7 @@ Our Service allows you to post, upload images, share information, and otherwise 
                                         <rect key="frame" x="0.0" y="35" width="375" height="69"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="boC-Ms-4xS" id="f1v-Wp-Ori">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="An amusing title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hek-9m-4rF">
@@ -1069,7 +1082,7 @@ Our Service allows you to post, upload images, share information, and otherwise 
                                         <rect key="frame" x="0.0" y="140" width="375" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eex-yK-LFL" id="EMA-Hc-L2h">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="76"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" text="Enter text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="agd-mM-MxP">
@@ -1095,7 +1108,7 @@ Our Service allows you to post, upload images, share information, and otherwise 
                                         <rect key="frame" x="0.0" y="252" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dgz-v3-M6e" id="zfB-TU-Prq">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3d6-nI-l5k">

@@ -32,9 +32,14 @@ class PeekController {
         return peeks.flatMap { $0.comments }
     }
     
-    var sortedPeeks: [Peek] {
+    var sortedPeeksByTime: [Peek] {
         return peeks.sorted(by: { return $0.timestamp.compare($1.timestamp as Date) == .orderedDescending })
     }
+    
+    var sortedPeeksByNumberOfComments: [Peek] {
+        return peeks.sorted(by: { return $0.comments.count > $1.comments.count})
+    }
+    
     
     var isSyncing: Bool = false
     

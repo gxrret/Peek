@@ -17,6 +17,8 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
     
     @IBOutlet var menuView: UIView!
     
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,11 +27,11 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
         let nc = NotificationCenter.default
         nc.addObserver(self, selector: #selector(postsChanged(_:)), name: PeekController.PeeksChangedNotification, object: nil)
         
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 75, height: 25))
-        imageView.contentMode = .scaleAspectFit
-        let image = #imageLiteral(resourceName: "peek icon with text")
-        imageView.image = image
-        navigationItem.titleView = imageView
+        ////        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 75, height: 25))
+        ////        imageView.contentMode = .scaleAspectFit
+        ////        let image = #imageLiteral(resourceName: "peek icon with text")
+        ////        imageView.image = image
+        //        navigationItem.titleView = imageView
         
         LocationManager.sharedInstance.locationManager.requestWhenInUseAuthorization()
         LocationManager.sharedInstance.requestCurrentLocation()
@@ -41,12 +43,16 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
         
         navigationController?.hidesBarsOnSwipe = true
     }
-
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.menuView.removeFromSuperview()
         self.dimView.removeFromSuperview()
         self.tableView.isScrollEnabled = true
+    }
+    
+    @IBAction func indexChanged(_ sender: Any) {
+        tableView.reloadData()
     }
     
     @IBAction func refreshControlPulled(_ sender: UIRefreshControl) {
@@ -129,20 +135,54 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Newest Peeks"
+        var returnString = ""
+        switch (segmentedControl.selectedSegmentIndex) {
+        case 0:
+            returnString = "Newest Peeks"
+            break
+        case 1:
+            returnString = "Most Popular Peeks"
+            break
+        default:
+            break
+        }
+        return returnString
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return PeekController.sharedController.sortedPeeks.count
+        
+        var returnValue = 0
+        
+        switch segmentedControl.selectedSegmentIndex {
+        case 0:
+            returnValue = PeekController.sharedController.sortedPeeksByTime.count
+            break
+        case 1:
+            returnValue = PeekController.sharedController.sortedPeeksByNumberOfComments.count
+            break
+        default:
+            break
+        }
+        return returnValue
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "peekCell", for: indexPath) as? PeekTableViewCell
         
-        let peek = PeekController.sharedController.sortedPeeks[indexPath.row]
-        cell?.updateWithPeek(peek: peek)
-        return cell ?? UITableViewCell()
+        switch segmentedControl.selectedSegmentIndex {
+        case 0:
+            let peek = PeekController.sharedController.sortedPeeksByTime[indexPath.row]
+            cell?.updateWithPeek(peek: peek)
+            break
+        case 1:
+            let peek = PeekController.sharedController.sortedPeeksByNumberOfComments[indexPath.row]
+            cell?.updateWithPeek(peek: peek)
+             break
+        default:
+            break
+        }
         
+        return cell ?? UITableViewCell()
     }
     
     // MARK: - Navigation

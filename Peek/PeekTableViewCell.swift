@@ -34,7 +34,6 @@ class PeekTableViewCell: UITableViewCell {
         peekTimeLabel.text = "\(time)"
         
         peekImageView.image = peek.photo
-        peekImageView.layer.cornerRadius = 1.0
         
         if peek.comments.count == 0 {
             commentsLabel.text = "0 comments 😢"

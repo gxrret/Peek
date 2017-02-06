@@ -17,6 +17,8 @@ class CommentsTableViewController: UITableViewController {
         
         let nc = NotificationCenter.default
         nc.addObserver(self, selector: #selector(postCommentsChanged(notification:)), name: PeekController.PeekCommentsChangedNotification, object: nil)
+        
+        navigationController?.isNavigationBarHidden = false
     }
 
     func postCommentsChanged(notification: Notification) {
@@ -51,6 +53,7 @@ class CommentsTableViewController: UITableViewController {
         
         alertController.addTextField { (textField) in
             textField.placeholder = "Enter comment here"
+            
             commentTextField = textField
         }
         

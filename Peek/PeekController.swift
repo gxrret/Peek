@@ -47,7 +47,7 @@ class PeekController {
     }
     
     func createPeekWithImage(title: String, caption: String, image: UIImage, location: CLLocation, completion: ((Peek) -> Void)? = nil) {
-        guard let data = UIImageJPEGRepresentation(image, 0.8) else { return }
+        guard let data = UIImageJPEGRepresentation(image, 0.6) else { return }
         let peek = Peek(title: title, text: caption, photoData: data, location: location)
         peeks.insert(peek, at: 0)
         

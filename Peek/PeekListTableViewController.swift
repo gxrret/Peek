@@ -35,8 +35,13 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
         LocationManager.sharedInstance.requestCurrentLocation()
         
     }
-
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        navigationController?.hidesBarsOnSwipe = true
+    }
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.menuView.removeFromSuperview()

@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import CoreLocation
+import MapKit
 
 class AddPeekwithTextTableViewController: UITableViewController {
+    
+    var peek: Peek?
     
     @IBOutlet weak var titleTextField: UITextField!
     
@@ -19,19 +23,20 @@ class AddPeekwithTextTableViewController: UITableViewController {
 
     }
     
-//    @IBAction func postButtonTapped(_ sender: Any) {
-//        if let title = titleTextField.text,
-//            let text = peekTextView.text {
-//            
-////            PeekController.sharedController.createPeekWithText(title: title, caption: text, completion: nil)
-////            dismiss(animated: true, completion: nil)
-//        }
-//    }
-//    
-//    @IBAction func cancelButtonTapped(_ sender: Any) {
-//        dismiss(animated: true, completion: nil)
-//    }
-//    
-//    
-//}
+    @IBAction func postButtonTapped(_ sender: Any) {
+        if let title = titleTextField.text,
+            let text = peekTextView.text,
+            let peek = peek {
+            
+            PeekController.sharedController.createPeekWithText(title: title, caption: text, location: peek.location, completion: nil)
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func cancelButtonTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
 }
+

@@ -62,7 +62,7 @@ class PeekController {
         
     }
     
-    func createPeekWithText(title: String, caption: String, location: CLLocation, address: String, completion: ((Peek) -> Void)? = nil) {
+    func createPeekWithText(title: String, caption: String, location: CLLocation, completion: ((Peek) -> Void)? = nil) {
         
         let peek = Peek(title: title, text: caption, photoData: nil, location: location)
         peeks.insert(peek, at: 0)

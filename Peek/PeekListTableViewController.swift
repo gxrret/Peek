@@ -27,22 +27,16 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
         let nc = NotificationCenter.default
         nc.addObserver(self, selector: #selector(postsChanged(_:)), name: PeekController.PeeksChangedNotification, object: nil)
         
-        ////        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 75, height: 25))
-        ////        imageView.contentMode = .scaleAspectFit
-        ////        let image = #imageLiteral(resourceName: "peek icon with text")
-        ////        imageView.image = image
-        //        navigationItem.titleView = imageView
-        
         LocationManager.sharedInstance.locationManager.requestWhenInUseAuthorization()
         LocationManager.sharedInstance.requestCurrentLocation()
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        navigationController?.hidesBarsOnSwipe = true
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        
+//        navigationController?.hidesBarsOnSwipe = true
+//    }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -191,9 +185,20 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toComments" {
             if let indexPath = tableView.indexPathForSelectedRow {
-                let peek = PeekController.sharedController.peeks[indexPath.row]
-                let commentsTVC = segue.destination as? CommentsTableViewController
-                commentsTVC?.peek = peek
+                switch segmentedControl.selectedSegmentIndex {
+                case 0:
+                    let peek = PeekController.sharedController.sortedPeeksByTime[indexPath.row]
+                    let commentsTVC = segue.destination as? CommentsTableViewController
+                    commentsTVC?.peek = peek
+                    break
+                case 1:
+                    let peek = PeekController.sharedController.sortedPeeksByNumberOfComments[indexPath.row]
+                    let commentsTVC = segue.destination as? CommentsTableViewController
+                    commentsTVC?.peek = peek
+                    break
+                default:
+                    break
+                }
             }
         }
     }
@@ -227,7 +232,6 @@ extension PeekListTableViewController {
             self.menuView.removeFromSuperview()
             self.dimView.removeFromSuperview()
             self.tableView.isScrollEnabled = true
-            
         }
     }
 }

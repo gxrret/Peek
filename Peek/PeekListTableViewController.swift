@@ -8,17 +8,18 @@
 
 import UIKit
 import MessageUI
+import MapKit
+import CoreLocation
 
-class PeekListTableViewController: UITableViewController, MFMailComposeViewControllerDelegate {
+class PeekListTableViewController: UITableViewController, MFMailComposeViewControllerDelegate{
     
     var peek: Peek?
     
     let dimView = UIView()
     
     @IBOutlet var menuView: UIView!
-    
     @IBOutlet weak var segmentedControl: UISegmentedControl!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -121,6 +121,7 @@
 		AC84A1611E37B5680053C77F /* CloudKit */ = {
 			isa = PBXGroup;
 			children = (
+				ACB78A441E355E6000AA1D00 /* TermsAndConditionsViewController.swift */,
 				AC84A15F1E37B5630053C77F /* CloudKitManager.swift */,
 				AC84A1621E37B5790053C77F /* CloudKitSyncable.swift */,
 			);
@@ -139,7 +140,6 @@
 			isa = PBXGroup;
 			children = (
 				ACDDB9D31E4168FA00A1C6F4 /* PeekListTableViewController.swift */,
-				ACB78A441E355E6000AA1D00 /* TermsAndConditionsViewController.swift */,
 				ACD8EDE61E36D9290033AB17 /* CommentsTableViewController.swift */,
 				ACACADC11E36BB9800575BB0 /* AddPeekwithImageTableViewController.swift */,
 				AC05B1D11E4180F8003FBCBF /* AddPeekwithTextTableViewController.swift */,

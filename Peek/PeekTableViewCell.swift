@@ -22,16 +22,7 @@ class PeekTableViewCell: UITableViewCell {
     func updateWithPeek(peek: Peek) {
         peekTitleLabel.text = peek.title
         peekTextView.text = peek.text
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        dateFormatter.doesRelativeDateFormatting = true
-        
-        let timeFormatter = DateFormatter()
-        timeFormatter.dateFormat = "h:mm a"
-        
-        let time = "\(dateFormatter.string(from: peek.timestamp)), \(timeFormatter.string(from: peek.timestamp))"
-        peekTimeLabel.text = "\(time)"
+        peekTimeLabel.text = DateHelper.timeAgoSincePeek(peek.timestamp)
         
         peekImageView.image = peek.photo
         
@@ -44,6 +35,7 @@ class PeekTableViewCell: UITableViewCell {
         }
         
         let geoCoder = CLGeocoder()
+        
         
         geoCoder.reverseGeocodeLocation(peek.location) { (placemarks, error) in
             guard let placemarks = placemarks else { return }

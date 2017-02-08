@@ -32,11 +32,11 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
         
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//        
-//        navigationController?.hidesBarsOnSwipe = true
-//    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        navigationController?.hidesBarsOnSwipe = true
+    }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -171,7 +171,7 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
         case 1:
             let peek = PeekController.sharedController.sortedPeeksByNumberOfComments[indexPath.row]
             cell?.updateWithPeek(peek: peek)
-             break
+            break
         default:
             break
         }
@@ -208,14 +208,14 @@ extension PeekListTableViewController {
     
     func composeButtonMenuAnimation() {
         self.view.addSubview(menuView)
-        menuView.layer.frame = CGRect(x: 0, y: -200, width: view.frame.size.width, height: menuView.frame.size.height)
-        menuView.layer.cornerRadius = 1
+        menuView.layer.frame = CGRect(x: 0, y: -100, width: view.frame.size.width, height: menuView.frame.size.height)
+        menuView.layer.cornerRadius = 8
         
         dimView.frame = CGRect(x: view.frame.origin.x, y: view.frame.origin.y + 45, width: view.frame.size.width, height: view.frame.size.height)
         dimView.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.75)
         dimView.alpha = 0
         
-        UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.95, initialSpringVelocity: 9, options: .curveEaseIn, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 5, options: .curveEaseIn, animations: {
             self.menuView.frame.origin.y = 0
             self.view.addSubview(self.dimView)
             self.dimView.alpha = 0.75

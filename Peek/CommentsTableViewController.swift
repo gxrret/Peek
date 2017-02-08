@@ -38,6 +38,9 @@ class CommentsTableViewController: UITableViewController {
         
         cell.textLabel?.text = comment.text
         
+        cell.detailTextLabel?.text = DateHelper.timeAgoSinceComments(comment.timestamp)
+
+        
         return cell
     }
     

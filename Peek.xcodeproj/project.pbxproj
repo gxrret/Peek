@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AC05B1D21E4180F8003FBCBF /* AddPeekwithTextTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC05B1D11E4180F8003FBCBF /* AddPeekwithTextTableViewController.swift */; };
+		AC125DA51E4B928E005204FA /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC125DA41E4B928E005204FA /* DateHelper.swift */; };
 		AC1CBBAD1E38102500F77E01 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1CBBAC1E38102500F77E01 /* CloudKit.framework */; };
 		AC1CBBAF1E3812E900F77E01 /* PeekTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1CBBAE1E3812E900F77E01 /* PeekTableViewCell.swift */; };
 		AC84A15D1E37B5440053C77F /* Peek.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84A15C1E37B5440053C77F /* Peek.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		AC05B1D11E4180F8003FBCBF /* AddPeekwithTextTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPeekwithTextTableViewController.swift; sourceTree = "<group>"; };
+		AC125DA41E4B928E005204FA /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		AC1CBBAA1E38102200F77E01 /* Peek.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Peek.entitlements; sourceTree = "<group>"; };
 		AC1CBBAC1E38102500F77E01 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		AC1CBBAE1E3812E900F77E01 /* PeekTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeekTableViewCell.swift; sourceTree = "<group>"; };
@@ -81,9 +83,11 @@
 		AC09DB221E451F1100903897 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AC125DA41E4B928E005204FA /* DateHelper.swift */,
 				ACE797491E33FC08007DB33C /* Assets.xcassets */,
 				ACE7974B1E33FC08007DB33C /* LaunchScreen.storyboard */,
 				ACE7974E1E33FC08007DB33C /* Info.plist */,
+				AC1CBBAA1E38102200F77E01 /* Peek.entitlements */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -166,7 +170,6 @@
 		ACE797411E33FC08007DB33C /* Peek */ = {
 			isa = PBXGroup;
 			children = (
-				AC1CBBAA1E38102200F77E01 /* Peek.entitlements */,
 				ACE797421E33FC08007DB33C /* AppDelegate.swift */,
 				ACE797461E33FC08007DB33C /* Main.storyboard */,
 				AC84A1611E37B5680053C77F /* CloudKit */,
@@ -219,7 +222,7 @@
 								enabled = 1;
 							};
 							com.apple.Push = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.iCloud = {
 								enabled = 1;
@@ -273,6 +276,7 @@
 				AC84A1651E37B8DB0053C77F /* PeekController.swift in Sources */,
 				ACD8EDE91E36DA360033AB17 /* RulesViewController.swift in Sources */,
 				ACDDB9D41E4168FA00A1C6F4 /* PeekListTableViewController.swift in Sources */,
+				AC125DA51E4B928E005204FA /* DateHelper.swift in Sources */,
 				ACD8EDE71E36D9290033AB17 /* CommentsTableViewController.swift in Sources */,
 				AC05B1D21E4180F8003FBCBF /* AddPeekwithTextTableViewController.swift in Sources */,
 				ACACADC01E36A8FC00575BB0 /* MoreTableViewController.swift in Sources */,

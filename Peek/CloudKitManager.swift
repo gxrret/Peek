@@ -11,6 +11,8 @@ import CloudKit
 
 class CloudKitManager {
     
+    static let sharedInstance = CloudKitManager()
+    
     let publicDatabase = CKContainer.default().publicCloudDatabase
     
     init() {
@@ -89,6 +91,13 @@ class CloudKitManager {
         }
         
         publicDatabase.add(operation)
+    }
+    
+    func deleteRecordWithID(_ recordID: CKRecordID, completion: ((_ recordID: CKRecordID?, _ error: Error?) -> Void)?) {
+        
+        publicDatabase.delete(withRecordID: recordID) { (recordID, error) in
+            completion?(recordID, error)
+        }
     }
     
     func checkCloudKitAvailability() {

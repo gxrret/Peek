@@ -9,7 +9,6 @@
 import Foundation
 import CoreLocation
 import CloudKit
-import MapKit
 
 class LocationManager: NSObject {
     
@@ -33,7 +32,7 @@ class LocationManager: NSObject {
 extension LocationManager: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        currentLocation = locations.first
+        currentLocation = locations.last
         if let currentLocation = currentLocation {
             let geoCoder = CLGeocoder()
             geoCoder.reverseGeocodeLocation(currentLocation, completionHandler: { (placemarks, error) in

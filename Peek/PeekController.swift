@@ -40,6 +40,10 @@ class PeekController {
         return peeks.sorted(by: { return $0.comments.count > $1.comments.count})
     }
     
+    var sortedCommentsByTime: [Comment] {
+        return comments.sorted(by: { return $0.timestamp.compare($1.timestamp as Date) == .orderedDescending })
+    }
+    
     
     var isSyncing: Bool = false
     

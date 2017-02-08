@@ -7,24 +7,41 @@
 //
 
 import UIKit
+import MessageUI
 
-class CommentsTableViewController: UITableViewController {
+class CommentsTableViewController: UITableViewController, MFMailComposeViewControllerDelegate, UITextFieldDelegate {
     
     var peek: Peek?
     
+    @IBOutlet weak var commentTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        commentTextField.delegate = self
         
         let nc = NotificationCenter.default
         nc.addObserver(self, selector: #selector(postCommentsChanged(notification:)), name: PeekController.PeekCommentsChangedNotification, object: nil)
         
         navigationController?.isNavigationBarHidden = false
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        navigationController?.hidesBarsOnSwipe = false
+    }
+    
     func postCommentsChanged(notification: Notification) {
         guard let notificationPost = notification.object as? Peek,
             let peek = peek, notificationPost === peek else { return }
         tableView.reloadData()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        commentTextField = textField
+        textField.resignFirstResponder()
+        return true
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -39,43 +56,62 @@ class CommentsTableViewController: UITableViewController {
         cell.textLabel?.text = comment.text
         
         cell.detailTextLabel?.text = DateHelper.timeAgoSinceComments(comment.timestamp)
-
+        
         
         return cell
     }
     
-    @IBAction func addCommentButtonTapped(_ sender: Any) {
-        presentAlert()
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let report = UITableViewRowAction(style: .destructive, title: "Report") { (action, indexPath) in
+            if MFMailComposeViewController.canSendMail() {
+                let messageBody = "Specify the abuse you saw from a user."
+                let toRecipients = ["peekapp.contact@gmail.com"]
+                let mc = MFMailComposeViewController()
+                mc.mailComposeDelegate = self
+                mc.setMessageBody(messageBody, isHTML: false)
+                mc.setToRecipients(toRecipients)
+                
+                self.present(mc, animated: true, completion: nil)
+                
+            } else {
+                self.presentMailErrorAlert()
+            }
+        }
+        return [report]
     }
     
-    func presentAlert() {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func presentMailErrorAlert() {
+        let errorAlert = UIAlertController(title: "Error Sending Email", message: "Check email configuration then try again.", preferredStyle: .alert)
         
-        var commentTextField: UITextField?
+        let dismissAction = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+        errorAlert.addAction(dismissAction)
         
-        let alertController = UIAlertController(title: "Add Comment", message: "Wanna add a comment?", preferredStyle: .alert)
-        
-        alertController.addTextField { (textField) in
-            textField.placeholder = "Enter comment here"
-            
-            commentTextField = textField
+        present(errorAlert, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func postCommentButtonTapped(_ sender: Any) {
+        guard let commentText = commentTextField.text, !commentText.isEmpty,
+            let peek = self.peek else {
+                presentErrorAlert()
+                return
         }
+        let _ = PeekController.sharedController.addComment(peek: peek, commentText: commentText)
+        commentTextField.text = ""
+        self.tableView.reloadData()
+    }
+    
+    func presentErrorAlert() {
+        let alertController = UIAlertController(title: "Missing information", message: "You need to add some text.", preferredStyle: .alert)
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
-        
-        let postAction = UIAlertAction(title: "Post", style: .default) { (_) in
-            guard let comment = commentTextField?.text,
-                let peek = self.peek else {
-                    return }
-            
-            let _ = PeekController.sharedController.addComment(peek: peek, commentText: comment)
-            self.tableView.reloadData()
-        }
-        
-        alertController.addAction(cancelAction)
-        alertController.addAction(postAction)
-        alertController.view.tintColor = UIColor(red: 30/255, green: 216/255, blue: 96/255, alpha: 1.0)
+        let tryAgainAction = UIAlertAction(title: "Try Again", style: .cancel, handler: nil)
+        alertController.addAction(tryAgainAction)
         
         present(alertController, animated: true, completion: nil)
     }
+    
 }

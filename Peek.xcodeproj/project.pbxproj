@@ -218,6 +218,9 @@
 						DevelopmentTeam = KDJV5MMQDA;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
 							com.apple.Maps.iOS = {
 								enabled = 1;
 							};

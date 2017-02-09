@@ -46,15 +46,15 @@ class DateHelper {
         }
         
         if let day = components.day, day >= 1 {
-            return "Yesterday"
+            return "1 day ago"
         }
         
         if let hour = components.hour, hour >= 2 {
-            return "\(hour)hrs"
+            return "\(hour)h"
         }
         
         if let hour = components.hour, hour >= 1 {
-            return "1hr"
+            return "1h"
         }
         
         if let minute = components.minute, minute >= 2 {

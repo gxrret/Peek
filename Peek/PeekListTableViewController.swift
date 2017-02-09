@@ -19,7 +19,7 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
     
     @IBOutlet var menuView: UIView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -67,7 +67,7 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
         let reportButton = UIAlertAction(title: "Report", style: .destructive) { (_) in
             if MFMailComposeViewController.canSendMail() {
                 
-                let messageBody = "Specify the abuse you saw from a user."
+                let messageBody = "Specify the abuse or spam you saw from a user. Review the Terms & Conditions."
                 let toRecipients = ["peekapp.contact@gmail.com"]
                 let mc = MFMailComposeViewController()
                 mc.mailComposeDelegate = self
@@ -178,6 +178,18 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
         }
         
         return cell ?? UITableViewCell()
+    }
+
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let share = UITableViewRowAction(style: .normal, title: "Share") { (action, index) in
+            
+            guard let photo = self.peek?.photo,
+                let title = self.peek?.title else { return }
+            let activityViewController = UIActivityViewController(activityItems: [photo, title], applicationActivities: nil)
+            self.present(activityViewController, animated: true, completion: nil)
+        }
+        share.backgroundColor = UIColor(red: 30/255, green: 215/255, blue: 96/255, alpha: 1.0)
+        return [share]
     }
     
     // MARK: - Navigation

@@ -24,6 +24,9 @@ class CommentsTableViewController: UITableViewController, MFMailComposeViewContr
         nc.addObserver(self, selector: #selector(postCommentsChanged(notification:)), name: PeekController.PeekCommentsChangedNotification, object: nil)
         
         navigationController?.isNavigationBarHidden = false
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 200
     }
     
     override func viewWillAppear(_ animated: Bool) {

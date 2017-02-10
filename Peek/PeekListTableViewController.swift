@@ -30,7 +30,6 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
         
         LocationManager.sharedInstance.locationManager.requestWhenInUseAuthorization()
         LocationManager.sharedInstance.requestCurrentLocation()
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {

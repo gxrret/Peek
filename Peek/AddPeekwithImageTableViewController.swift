@@ -11,9 +11,7 @@ import UIKit
 class AddPeekwithImageTableViewController: UITableViewController, UITextFieldDelegate {
     
     @IBOutlet weak var titleTextField: UITextField!
-    
-    @IBOutlet weak var peekTextView: UITextView!
-    
+    @IBOutlet weak var characterCounter: UILabel!
     var image: UIImage?
     
     let currentLocation = LocationManager.sharedInstance.currentLocation
@@ -21,11 +19,10 @@ class AddPeekwithImageTableViewController: UITableViewController, UITextFieldDel
     @IBAction func addButtonTapped(_ sender: Any) {
         
         if let title = titleTextField.text,
-            let text = peekTextView.text,
             let image = image,
             let currentLocation = currentLocation {
             
-            PeekController.sharedController.createPeekWithImage(title: title, caption: text, image: image, location: currentLocation, completion: nil)
+            PeekController.sharedController.createPeekWithImage(title: title, image: image, location: currentLocation, completion: nil)
             dismiss(animated: true, completion: nil)
             
         } else {
@@ -50,6 +47,18 @@ class AddPeekwithImageTableViewController: UITableViewController, UITextFieldDel
         return true
     }
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        <#code#>
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        <#code#>
+    }
+    
+    func checkRemainingCharacters() {
+        let allowedChars = 50
+        let charsInTextField = -titleTextField.text?.characters.count
+    }
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)

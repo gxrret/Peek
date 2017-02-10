@@ -15,13 +15,14 @@ class PeekTableViewCell: UITableViewCell {
     @IBOutlet weak var peekTitleLabel: UILabel!
     @IBOutlet weak var peekTimeLabel: UILabel!
     @IBOutlet weak var peekImageView: UIImageView!
-    @IBOutlet weak var peekTextView: UITextView!
     @IBOutlet weak var commentsLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     
     func updateWithPeek(peek: Peek) {
         peekTitleLabel.text = peek.title
-        peekTextView.text = peek.text
+        peekTimeLabel.adjustsFontSizeToFitWidth = true
+        peekTimeLabel.minimumScaleFactor = 0.2
+        
         peekTimeLabel.text = DateHelper.timeAgoSincePeek(peek.timestamp)
         
         peekImageView.image = peek.photo

@@ -55,9 +55,9 @@ class PeekController {
         performFullSync()
     }
     
-    func createPeekWithImage(title: String, caption: String, image: UIImage, location: CLLocation, completion: ((Peek) -> Void)? = nil) {
+    func createPeekWithImage(title: String, image: UIImage, location: CLLocation, completion: ((Peek) -> Void)? = nil) {
         guard let data = UIImageJPEGRepresentation(image, 0.6) else { return }
-        let peek = Peek(title: title, text: caption, photoData: data, location: location)
+        let peek = Peek(title: title, photoData: data, location: location)
         peeks.insert(peek, at: 0)
         
         cloudKitManager.saveRecord(CKRecord(peek)) { (record, error) in
@@ -71,9 +71,9 @@ class PeekController {
         
     }
     
-    func createPeekWithText(title: String, caption: String, location: CLLocation, completion: ((Peek) -> Void)? = nil) {
+    func createPeekWithText(title: String, location: CLLocation, completion: ((Peek) -> Void)? = nil) {
         
-        let peek = Peek(title: title, text: caption, photoData: nil, location: location)
+        let peek = Peek(title: title, photoData: nil, location: location)
         peeks.insert(peek, at: 0)
         
         cloudKitManager.saveRecord(CKRecord(peek)) { (record, error) in

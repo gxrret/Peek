@@ -16,6 +16,12 @@ class AddPeekwithImageTableViewController: UITableViewController, UITextFieldDel
     
     let currentLocation = LocationManager.sharedInstance.currentLocation
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.characterCounter.text = "50"
+        self.titleTextField.delegate = self
+    }
+    
     @IBAction func addButtonTapped(_ sender: Any) {
         
         if let title = titleTextField.text,
@@ -48,16 +54,13 @@ class AddPeekwithImageTableViewController: UITableViewController, UITextFieldDel
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        <#code#>
-    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        <#code#>
-    }
-    
-    func checkRemainingCharacters() {
-        let allowedChars = 50
-        let charsInTextField = -titleTextField.text?.characters.count
+        let newLength = (titleTextField.text?.characters.count)! + string.characters.count - range.length
+        if newLength <= 50 {
+            self.characterCounter.text = "\(50 - newLength)"
+            return true
+        } else {
+            return false
+        }
     }
     
     @IBAction func cancelButtonTapped(_ sender: Any) {

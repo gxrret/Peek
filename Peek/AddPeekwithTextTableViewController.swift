@@ -16,8 +16,6 @@ class AddPeekwithTextTableViewController: UITableViewController {
     
     @IBOutlet weak var titleTextField: UITextField!
     
-    @IBOutlet weak var peekTextView: UITextView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,10 +23,9 @@ class AddPeekwithTextTableViewController: UITableViewController {
     
     @IBAction func postButtonTapped(_ sender: Any) {
         if let title = titleTextField.text,
-            let text = peekTextView.text,
             let peek = peek {
             
-            PeekController.sharedController.createPeekWithText(title: title, caption: text, location: peek.location, completion: nil)
+            PeekController.sharedController.createPeekWithText(title: title, location: peek.location, completion: nil)
         }
         dismiss(animated: true, completion: nil)
     }

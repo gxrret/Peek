@@ -28,15 +28,14 @@ class PeekTableViewCell: UITableViewCell {
         peekImageView.image = peek.photo
         
         if peek.comments.count == 0 {
-            commentsLabel.text = "0 comments😢"
+            commentsLabel.text = "0"
         } else if peek.comments.count == 1 {
-            commentsLabel.text = "1 comment🙂"
+            commentsLabel.text = "1"
         } else {
-            commentsLabel.text = "\(peek.comments.count) Comments😎"
+            commentsLabel.text = "\(peek.comments.count)"
         }
         
         let geoCoder = CLGeocoder()
-        
         
         geoCoder.reverseGeocodeLocation(peek.location) { (placemarks, error) in
             guard let placemarks = placemarks else { return }

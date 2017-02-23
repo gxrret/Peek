@@ -63,6 +63,13 @@ class AddPeekwithImageTableViewController: UITableViewController, UITextFieldDel
         }
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        titleTextField = textField
+        titleTextField.layer.borderWidth = 1
+        titleTextField.layer.borderColor = UIColor(red: 30/255, green: 215/255, blue: 96/255, alpha: 0.5).cgColor
+        titleTextField.layer.cornerRadius = 1
+    }
+    
     @IBAction func cancelButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }

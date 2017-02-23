@@ -16,6 +16,7 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
     var peek: Peek?
     
     let dimView = UIView()
+    let dismissButton: UIButton = UIButton()
     
     @IBOutlet var menuView: UIView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -42,6 +43,7 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
         super.viewWillDisappear(animated)
         self.menuView.removeFromSuperview()
         self.dimView.removeFromSuperview()
+        self.dismissButton.removeFromSuperview()
         self.tableView.isScrollEnabled = true
     }
     
@@ -56,49 +58,6 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
             self.refreshControl?.endRefreshing()
         }
     }
-    
-    @IBAction func reportButtonTapped(_ sender: Any) {
-        
-        let alertController = UIAlertController(title: "Select an Option", message: nil, preferredStyle: .actionSheet)
-        
-        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
-        let reportButton = UIAlertAction(title: "Report", style: .destructive) { (_) in
-            if MFMailComposeViewController.canSendMail() {
-                
-                let messageBody = "Specify the abuse or spam you saw from a user. Review the Terms & Conditions."
-                let toRecipients = ["peekapp.contact@gmail.com"]
-                let mc = MFMailComposeViewController()
-                mc.mailComposeDelegate = self
-                mc.setMessageBody(messageBody, isHTML: false)
-                mc.setToRecipients(toRecipients)
-                
-                self.present(mc, animated: true, completion: nil)
-                
-            } else {
-                self.presentErrorAlert()
-            }
-        }
-        
-        alertController.addAction(cancelButton)
-        alertController.addAction(reportButton)
-        
-        self.present(alertController, animated: true, completion: nil)
-    }
-    
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    func presentErrorAlert() {
-        let errorAlert = UIAlertController(title: "Error Sending Email", message: "Check email configuration then try again.", preferredStyle: .alert)
-        
-        let dismissAction = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
-        errorAlert.addAction(dismissAction)
-        
-        present(errorAlert, animated: true, completion: nil)
-    }
-    
     
     @IBAction func composeButtonTapped(_ sender: Any) {
         composeButtonMenuAnimation()
@@ -180,19 +139,40 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
     }
 
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let share = UITableViewRowAction(style: .normal, title: "Share") { (action, index) in
-            
-            guard let photo = self.peek?.photo,
-                let title = self.peek?.title else { return }
-            let activityViewController = UIActivityViewController(activityItems: [photo, title], applicationActivities: nil)
-            self.present(activityViewController, animated: true, completion: nil)
+        let report = UITableViewRowAction(style: .default, title: "Report") { (action, index) in
+            if MFMailComposeViewController.canSendMail() {
+                
+                let messageBody = "Specify the abuse or spam you saw from a user. Review the Terms & Conditions."
+                let toRecipients = ["peekapp.contact@gmail.com"]
+                let mc = MFMailComposeViewController()
+                mc.mailComposeDelegate = self
+                mc.setMessageBody(messageBody, isHTML: false)
+                mc.setToRecipients(toRecipients)
+                
+                self.present(mc, animated: true, completion: nil)
+                
+            } else {
+                self.presentErrorAlert()
+            }
         }
-        share.backgroundColor = UIColor(red: 30/255, green: 215/255, blue: 96/255, alpha: 1.0)
-        return [share]
+        return [report]
     }
     
-    // MARK: - Navigation
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        dismiss(animated: true, completion: nil)
+    }
     
+    func presentErrorAlert() {
+        let errorAlert = UIAlertController(title: "Error Sending Email", message: "Check email configuration then try again.", preferredStyle: .alert)
+        
+        let dismissAction = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+        errorAlert.addAction(dismissAction)
+        
+        present(errorAlert, animated: true, completion: nil)
+    }
+
+    
+    // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toComments" {
@@ -221,15 +201,19 @@ extension PeekListTableViewController {
     func composeButtonMenuAnimation() {
         self.view.addSubview(menuView)
         menuView.layer.frame = CGRect(x: 0, y: -100, width: view.frame.size.width, height: menuView.frame.size.height)
-        menuView.layer.cornerRadius = 8
+        menuView.layer.cornerRadius = 2
         
         dimView.frame = CGRect(x: view.frame.origin.x, y: view.frame.origin.y + 45, width: view.frame.size.width, height: view.frame.size.height)
         dimView.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.75)
         dimView.alpha = 0
         
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 5, options: .curveEaseIn, animations: {
+        dismissButton.frame = CGRect(x: view.frame.origin.x, y: view.frame.origin.y, width: view.frame.size.width, height: view.frame.size.height - menuView.frame.size.height)
+        dismissButton.addTarget(self, action: #selector(tapToExit(_:)), for: .touchUpInside)
+        
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.75, initialSpringVelocity: 0.75, options: .curveEaseIn, animations: {
             self.menuView.frame.origin.y = 0
             self.view.addSubview(self.dimView)
+            self.view.addSubview(self.dismissButton)
             self.dimView.alpha = 0.75
             self.view.bringSubview(toFront: self.menuView)
             self.tableView.isScrollEnabled = false
@@ -243,7 +227,12 @@ extension PeekListTableViewController {
         }) { (_) in
             self.menuView.removeFromSuperview()
             self.dimView.removeFromSuperview()
+            self.dismissButton.removeFromSuperview()
             self.tableView.isScrollEnabled = true
         }
+    }
+    
+    func tapToExit(_ sender: UIButton) {
+        exitComposeMenu()
     }
 }

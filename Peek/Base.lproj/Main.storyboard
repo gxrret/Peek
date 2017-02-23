@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -253,6 +254,27 @@ If you have any questions about these Terms, please contact us at peek app.conta
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="fQM-9l-D7W" style="IBUITableViewCellStyleDefault" id="clz-12-ZbV">
+                                        <rect key="frame" x="0.0" y="188" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="clz-12-ZbV" id="PcR-gq-5zE">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="👤 About Peek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fQM-9l-D7W">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="Qi5-W8-xnf" kind="show" id="Nb3-pE-KyJ"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -262,7 +284,7 @@ If you have any questions about these Terms, please contact us at peek app.conta
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="MORE" id="NHK-8V-ENP">
-                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="6vz-tf-kGo">
+                        <barButtonItem key="leftBarButtonItem" title="Dismiss" id="6vz-tf-kGo">
                             <connections>
                                 <action selector="doneButtonTapped:" destination="PoP-NH-DrK" id="vW5-ba-dzB"/>
                             </connections>
@@ -466,6 +488,46 @@ If you have concerns about the way Peek is handling your Information, please let
             </objects>
             <point key="canvasLocation" x="4694" y="1767"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="mtK-rW-HZq">
+            <objects>
+                <viewController id="Qi5-W8-xnf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4dC-zw-cbQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="rT7-WS-mve"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JJm-1t-NcG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="peek icon with text" translatesAutoresizingMaskIntoConstraints="NO" id="wLi-tu-ax0">
+                                <rect key="frame" x="43" y="264.5" width="290" height="138"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3P-Ut-03N">
+                                <rect key="frame" x="132.5" y="410.5" width="110" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="H9n-uz-axv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92146831750869751" green="0.92162626981735229" blue="0.92145836353302002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wLi-tu-ax0" firstAttribute="centerX" secondItem="r3P-Ut-03N" secondAttribute="centerX" id="08O-rT-byO"/>
+                            <constraint firstItem="r3P-Ut-03N" firstAttribute="centerX" secondItem="JJm-1t-NcG" secondAttribute="centerX" id="Ijx-2o-qGg"/>
+                            <constraint firstItem="wLi-tu-ax0" firstAttribute="leading" secondItem="JJm-1t-NcG" secondAttribute="leadingMargin" constant="27" id="Q3J-Q2-Jd7"/>
+                            <constraint firstItem="r3P-Ut-03N" firstAttribute="top" secondItem="wLi-tu-ax0" secondAttribute="bottom" constant="8" symbolic="YES" id="Z5A-aE-qPV"/>
+                            <constraint firstItem="rT7-WS-mve" firstAttribute="top" secondItem="r3P-Ut-03N" secondAttribute="bottom" constant="236" id="dS4-vX-fZl"/>
+                            <constraint firstItem="wLi-tu-ax0" firstAttribute="centerY" secondItem="JJm-1t-NcG" secondAttribute="centerY" id="xwb-gF-vWz"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dN5-vs-jkj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5431.1999999999998" y="1746.4767616191905"/>
+        </scene>
         <!--Peek List Table View Controller-->
         <scene sceneID="TWp-Hg-9Sn">
             <objects>
@@ -474,7 +536,8 @@ If you have concerns about the way Peek is handling your Information, please let
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.89381009340286255" green="0.90204864740371704" blue="0.90194469690322876" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="0.11764705882352941" green="0.84313725490196079" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="peekCell" rowHeight="516" id="OTS-hB-8nl" customClass="PeekTableViewCell" customModule="Peek" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="56" width="375" height="516"/>
@@ -483,90 +546,80 @@ If you have concerns about the way Peek is handling your Information, please let
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="515"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fuz-8D-oCA">
-                                            <rect key="frame" x="8" y="14" width="273" height="82"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZM-wX-QdW">
-                                            <rect key="frame" x="8" y="472" width="89" height="38"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="89" id="tyW-MS-wfU"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="10"/>
+                                            <rect key="frame" x="8" y="475" width="127" height="24"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="11"/>
                                             <color key="textColor" red="0.57647058823529407" green="0.58823529411764708" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wS-Us-5WI">
-                                            <rect key="frame" x="328" y="44" width="39" height="22"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="39" id="FV3-o1-boi"/>
-                                            </constraints>
-                                            <state key="normal" image="more button"/>
-                                            <connections>
-                                                <action selector="reportButtonTapped:" destination="v4G-UX-vZT" eventType="touchUpInside" id="rTr-54-ttL"/>
-                                            </connections>
-                                        </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMx-bS-Jbf">
-                                            <rect key="frame" x="131" y="473" width="122" height="36"/>
+                                            <rect key="frame" x="172" y="475" width="113" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="113" id="4h8-Ad-ADp"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="11"/>
                                             <color key="textColor" red="0.57647058823529407" green="0.58823529411764708" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7gS-XZ-k3n">
-                                            <rect key="frame" x="0.0" y="104" width="375" height="361"/>
+                                            <rect key="frame" x="0.0" y="92" width="375" height="375"/>
                                             <gestureRecognizers/>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location icon" translatesAutoresizingMaskIntoConstraints="NO" id="j1Q-pJ-r9G">
-                                            <rect key="frame" x="113" y="481" width="11" height="20"/>
+                                            <rect key="frame" x="148" y="478" width="11" height="19"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="11" id="2Ly-al-GPn"/>
+                                                <constraint firstAttribute="width" constant="11" id="Pd7-Gb-cQJ"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Comment Icon" translatesAutoresizingMaskIntoConstraints="NO" id="I7x-JI-u78">
+                                            <rect key="frame" x="299" y="477" width="18" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="18" id="4kp-t4-nMP"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GP0-B9-VkC">
-                                            <rect key="frame" x="280" y="481" width="20" height="20"/>
+                                            <rect key="frame" x="319" y="480" width="20" height="17"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="20" id="r0q-O8-zT6"/>
+                                                <constraint firstAttribute="height" constant="17" id="7WE-SW-Wpt"/>
+                                                <constraint firstAttribute="width" constant="20" id="bBa-7C-EFc"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="11"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Comment Icon" translatesAutoresizingMaskIntoConstraints="NO" id="I7x-JI-u78">
-                                            <rect key="frame" x="300" y="486" width="10" height="10"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fuz-8D-oCA">
+                                            <rect key="frame" x="8" y="21" width="223" height="53"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="10" id="jpY-fO-pRi"/>
-                                                <constraint firstAttribute="width" constant="10" id="wSX-IC-vkC"/>
+                                                <constraint firstAttribute="height" constant="53" id="IGJ-0G-Ku4"/>
+                                                <constraint firstAttribute="width" constant="223" id="ZKM-MP-KEe"/>
                                             </constraints>
-                                        </imageView>
+                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="7gS-XZ-k3n" firstAttribute="top" secondItem="fuz-8D-oCA" secondAttribute="bottom" constant="8" symbolic="YES" id="1sI-uJ-6Fp"/>
-                                        <constraint firstItem="j1Q-pJ-r9G" firstAttribute="top" secondItem="7gS-XZ-k3n" secondAttribute="bottom" constant="16" id="3XV-Er-Qmm"/>
-                                        <constraint firstItem="6wS-Us-5WI" firstAttribute="leading" secondItem="fuz-8D-oCA" secondAttribute="trailing" constant="47" id="3hY-e2-cN1"/>
-                                        <constraint firstItem="j1Q-pJ-r9G" firstAttribute="bottom" secondItem="GP0-B9-VkC" secondAttribute="bottom" id="4Pe-bW-MXM"/>
-                                        <constraint firstItem="gMx-bS-Jbf" firstAttribute="leading" secondItem="j1Q-pJ-r9G" secondAttribute="trailing" constant="7" id="6rB-fg-009"/>
-                                        <constraint firstItem="GP0-B9-VkC" firstAttribute="leading" secondItem="gMx-bS-Jbf" secondAttribute="trailing" constant="27" id="7Hu-n3-70p"/>
-                                        <constraint firstAttribute="trailing" secondItem="7gS-XZ-k3n" secondAttribute="trailing" id="8Vj-tg-mRI"/>
-                                        <constraint firstItem="6wS-Us-5WI" firstAttribute="trailing" secondItem="fqG-iv-Uxx" secondAttribute="trailingMargin" id="8ao-Lr-XTx"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="I7x-JI-u78" secondAttribute="trailing" constant="57" id="DNY-JC-qID"/>
-                                        <constraint firstItem="DZM-wX-QdW" firstAttribute="centerY" secondItem="j1Q-pJ-r9G" secondAttribute="centerY" id="DwZ-X1-X2M"/>
-                                        <constraint firstItem="fuz-8D-oCA" firstAttribute="centerY" secondItem="6wS-Us-5WI" secondAttribute="centerY" id="GNM-12-mdE"/>
-                                        <constraint firstItem="j1Q-pJ-r9G" firstAttribute="leading" secondItem="DZM-wX-QdW" secondAttribute="trailing" constant="16" id="HgN-gg-TA5"/>
-                                        <constraint firstItem="DZM-wX-QdW" firstAttribute="top" secondItem="7gS-XZ-k3n" secondAttribute="bottom" constant="7" id="Hqc-ao-ump"/>
-                                        <constraint firstItem="7gS-XZ-k3n" firstAttribute="leading" secondItem="fqG-iv-Uxx" secondAttribute="leading" id="IdT-ur-lfU"/>
-                                        <constraint firstItem="j1Q-pJ-r9G" firstAttribute="top" secondItem="GP0-B9-VkC" secondAttribute="top" id="Kn8-78-mVy"/>
-                                        <constraint firstItem="j1Q-pJ-r9G" firstAttribute="centerY" secondItem="gMx-bS-Jbf" secondAttribute="centerY" id="MUP-hW-Qpy"/>
-                                        <constraint firstItem="I7x-JI-u78" firstAttribute="top" secondItem="7gS-XZ-k3n" secondAttribute="bottom" constant="21" id="Omo-qL-ppK"/>
-                                        <constraint firstItem="gMx-bS-Jbf" firstAttribute="top" secondItem="7gS-XZ-k3n" secondAttribute="bottom" constant="8" symbolic="YES" id="ahn-pj-0MX"/>
-                                        <constraint firstItem="7gS-XZ-k3n" firstAttribute="top" secondItem="6wS-Us-5WI" secondAttribute="bottom" constant="38" id="iA0-T0-7XQ"/>
-                                        <constraint firstItem="I7x-JI-u78" firstAttribute="leading" secondItem="GP0-B9-VkC" secondAttribute="trailing" id="mYy-cx-1zr"/>
-                                        <constraint firstItem="fuz-8D-oCA" firstAttribute="leading" secondItem="DZM-wX-QdW" secondAttribute="leading" id="nWA-qS-1KH"/>
-                                        <constraint firstItem="fuz-8D-oCA" firstAttribute="top" secondItem="fqG-iv-Uxx" secondAttribute="topMargin" constant="6" id="nw1-Y2-qv8"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="gMx-bS-Jbf" secondAttribute="bottom" constant="-2" id="ueU-EF-dVg"/>
-                                        <constraint firstItem="GP0-B9-VkC" firstAttribute="centerY" secondItem="I7x-JI-u78" secondAttribute="centerY" id="vEp-kb-lSj"/>
-                                        <constraint firstItem="fuz-8D-oCA" firstAttribute="leading" secondItem="fqG-iv-Uxx" secondAttribute="leadingMargin" id="ztU-ii-10p"/>
+                                        <constraint firstItem="I7x-JI-u78" firstAttribute="leading" secondItem="gMx-bS-Jbf" secondAttribute="trailing" constant="14" id="6Mn-g2-uan"/>
+                                        <constraint firstItem="gMx-bS-Jbf" firstAttribute="centerY" secondItem="I7x-JI-u78" secondAttribute="centerY" id="9gR-Mb-hyi"/>
+                                        <constraint firstItem="7gS-XZ-k3n" firstAttribute="leading" secondItem="fqG-iv-Uxx" secondAttribute="leading" id="Cmv-g9-gd3"/>
+                                        <constraint firstItem="j1Q-pJ-r9G" firstAttribute="leading" secondItem="DZM-wX-QdW" secondAttribute="trailing" constant="13" id="QaK-1U-UPU"/>
+                                        <constraint firstItem="gMx-bS-Jbf" firstAttribute="top" secondItem="7gS-XZ-k3n" secondAttribute="bottom" constant="8" id="QyE-0s-fao"/>
+                                        <constraint firstItem="I7x-JI-u78" firstAttribute="bottom" secondItem="GP0-B9-VkC" secondAttribute="bottom" id="Rku-AL-seg"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="DZM-wX-QdW" secondAttribute="bottom" constant="8" id="SRC-Tr-yQt"/>
+                                        <constraint firstItem="j1Q-pJ-r9G" firstAttribute="bottom" secondItem="I7x-JI-u78" secondAttribute="bottom" id="Zkh-lr-QBb"/>
+                                        <constraint firstItem="7gS-XZ-k3n" firstAttribute="top" secondItem="fuz-8D-oCA" secondAttribute="bottom" constant="18" id="aIb-UP-6cd"/>
+                                        <constraint firstItem="j1Q-pJ-r9G" firstAttribute="centerY" secondItem="gMx-bS-Jbf" secondAttribute="centerY" id="al0-fG-MYd"/>
+                                        <constraint firstItem="fuz-8D-oCA" firstAttribute="leading" secondItem="fqG-iv-Uxx" secondAttribute="leadingMargin" id="f12-Af-ohl"/>
+                                        <constraint firstItem="j1Q-pJ-r9G" firstAttribute="top" secondItem="7gS-XZ-k3n" secondAttribute="bottom" constant="11" id="fWY-fB-4Xc"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="GP0-B9-VkC" secondAttribute="trailing" constant="28" id="gRj-ee-aHI"/>
+                                        <constraint firstItem="gMx-bS-Jbf" firstAttribute="leading" secondItem="j1Q-pJ-r9G" secondAttribute="trailing" constant="13" id="isb-QN-19S"/>
+                                        <constraint firstItem="DZM-wX-QdW" firstAttribute="bottom" secondItem="gMx-bS-Jbf" secondAttribute="bottom" id="jQI-Od-13k"/>
+                                        <constraint firstAttribute="trailing" secondItem="7gS-XZ-k3n" secondAttribute="trailing" id="oRz-7a-vWU"/>
+                                        <constraint firstItem="GP0-B9-VkC" firstAttribute="top" secondItem="7gS-XZ-k3n" secondAttribute="bottom" constant="13" id="oin-zz-Feh"/>
+                                        <constraint firstItem="GP0-B9-VkC" firstAttribute="leading" secondItem="I7x-JI-u78" secondAttribute="trailing" constant="2" id="pJ1-2p-LeQ"/>
+                                        <constraint firstItem="fuz-8D-oCA" firstAttribute="leading" secondItem="DZM-wX-QdW" secondAttribute="leading" id="sF4-Bm-F5P"/>
+                                        <constraint firstItem="DZM-wX-QdW" firstAttribute="firstBaseline" secondItem="gMx-bS-Jbf" secondAttribute="firstBaseline" id="vXB-Ef-foG"/>
+                                        <constraint firstItem="fuz-8D-oCA" firstAttribute="top" secondItem="fqG-iv-Uxx" secondAttribute="topMargin" constant="13" id="yzo-Xh-ggW"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -629,16 +682,35 @@ If you have concerns about the way Peek is handling your Information, please let
                     <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UaN-MQ-Pt5">
-                            <rect key="frame" x="113" y="25" width="50" height="50"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="50" id="4gn-VS-PgM"/>
-                            </constraints>
-                            <state key="normal" image="text icon"/>
-                            <connections>
-                                <segue destination="yvB-vw-jmj" kind="show" id="vDE-WC-WKc"/>
-                            </connections>
-                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="3tL-gk-ENU">
+                            <rect key="frame" x="120" y="24" width="135" height="50"/>
+                            <subviews>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UaN-MQ-Pt5">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="QT4-7f-JRD"/>
+                                        <constraint firstAttribute="width" constant="50" id="XIN-6x-kWA"/>
+                                    </constraints>
+                                    <state key="normal" image="text icon"/>
+                                    <connections>
+                                        <segue destination="yvB-vw-jmj" kind="show" id="vDE-WC-WKc"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVO-mv-bvJ">
+                                    <rect key="frame" x="85" y="0.0" width="50" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="50" id="0zi-Qn-JgF"/>
+                                        <constraint firstAttribute="height" constant="50" id="puc-FE-BYk"/>
+                                    </constraints>
+                                    <state key="normal" image="camera icon">
+                                        <color key="titleColor" red="0.54556630710659904" green="0.54556630710659904" blue="0.54556630710659904" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <segue destination="d7o-Fg-nyx" kind="show" id="0NK-a3-7B7"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmI-Lc-XoZ">
                             <rect key="frame" x="323" y="37" width="52" height="52"/>
                             <constraints>
@@ -661,37 +733,20 @@ If you have concerns about the way Peek is handling your Information, please let
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVO-mv-bvJ">
-                            <rect key="frame" x="212" y="25" width="50" height="50"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="50" id="3jH-g4-x6D"/>
-                            </constraints>
-                            <state key="normal" image="camera icon">
-                                <color key="titleColor" red="0.54556630710659904" green="0.54556630710659904" blue="0.54556630710659904" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </state>
-                            <connections>
-                                <segue destination="d7o-Fg-nyx" kind="show" id="0NK-a3-7B7"/>
-                            </connections>
-                        </button>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstItem="LVO-mv-bvJ" firstAttribute="leading" secondItem="UaN-MQ-Pt5" secondAttribute="trailing" constant="49" id="1Nc-jc-shT"/>
-                        <constraint firstAttribute="bottom" secondItem="UaN-MQ-Pt5" secondAttribute="bottom" constant="14" id="2qA-v5-r4i"/>
                         <constraint firstItem="xmI-Lc-XoZ" firstAttribute="top" secondItem="ymL-qq-kTQ" secondAttribute="top" constant="37" id="6iQ-4f-pNF"/>
-                        <constraint firstItem="UaN-MQ-Pt5" firstAttribute="top" secondItem="LVO-mv-bvJ" secondAttribute="top" id="C0I-Ic-n90"/>
                         <constraint firstItem="495-Ju-dxO" firstAttribute="centerX" secondItem="ymL-qq-kTQ" secondAttribute="centerX" id="DR2-Aw-yjN"/>
                         <constraint firstAttribute="bottom" secondItem="xmI-Lc-XoZ" secondAttribute="bottom" id="Noc-mg-bfh"/>
-                        <constraint firstItem="xmI-Lc-XoZ" firstAttribute="leading" secondItem="LVO-mv-bvJ" secondAttribute="trailing" constant="61" id="SVF-Mp-QV7"/>
+                        <constraint firstItem="3tL-gk-ENU" firstAttribute="centerX" secondItem="ymL-qq-kTQ" secondAttribute="centerX" id="U4f-Qt-Xhw"/>
                         <constraint firstAttribute="trailing" secondItem="xmI-Lc-XoZ" secondAttribute="trailing" id="U8r-td-4Sj"/>
-                        <constraint firstAttribute="trailing" secondItem="LVO-mv-bvJ" secondAttribute="trailing" constant="113" id="akd-S3-El4"/>
                         <constraint firstItem="495-Ju-dxO" firstAttribute="top" secondItem="ymL-qq-kTQ" secondAttribute="top" constant="3" id="aox-rk-WEq"/>
-                        <constraint firstItem="UaN-MQ-Pt5" firstAttribute="bottom" secondItem="LVO-mv-bvJ" secondAttribute="bottom" id="e20-3J-CoZ"/>
-                        <constraint firstItem="UaN-MQ-Pt5" firstAttribute="top" secondItem="495-Ju-dxO" secondAttribute="bottom" constant="5" id="pLi-WS-ibd"/>
+                        <constraint firstItem="3tL-gk-ENU" firstAttribute="top" secondItem="495-Ju-dxO" secondAttribute="bottom" constant="4" id="uu7-2Q-bgS"/>
                     </constraints>
                 </view>
             </objects>
-            <point key="canvasLocation" x="3654" y="39"/>
+            <point key="canvasLocation" x="3653.5999999999999" y="38.23088455772114"/>
         </scene>
         <!--💬 COMMENTS-->
         <scene sceneID="Nqi-jn-3d0">
@@ -797,8 +852,8 @@ If you have concerns about the way Peek is handling your Information, please let
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="An amusing title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yHG-4x-rqM">
-                                                    <rect key="frame" x="8" y="0.0" width="324" height="69"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="An amusing title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yHG-4x-rqM">
+                                                    <rect key="frame" x="8" y="17" width="324" height="44"/>
                                                     <color key="backgroundColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
@@ -810,7 +865,7 @@ If you have concerns about the way Peek is handling your Information, please let
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rn2-Ut-VZc">
                                                     <rect key="frame" x="332" y="49" width="35" height="20"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="35" id="lXx-gp-bKG"/>
+                                                        <constraint firstAttribute="width" constant="35" id="C4Z-Vw-HdD"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -818,13 +873,13 @@ If you have concerns about the way Peek is handling your Information, please let
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="yHG-4x-rqM" firstAttribute="top" secondItem="LNn-3Z-9YM" secondAttribute="top" id="J7v-UO-AcW"/>
-                                                <constraint firstItem="rn2-Ut-VZc" firstAttribute="leading" secondItem="yHG-4x-rqM" secondAttribute="trailing" id="SXL-bA-CzX"/>
-                                                <constraint firstItem="yHG-4x-rqM" firstAttribute="bottom" secondItem="rn2-Ut-VZc" secondAttribute="bottom" id="U1o-XD-QG1"/>
-                                                <constraint firstAttribute="bottom" secondItem="yHG-4x-rqM" secondAttribute="bottom" id="fuw-9A-swv"/>
-                                                <constraint firstItem="rn2-Ut-VZc" firstAttribute="trailing" secondItem="LNn-3Z-9YM" secondAttribute="trailingMargin" id="mKb-Na-33X"/>
-                                                <constraint firstItem="yHG-4x-rqM" firstAttribute="leading" secondItem="LNn-3Z-9YM" secondAttribute="leadingMargin" id="oLa-MB-PYa"/>
-                                                <constraint firstItem="rn2-Ut-VZc" firstAttribute="top" secondItem="LNn-3Z-9YM" secondAttribute="topMargin" constant="41" id="u26-50-iz0"/>
+                                                <constraint firstItem="rn2-Ut-VZc" firstAttribute="top" secondItem="LNn-3Z-9YM" secondAttribute="topMargin" constant="41" id="8Ka-K7-FPE"/>
+                                                <constraint firstItem="rn2-Ut-VZc" firstAttribute="leading" secondItem="yHG-4x-rqM" secondAttribute="trailing" id="Iw0-Ox-XbZ"/>
+                                                <constraint firstItem="yHG-4x-rqM" firstAttribute="top" secondItem="LNn-3Z-9YM" secondAttribute="topMargin" constant="9" id="Vzf-hQ-Uft"/>
+                                                <constraint firstItem="rn2-Ut-VZc" firstAttribute="trailing" secondItem="LNn-3Z-9YM" secondAttribute="trailingMargin" id="Yjd-Sa-eBP"/>
+                                                <constraint firstAttribute="bottom" secondItem="rn2-Ut-VZc" secondAttribute="bottom" id="Zva-pQ-MjF"/>
+                                                <constraint firstItem="yHG-4x-rqM" firstAttribute="bottom" secondItem="LNn-3Z-9YM" secondAttribute="bottomMargin" id="nqe-ye-QRf"/>
+                                                <constraint firstItem="yHG-4x-rqM" firstAttribute="leading" secondItem="LNn-3Z-9YM" secondAttribute="leadingMargin" id="pDC-7c-GwU"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -914,7 +969,7 @@ If you have concerns about the way Peek is handling your Information, please let
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="942-IT-ecc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6188" y="-1435"/>
+            <point key="canvasLocation" x="6188" y="-1435.2323838080961"/>
         </scene>
         <!--Rules View Controller-->
         <scene sceneID="H3R-2j-5hG">
@@ -1103,7 +1158,7 @@ Our Service allows you to post, upload images, share information, and otherwise 
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="An amusing title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hek-9m-4rF">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="What's on your mind?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hek-9m-4rF">
                                                     <rect key="frame" x="8" y="8" width="359" height="52"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
@@ -1182,7 +1237,7 @@ Our Service allows you to post, upload images, share information, and otherwise 
         <image name="accept button" width="258" height="33"/>
         <image name="camera icon" width="99" height="99"/>
         <image name="location icon" width="34" height="58"/>
-        <image name="more button" width="30" height="8"/>
+        <image name="peek icon with text" width="374" height="138"/>
         <image name="photo icon" width="99" height="99"/>
         <image name="text icon" width="99" height="99"/>
     </resources>

@@ -1,5 +1,6 @@
 # Peek
 An anonymous social media app for iOS - developed in Swift 3.0
+
 Technologies: CloudKit, CoreLocation, NSUserDefaults
 
 Privacy Policy

@@ -593,7 +593,7 @@ If you have concerns about the way Peek is handling your Information, please let
                                                 <constraint firstAttribute="height" constant="53" id="IGJ-0G-Ku4"/>
                                                 <constraint firstAttribute="width" constant="223" id="ZKM-MP-KEe"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>

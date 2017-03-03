@@ -13,6 +13,11 @@ What Information Peek Collects and Why
 Information from the user
 
 As Peek is an anonymous social media application, we still need to keep an account of who you are through an iCloud account that you are logged into on your device.  This does not include any encrypted data including 
+  - passwords
+  - other accounts
+  - phone numbers
+  - emails
+  - other sensitive data
 
 Why do we collect this information?
 - To access Peek in its entirety, you will need an iCloud account.

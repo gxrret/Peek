@@ -25,8 +25,6 @@ class CommentsTableViewController: UITableViewController, MFMailComposeViewContr
         
         navigationController?.isNavigationBarHidden = false
         
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 200
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -81,6 +79,16 @@ class CommentsTableViewController: UITableViewController, MFMailComposeViewContr
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "commentCell", for: indexPath)
+        
+        cell.backgroundColor = .clear
+        cell.contentView.backgroundColor = .clear
+        
+        let whiteRoundedView: UIView = UIView(frame: CGRect(x: 10, y: 8, width: self.view.frame.size.width - 20, height: cell.frame.size.height - 10))
+        whiteRoundedView.layer.backgroundColor = CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(), components: [1.0, 1.0, 1.0, 0.9])
+        whiteRoundedView.layer.masksToBounds = false
+        whiteRoundedView.layer.cornerRadius = 4.0
+        cell.contentView.addSubview(whiteRoundedView)
+        cell.contentView.sendSubview(toBack: whiteRoundedView)
         
         guard let comment = peek?.comments[indexPath.row] else { return cell }
         

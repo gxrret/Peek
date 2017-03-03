@@ -129,7 +129,7 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
         let whiteRoundedView: UIView = UIView(frame: CGRect(x: 10, y: 8, width: self.view.frame.size.width - 20, height: cell.frame.size.height - 10))
         whiteRoundedView.layer.backgroundColor = CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(), components: [1.0, 1.0, 1.0, 0.9])
         whiteRoundedView.layer.masksToBounds = false
-        whiteRoundedView.layer.cornerRadius = 8.0
+        whiteRoundedView.layer.cornerRadius = 4.0
         cell.contentView.addSubview(whiteRoundedView)
         cell.contentView.sendSubview(toBack: whiteRoundedView)
         
@@ -166,6 +166,7 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
                 self.presentErrorAlert()
             }
         }
+        report.backgroundColor = .clear
         return [report]
     }
     

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AC05B1D21E4180F8003FBCBF /* AddPeekwithTextTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC05B1D11E4180F8003FBCBF /* AddPeekwithTextTableViewController.swift */; };
 		AC0941F51E69E4E0009FEA90 /* PulsingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0941F41E69E4E0009FEA90 /* PulsingAnimation.swift */; };
+		AC0941F81E69E979009FEA90 /* RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0941F71E69E979009FEA90 /* RandomColor.swift */; };
 		AC125DA51E4B928E005204FA /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC125DA41E4B928E005204FA /* DateHelper.swift */; };
 		AC1CBBAF1E3812E900F77E01 /* PeekTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1CBBAE1E3812E900F77E01 /* PeekTableViewCell.swift */; };
 		AC4CB5E81E4E838A00979D03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4CB5E61E4E838A00979D03 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		AC05B1D11E4180F8003FBCBF /* AddPeekwithTextTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPeekwithTextTableViewController.swift; sourceTree = "<group>"; };
 		AC0941F41E69E4E0009FEA90 /* PulsingAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulsingAnimation.swift; sourceTree = "<group>"; };
+		AC0941F71E69E979009FEA90 /* RandomColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomColor.swift; sourceTree = "<group>"; };
 		AC125DA41E4B928E005204FA /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		AC1CBBAA1E38102200F77E01 /* Peek.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Peek.entitlements; sourceTree = "<group>"; };
 		AC1CBBAE1E3812E900F77E01 /* PeekTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeekTableViewCell.swift; sourceTree = "<group>"; };
@@ -80,6 +82,23 @@
 				AC0941F41E69E4E0009FEA90 /* PulsingAnimation.swift */,
 			);
 			name = Animations;
+			sourceTree = "<group>";
+		};
+		AC0941F91E69E97D009FEA90 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AC0941F71E69E979009FEA90 /* RandomColor.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		AC0941FA1E69E985009FEA90 /* Helper Functions */ = {
+			isa = PBXGroup;
+			children = (
+				AC0941F91E69E97D009FEA90 /* Helpers */,
+				AC0941F61E69E4E4009FEA90 /* Animations */,
+			);
+			name = "Helper Functions";
 			sourceTree = "<group>";
 		};
 		AC09DB211E451EFC00903897 /* Location Files */ = {
@@ -187,7 +206,7 @@
 				AC84A1661E37B8DE0053C77F /* Model Controller */,
 				ACACADBA1E36A86B00575BB0 /* View Controllers */,
 				AC2871B61E3933F90014151E /* Custom Cells */,
-				AC0941F61E69E4E4009FEA90 /* Animations */,
+				AC0941FA1E69E985009FEA90 /* Helper Functions */,
 				AC09DB211E451EFC00903897 /* Location Files */,
 				AC09DB221E451F1100903897 /* Resources */,
 			);
@@ -298,6 +317,7 @@
 				AC1CBBAF1E3812E900F77E01 /* PeekTableViewCell.swift in Sources */,
 				AC84A1681E37BF3B0053C77F /* Comment.swift in Sources */,
 				AC84A15D1E37B5440053C77F /* Peek.swift in Sources */,
+				AC0941F81E69E979009FEA90 /* RandomColor.swift in Sources */,
 				ACACADC21E36BB9800575BB0 /* AddPeekwithImageTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

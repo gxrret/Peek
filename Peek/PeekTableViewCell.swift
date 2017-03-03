@@ -26,6 +26,7 @@ class PeekTableViewCell: UITableViewCell {
         peekTimeLabel.text = DateHelper.timeAgoSincePeek(peek.timestamp)
         
         peekImageView.image = peek.photo
+        peekImageView.layer.cornerRadius = 3.0
         
         if peek.comments.count == 0 {
             commentsLabel.text = "0"

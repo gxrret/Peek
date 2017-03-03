@@ -97,7 +97,7 @@ class DateHelper {
         }
         
         if let week = components.weekOfYear, week >= 2 {
-            return "\(week)w"
+            return "\(week) weeks ago"
         }
         
         if let week = components.weekOfYear, week >= 1 {

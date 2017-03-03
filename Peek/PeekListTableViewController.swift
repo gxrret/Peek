@@ -54,6 +54,7 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
     @IBAction func refreshControlPulled(_ sender: UIRefreshControl) {
         
         refreshControl?.tintColor = UIColor(red: 30/255, green: 215/255, blue: 96/255, alpha: 1.0)
+        refreshControl?.backgroundColor = RandomColor.getRandomColor()
         requestFullSync {
             self.refreshControl?.endRefreshing()
         }
@@ -120,22 +121,32 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "peekCell", for: indexPath) as? PeekTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "peekCell", for: indexPath) as? PeekTableViewCell else { return UITableViewCell() }
+        
+        cell.backgroundColor = .clear
+        cell.contentView.backgroundColor = .clear
+        
+        let whiteRoundedView: UIView = UIView(frame: CGRect(x: 10, y: 8, width: self.view.frame.size.width - 20, height: cell.frame.size.height - 10))
+        whiteRoundedView.layer.backgroundColor = CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(), components: [1.0, 1.0, 1.0, 0.9])
+        whiteRoundedView.layer.masksToBounds = false
+        whiteRoundedView.layer.cornerRadius = 8.0
+        cell.contentView.addSubview(whiteRoundedView)
+        cell.contentView.sendSubview(toBack: whiteRoundedView)
         
         switch segmentedControl.selectedSegmentIndex {
         case 0:
             let peek = PeekController.sharedController.sortedPeeksByTime[indexPath.row]
-            cell?.updateWithPeek(peek: peek)
+            cell.updateWithPeek(peek: peek)
             break
         case 1:
             let peek = PeekController.sharedController.sortedPeeksByNumberOfComments[indexPath.row]
-            cell?.updateWithPeek(peek: peek)
+            cell.updateWithPeek(peek: peek)
             break
         default:
             break
         }
         
-        return cell ?? UITableViewCell()
+        return cell
     }
 
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {

@@ -24,6 +24,9 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        refreshControl?.tintColor = UIColor(red: 30/255, green: 215/255, blue: 96/255, alpha: 1.0)
+        refreshControl?.backgroundColor = tableView.backgroundColor
+        
         requestFullSync()
         
         let nc = NotificationCenter.default
@@ -53,8 +56,6 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
     
     @IBAction func refreshControlPulled(_ sender: UIRefreshControl) {
         
-        refreshControl?.tintColor = UIColor(red: 30/255, green: 215/255, blue: 96/255, alpha: 1.0)
-        refreshControl?.backgroundColor = RandomColor.getRandomColor()
         requestFullSync {
             self.refreshControl?.endRefreshing()
         }
@@ -92,15 +93,21 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
         var returnString = ""
         switch (segmentedControl.selectedSegmentIndex) {
         case 0:
-            returnString = "Newest Peeks"
+            returnString = "Newest😄"
             break
         case 1:
-            returnString = "Most Popular Peeks"
+            returnString = "Most Popular😎"
             break
         default:
             break
         }
         return returnString
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        view.tintColor = .clear
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = .black
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -123,6 +130,11 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "peekCell", for: indexPath) as? PeekTableViewCell else { return UITableViewCell() }
         
+        let bgColorView = UIView()
+        bgColorView.backgroundColor = .white
+        bgColorView.layer.cornerRadius = 4.0
+    
+        cell.selectedBackgroundView = bgColorView
         cell.backgroundColor = .clear
         cell.contentView.backgroundColor = .clear
         

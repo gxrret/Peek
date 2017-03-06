@@ -160,7 +160,7 @@ If you have any questions about these Terms, please contact us at peek app.conta
             <objects>
                 <navigationController storyboardIdentifier="mainVC" automaticallyAdjustsScrollViewInsets="NO" id="iE3-Ad-ohV" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="D8V-IH-HLF">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="D8V-IH-HLF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -546,13 +546,13 @@ If you have concerns about the way Peek is handling your Information, please let
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZM-wX-QdW">
-                                            <rect key="frame" x="8" y="476" width="127" height="24"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="11"/>
+                                            <rect key="frame" x="8" y="474" width="127" height="26"/>
+                                            <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="11"/>
                                             <color key="textColor" red="0.57647058823529407" green="0.58823529411764708" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMx-bS-Jbf">
-                                            <rect key="frame" x="172" y="476" width="113" height="24"/>
+                                            <rect key="frame" x="33" y="66" width="113" height="25"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="113" id="4h8-Ad-ADp"/>
                                             </constraints>
@@ -561,29 +561,19 @@ If you have concerns about the way Peek is handling your Information, please let
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location icon" translatesAutoresizingMaskIntoConstraints="NO" id="j1Q-pJ-r9G">
-                                            <rect key="frame" x="148" y="479" width="11" height="19"/>
+                                            <rect key="frame" x="18" y="69" width="11" height="19"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="11" id="Pd7-Gb-cQJ"/>
                                             </constraints>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Comment Icon" translatesAutoresizingMaskIntoConstraints="NO" id="I7x-JI-u78">
-                                            <rect key="frame" x="299" y="478" width="18" height="20"/>
+                                            <rect key="frame" x="163" y="478" width="18" height="19"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="18" id="4kp-t4-nMP"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GP0-B9-VkC">
-                                            <rect key="frame" x="319" y="481" width="20" height="17"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="17" id="7WE-SW-Wpt"/>
-                                                <constraint firstAttribute="width" constant="20" id="bBa-7C-EFc"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fuz-8D-oCA">
-                                            <rect key="frame" x="18" y="21" width="223" height="53"/>
+                                            <rect key="frame" x="18" y="8" width="223" height="53"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="53" id="IGJ-0G-Ku4"/>
                                                 <constraint firstAttribute="width" constant="223" id="ZKM-MP-KEe"/>
@@ -593,32 +583,43 @@ If you have concerns about the way Peek is handling your Information, please let
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7gS-XZ-k3n">
-                                            <rect key="frame" x="18" y="97" width="339" height="339"/>
+                                            <rect key="frame" x="18" y="97" width="339" height="338"/>
                                             <gestureRecognizers/>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GP0-B9-VkC">
+                                            <rect key="frame" x="184" y="479" width="20" height="17"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="17" id="7WE-SW-Wpt"/>
+                                                <constraint firstAttribute="width" constant="20" id="bBa-7C-EFc"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="I7x-JI-u78" firstAttribute="leading" secondItem="gMx-bS-Jbf" secondAttribute="trailing" constant="14" id="6Mn-g2-uan"/>
-                                        <constraint firstItem="gMx-bS-Jbf" firstAttribute="centerY" secondItem="I7x-JI-u78" secondAttribute="centerY" id="9gR-Mb-hyi"/>
+                                        <constraint firstItem="j1Q-pJ-r9G" firstAttribute="leading" secondItem="fqG-iv-Uxx" secondAttribute="leadingMargin" constant="10" id="38L-kt-ajW"/>
+                                        <constraint firstItem="I7x-JI-u78" firstAttribute="leading" secondItem="gMx-bS-Jbf" secondAttribute="trailing" constant="17" id="6Mn-g2-uan"/>
+                                        <constraint firstItem="gMx-bS-Jbf" firstAttribute="centerY" secondItem="I7x-JI-u78" secondAttribute="centerY" constant="-409" id="9gR-Mb-hyi"/>
                                         <constraint firstItem="7gS-XZ-k3n" firstAttribute="leading" secondItem="fqG-iv-Uxx" secondAttribute="leading" constant="18" id="Cmv-g9-gd3"/>
-                                        <constraint firstItem="j1Q-pJ-r9G" firstAttribute="leading" secondItem="DZM-wX-QdW" secondAttribute="trailing" constant="13" id="QaK-1U-UPU"/>
-                                        <constraint firstItem="gMx-bS-Jbf" firstAttribute="top" secondItem="7gS-XZ-k3n" secondAttribute="bottom" constant="40" id="QyE-0s-fao"/>
-                                        <constraint firstItem="I7x-JI-u78" firstAttribute="bottom" secondItem="GP0-B9-VkC" secondAttribute="bottom" id="Rku-AL-seg"/>
+                                        <constraint firstItem="j1Q-pJ-r9G" firstAttribute="leading" secondItem="DZM-wX-QdW" secondAttribute="trailing" constant="-117" id="QaK-1U-UPU"/>
+                                        <constraint firstItem="gMx-bS-Jbf" firstAttribute="top" secondItem="7gS-XZ-k3n" secondAttribute="bottom" constant="-369" id="QyE-0s-fao"/>
+                                        <constraint firstItem="I7x-JI-u78" firstAttribute="bottom" secondItem="GP0-B9-VkC" secondAttribute="bottom" constant="1" id="Rku-AL-seg"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="DZM-wX-QdW" secondAttribute="bottom" constant="8" id="SRC-Tr-yQt"/>
-                                        <constraint firstItem="j1Q-pJ-r9G" firstAttribute="bottom" secondItem="I7x-JI-u78" secondAttribute="bottom" id="Zkh-lr-QBb"/>
-                                        <constraint firstItem="7gS-XZ-k3n" firstAttribute="top" secondItem="fuz-8D-oCA" secondAttribute="bottom" constant="23" id="aIb-UP-6cd"/>
+                                        <constraint firstItem="j1Q-pJ-r9G" firstAttribute="bottom" secondItem="I7x-JI-u78" secondAttribute="bottom" constant="-409" id="Zkh-lr-QBb"/>
+                                        <constraint firstItem="7gS-XZ-k3n" firstAttribute="top" secondItem="fuz-8D-oCA" secondAttribute="bottom" constant="36" id="aIb-UP-6cd"/>
                                         <constraint firstItem="j1Q-pJ-r9G" firstAttribute="centerY" secondItem="gMx-bS-Jbf" secondAttribute="centerY" id="al0-fG-MYd"/>
                                         <constraint firstItem="fuz-8D-oCA" firstAttribute="leading" secondItem="fqG-iv-Uxx" secondAttribute="leadingMargin" constant="10" id="f12-Af-ohl"/>
-                                        <constraint firstItem="j1Q-pJ-r9G" firstAttribute="top" secondItem="7gS-XZ-k3n" secondAttribute="bottom" constant="43" id="fWY-fB-4Xc"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="GP0-B9-VkC" secondAttribute="trailing" constant="28" id="gRj-ee-aHI"/>
-                                        <constraint firstItem="gMx-bS-Jbf" firstAttribute="leading" secondItem="j1Q-pJ-r9G" secondAttribute="trailing" constant="13" id="isb-QN-19S"/>
-                                        <constraint firstItem="DZM-wX-QdW" firstAttribute="bottom" secondItem="gMx-bS-Jbf" secondAttribute="bottom" id="jQI-Od-13k"/>
+                                        <constraint firstItem="j1Q-pJ-r9G" firstAttribute="top" secondItem="7gS-XZ-k3n" secondAttribute="bottom" constant="-366" id="fWY-fB-4Xc"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="GP0-B9-VkC" secondAttribute="trailing" constant="163" id="gRj-ee-aHI"/>
+                                        <constraint firstItem="gMx-bS-Jbf" firstAttribute="leading" secondItem="j1Q-pJ-r9G" secondAttribute="trailing" constant="4" id="isb-QN-19S"/>
+                                        <constraint firstItem="DZM-wX-QdW" firstAttribute="bottom" secondItem="gMx-bS-Jbf" secondAttribute="bottom" constant="409" id="jQI-Od-13k"/>
                                         <constraint firstAttribute="trailing" secondItem="7gS-XZ-k3n" secondAttribute="trailing" constant="18" id="oRz-7a-vWU"/>
-                                        <constraint firstItem="GP0-B9-VkC" firstAttribute="top" secondItem="7gS-XZ-k3n" secondAttribute="bottom" constant="45" id="oin-zz-Feh"/>
-                                        <constraint firstItem="GP0-B9-VkC" firstAttribute="leading" secondItem="I7x-JI-u78" secondAttribute="trailing" constant="2" id="pJ1-2p-LeQ"/>
+                                        <constraint firstItem="GP0-B9-VkC" firstAttribute="top" secondItem="7gS-XZ-k3n" secondAttribute="bottom" constant="44" id="oin-zz-Feh"/>
+                                        <constraint firstItem="GP0-B9-VkC" firstAttribute="leading" secondItem="I7x-JI-u78" secondAttribute="trailing" constant="3" id="pJ1-2p-LeQ"/>
                                         <constraint firstItem="fuz-8D-oCA" firstAttribute="leading" secondItem="DZM-wX-QdW" secondAttribute="leading" constant="10" id="sF4-Bm-F5P"/>
-                                        <constraint firstItem="DZM-wX-QdW" firstAttribute="firstBaseline" secondItem="gMx-bS-Jbf" secondAttribute="firstBaseline" id="vXB-Ef-foG"/>
-                                        <constraint firstItem="fuz-8D-oCA" firstAttribute="top" secondItem="fqG-iv-Uxx" secondAttribute="topMargin" constant="13" id="yzo-Xh-ggW"/>
+                                        <constraint firstItem="DZM-wX-QdW" firstAttribute="firstBaseline" secondItem="gMx-bS-Jbf" secondAttribute="firstBaseline" constant="409" id="vXB-Ef-foG"/>
+                                        <constraint firstItem="fuz-8D-oCA" firstAttribute="top" secondItem="fqG-iv-Uxx" secondAttribute="topMargin" id="yzo-Xh-ggW"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1032,7 +1033,7 @@ Our Service allows you to post, upload images, share information, and otherwise 
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4SB-nV-Z88" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="VAq-eC-TvY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VAq-eC-TvY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1105,7 +1106,7 @@ Our Service allows you to post, upload images, share information, and otherwise 
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="d7o-Fg-nyx" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="oRo-FV-nVY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oRo-FV-nVY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1123,7 +1124,7 @@ Our Service allows you to post, upload images, share information, and otherwise 
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yvB-vw-jmj" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0jv-13-eDt">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0jv-13-eDt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

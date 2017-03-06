@@ -31,4 +31,14 @@ class TermsAndConditionsViewController: UIViewController, UITextViewDelegate {
         
         performSegue(withIdentifier: "toPeekView", sender: sender)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        let isOnboarding = UserDefaults.standard.bool(forKey: "onboarding")
+        if !isOnboarding {
+            let onboarding = UIStoryboard(name: "Onboarding", bundle: nil)
+            let vc = onboarding.instantiateViewController(withIdentifier: "Onboarding")
+            present(vc, animated: true, completion: nil)
+        }
+    }
 }

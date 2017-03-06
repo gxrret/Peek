@@ -11,6 +11,10 @@
 		AC0941F51E69E4E0009FEA90 /* PulsingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0941F41E69E4E0009FEA90 /* PulsingAnimation.swift */; };
 		AC125DA51E4B928E005204FA /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC125DA41E4B928E005204FA /* DateHelper.swift */; };
 		AC1CBBAF1E3812E900F77E01 /* PeekTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1CBBAE1E3812E900F77E01 /* PeekTableViewCell.swift */; };
+		AC4571831E6E19F900517A2A /* StoryboardInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4571821E6E19F900517A2A /* StoryboardInitializable.swift */; };
+		AC4571841E6E23A200517A2A /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC45717B1E6E134100517A2A /* Onboarding.storyboard */; };
+		AC4571861E6E273D00517A2A /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4571851E6E273D00517A2A /* Onboarding.swift */; };
+		AC4571881E6E277F00517A2A /* Tutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4571871E6E277F00517A2A /* Tutorial.swift */; };
 		AC4CB5E81E4E838A00979D03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4CB5E61E4E838A00979D03 /* Main.storyboard */; };
 		AC84A15D1E37B5440053C77F /* Peek.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84A15C1E37B5440053C77F /* Peek.swift */; };
 		AC84A1601E37B5630053C77F /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84A15F1E37B5630053C77F /* CloudKitManager.swift */; };
@@ -38,6 +42,10 @@
 		AC125DA41E4B928E005204FA /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		AC1CBBAA1E38102200F77E01 /* Peek.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Peek.entitlements; sourceTree = "<group>"; };
 		AC1CBBAE1E3812E900F77E01 /* PeekTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeekTableViewCell.swift; sourceTree = "<group>"; };
+		AC45717B1E6E134100517A2A /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		AC4571821E6E19F900517A2A /* StoryboardInitializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardInitializable.swift; sourceTree = "<group>"; };
+		AC4571851E6E273D00517A2A /* Onboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		AC4571871E6E277F00517A2A /* Tutorial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial.swift; sourceTree = "<group>"; };
 		AC4CB5E71E4E838A00979D03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC84A15C1E37B5440053C77F /* Peek.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Peek.swift; sourceTree = "<group>"; };
 		AC84A15F1E37B5630053C77F /* CloudKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
@@ -85,6 +93,7 @@
 		AC0941FA1E69E985009FEA90 /* Helper Functions */ = {
 			isa = PBXGroup;
 			children = (
+				AC4571821E6E19F900517A2A /* StoryboardInitializable.swift */,
 				AC0941F61E69E4E4009FEA90 /* Animations */,
 			);
 			name = "Helper Functions";
@@ -127,6 +136,15 @@
 			name = "Custom Cells";
 			sourceTree = "<group>";
 		};
+		AC45717D1E6E134600517A2A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AC4CB5E61E4E838A00979D03 /* Main.storyboard */,
+				AC45717B1E6E134100517A2A /* Onboarding.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		AC84A15E1E37B5480053C77F /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +174,8 @@
 		ACACADBA1E36A86B00575BB0 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AC4571871E6E277F00517A2A /* Tutorial.swift */,
+				AC4571851E6E273D00517A2A /* Onboarding.swift */,
 				ACB78A441E355E6000AA1D00 /* TermsAndConditionsViewController.swift */,
 				ACDDB9D31E4168FA00A1C6F4 /* PeekListTableViewController.swift */,
 				ACD8EDE61E36D9290033AB17 /* CommentsTableViewController.swift */,
@@ -189,7 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				ACE797421E33FC08007DB33C /* AppDelegate.swift */,
-				AC4CB5E61E4E838A00979D03 /* Main.storyboard */,
+				AC45717D1E6E134600517A2A /* Storyboards */,
 				AC84A1611E37B5680053C77F /* CloudKit */,
 				AC84A15E1E37B5480053C77F /* Model */,
 				AC84A1661E37B8DE0053C77F /* Model Controller */,
@@ -279,6 +299,7 @@
 				ACE7974D1E33FC08007DB33C /* LaunchScreen.storyboard in Resources */,
 				ACE7974A1E33FC08007DB33C /* Assets.xcassets in Resources */,
 				AC4CB5E81E4E838A00979D03 /* Main.storyboard in Resources */,
+				AC4571841E6E23A200517A2A /* Onboarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +313,7 @@
 				ACB78A451E355E6000AA1D00 /* TermsAndConditionsViewController.swift in Sources */,
 				ACE797431E33FC08007DB33C /* AppDelegate.swift in Sources */,
 				AC84A1601E37B5630053C77F /* CloudKitManager.swift in Sources */,
+				AC4571861E6E273D00517A2A /* Onboarding.swift in Sources */,
 				ACACADC41E36BBB900575BB0 /* PhotoSelectViewController.swift in Sources */,
 				ACD959CB1E43F1EA00A2D4F4 /* LocationManager.swift in Sources */,
 				AC84A1631E37B5790053C77F /* CloudKitSyncable.swift in Sources */,
@@ -301,11 +323,13 @@
 				ACDDB9D41E4168FA00A1C6F4 /* PeekListTableViewController.swift in Sources */,
 				AC125DA51E4B928E005204FA /* DateHelper.swift in Sources */,
 				ACD8EDE71E36D9290033AB17 /* CommentsTableViewController.swift in Sources */,
+				AC4571831E6E19F900517A2A /* StoryboardInitializable.swift in Sources */,
 				AC05B1D21E4180F8003FBCBF /* AddPeekwithTextTableViewController.swift in Sources */,
 				ACACADC01E36A8FC00575BB0 /* MoreTableViewController.swift in Sources */,
 				AC1CBBAF1E3812E900F77E01 /* PeekTableViewCell.swift in Sources */,
 				AC84A1681E37BF3B0053C77F /* Comment.swift in Sources */,
 				AC84A15D1E37B5440053C77F /* Peek.swift in Sources */,
+				AC4571881E6E277F00517A2A /* Tutorial.swift in Sources */,
 				ACACADC21E36BB9800575BB0 /* AddPeekwithImageTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

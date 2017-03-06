@@ -25,7 +25,7 @@ class PhotoSelectViewController: UIViewController, UINavigationControllerDelegat
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
             imagePicker.sourceType = UIImagePickerControllerSourceType.camera;
-            imagePicker.allowsEditing = false
+            imagePicker.allowsEditing = true
             self.present(imagePicker, animated: true, completion: nil)
         }
     }
@@ -35,15 +35,15 @@ class PhotoSelectViewController: UIViewController, UINavigationControllerDelegat
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
             imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary;
+            imagePicker.allowsEditing = true
             self.present(imagePicker, animated: true, completion: nil)
         }
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         picker.dismiss(animated: true, completion: nil)
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            let resizedImage = resizeImage(image: image, targetSize: CGSize(width: 375, height: 375))
-            delegate?.photoSelectViewControllerSelected(image: resizedImage)
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            delegate?.photoSelectViewControllerSelected(image: image)
             cameraButton.isHidden = true
             photoLibraryButton.isHidden = true
             imageView.image = image

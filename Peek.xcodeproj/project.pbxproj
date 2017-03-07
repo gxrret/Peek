@@ -20,6 +20,8 @@
 		AC84A1631E37B5790053C77F /* CloudKitSyncable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84A1621E37B5790053C77F /* CloudKitSyncable.swift */; };
 		AC84A1651E37B8DB0053C77F /* PeekController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84A1641E37B8DB0053C77F /* PeekController.swift */; };
 		AC84A1681E37BF3B0053C77F /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84A1671E37BF3B0053C77F /* Comment.swift */; };
+		AC852CE71E6F556D00388C51 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC852CE51E6F556D00388C51 /* Crashlytics.framework */; };
+		AC852CE81E6F556D00388C51 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC852CE61E6F556D00388C51 /* Fabric.framework */; };
 		ACACADC01E36A8FC00575BB0 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACACADBF1E36A8FC00575BB0 /* MoreTableViewController.swift */; };
 		ACACADC21E36BB9800575BB0 /* AddPeekwithImageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACACADC11E36BB9800575BB0 /* AddPeekwithImageTableViewController.swift */; };
 		ACACADC41E36BBB900575BB0 /* PhotoSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACACADC31E36BBB900575BB0 /* PhotoSelectViewController.swift */; };
@@ -50,6 +52,8 @@
 		AC84A1621E37B5790053C77F /* CloudKitSyncable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitSyncable.swift; sourceTree = "<group>"; };
 		AC84A1641E37B8DB0053C77F /* PeekController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeekController.swift; sourceTree = "<group>"; };
 		AC84A1671E37BF3B0053C77F /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		AC852CE51E6F556D00388C51 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		AC852CE61E6F556D00388C51 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		ACACADBF1E36A8FC00575BB0 /* MoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
 		ACACADC11E36BB9800575BB0 /* AddPeekwithImageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPeekwithImageTableViewController.swift; sourceTree = "<group>"; };
 		ACACADC31E36BBB900575BB0 /* PhotoSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSelectViewController.swift; sourceTree = "<group>"; };
@@ -73,7 +77,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACD959CD1E43F2CB00A2D4F4 /* MapKit.framework in Frameworks */,
+				AC852CE71E6F556D00388C51 /* Crashlytics.framework in Frameworks */,
 				ACC537621E4D72AC00CB2193 /* CloudKit.framework in Frameworks */,
+				AC852CE81E6F556D00388C51 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +126,8 @@
 		AC1CBBAB1E38102500F77E01 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AC852CE51E6F556D00388C51 /* Crashlytics.framework */,
+				AC852CE61E6F556D00388C51 /* Fabric.framework */,
 				ACC537611E4D72AC00CB2193 /* CloudKit.framework */,
 				ACD959CC1E43F2CB00A2D4F4 /* MapKit.framework */,
 			);
@@ -229,6 +237,7 @@
 				ACE7973B1E33FC07007DB33C /* Sources */,
 				ACE7973C1E33FC07007DB33C /* Frameworks */,
 				ACE7973D1E33FC07007DB33C /* Resources */,
+				AC852CE91E6F55E500388C51 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -301,6 +310,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AC852CE91E6F55E500388C51 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PROJECT_DIR}/Fabric.framework/run\" 99b4cdecbfcbcc3fa7e95ff979c8d23d3d44b628 a6d27b76c4585febe4726710d4c4c83de9f578353323fe3fb083aaebadcc0aaa";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ACE7973B1E33FC07007DB33C /* Sources */ = {
@@ -449,6 +474,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Peek/Peek.entitlements;
 				DEVELOPMENT_TEAM = KDJV5MMQDA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Peek/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.GK.Peek;
@@ -463,6 +492,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Peek/Peek.entitlements;
 				DEVELOPMENT_TEAM = KDJV5MMQDA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Peek/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.GK.Peek;

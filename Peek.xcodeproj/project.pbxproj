@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AC05B1D21E4180F8003FBCBF /* AddPeekwithTextTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC05B1D11E4180F8003FBCBF /* AddPeekwithTextTableViewController.swift */; };
 		AC0941F51E69E4E0009FEA90 /* PulsingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0941F41E69E4E0009FEA90 /* PulsingAnimation.swift */; };
 		AC125DA51E4B928E005204FA /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC125DA41E4B928E005204FA /* DateHelper.swift */; };
 		AC1CBBAF1E3812E900F77E01 /* PeekTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1CBBAE1E3812E900F77E01 /* PeekTableViewCell.swift */; };
@@ -37,7 +36,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AC05B1D11E4180F8003FBCBF /* AddPeekwithTextTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPeekwithTextTableViewController.swift; sourceTree = "<group>"; };
 		AC0941F41E69E4E0009FEA90 /* PulsingAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulsingAnimation.swift; sourceTree = "<group>"; };
 		AC125DA41E4B928E005204FA /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		AC1CBBAA1E38102200F77E01 /* Peek.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Peek.entitlements; sourceTree = "<group>"; };
@@ -180,7 +178,6 @@
 				ACDDB9D31E4168FA00A1C6F4 /* PeekListTableViewController.swift */,
 				ACD8EDE61E36D9290033AB17 /* CommentsTableViewController.swift */,
 				ACACADC11E36BB9800575BB0 /* AddPeekwithImageTableViewController.swift */,
-				AC05B1D11E4180F8003FBCBF /* AddPeekwithTextTableViewController.swift */,
 				ACACADC31E36BBB900575BB0 /* PhotoSelectViewController.swift */,
 				ACD8EDE81E36DA360033AB17 /* RulesViewController.swift */,
 				ACACADBF1E36A8FC00575BB0 /* MoreTableViewController.swift */,
@@ -324,7 +321,6 @@
 				AC125DA51E4B928E005204FA /* DateHelper.swift in Sources */,
 				ACD8EDE71E36D9290033AB17 /* CommentsTableViewController.swift in Sources */,
 				AC4571831E6E19F900517A2A /* StoryboardInitializable.swift in Sources */,
-				AC05B1D21E4180F8003FBCBF /* AddPeekwithTextTableViewController.swift in Sources */,
 				ACACADC01E36A8FC00575BB0 /* MoreTableViewController.swift in Sources */,
 				AC1CBBAF1E3812E900F77E01 /* PeekTableViewCell.swift in Sources */,
 				AC84A1681E37BF3B0053C77F /* Comment.swift in Sources */,

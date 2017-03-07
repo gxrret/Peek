@@ -71,21 +71,6 @@ class PeekController {
         
     }
     
-    func createPeekWithText(title: String, location: CLLocation, completion: ((Peek) -> Void)? = nil) {
-        
-        let peek = Peek(title: title, photoData: nil, location: location)
-        peeks.insert(peek, at: 0)
-        
-        cloudKitManager.saveRecord(CKRecord(peek)) { (record, error) in
-            guard let record = record else { return }
-            peek.cloudKitRecordID = record.recordID
-            if let error = error {
-                print("Error saving new peek to CloudKit: \(error)")
-            }
-            completion?(peek)
-        }
-    }
-    
     func addComment(peek: Peek, commentText: String, completion: @escaping ((Comment) -> Void) = { _ in }) -> Comment {
         let comment = Comment(text: commentText, peek: peek)
         peek.comments.insert(comment, at: 0)

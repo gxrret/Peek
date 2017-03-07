@@ -59,6 +59,11 @@ extension Onboarding: UIPageViewControllerDataSource {
             Onboarding.pageIndex = 3
             tutorialPage.pageIndex = Onboarding.pageIndex
             return tutorialPage
+        case 5:
+            let tutorialPage = Tutorial.initializeFromStoryboard()
+            Onboarding.pageIndex = 4
+            tutorialPage.pageIndex = Onboarding.pageIndex
+            return tutorialPage
         default:
             break
         }
@@ -88,12 +93,12 @@ extension Onboarding: UIPageViewControllerDataSource {
             Onboarding.pageIndex = 4
             tutorialPage.pageIndex = Onboarding.pageIndex
             return tutorialPage
-//        case 4:
-//            let tutorialPage = Tutorial.initializeFromStoryboard()
-//            Onboarding.pageIndex = 5
-//            tutorialPage.pageIndex = Onboarding.pageIndex
-//            return tutorialPage
         case 4:
+            let tutorialPage = Tutorial.initializeFromStoryboard()
+            Onboarding.pageIndex = 5
+            tutorialPage.pageIndex = Onboarding.pageIndex
+            return tutorialPage
+        case 5:
             UserDefaults.standard.set(true, forKey: "onboarding")
             presentingViewController?.dismiss(animated: true, completion: nil)
         default:
@@ -107,7 +112,7 @@ extension Onboarding: UIPageViewControllerDataSource {
         appearance.pageIndicatorTintColor = .white
         appearance.currentPageIndicatorTintColor = UIColor(red: 30/255, green: 215/255, blue: 96/255, alpha: 1.0)
         appearance.isOpaque = true
-        appearance.backgroundColor = .gray
+        appearance.backgroundColor = UIColor(red: 154/255, green: 154/255, blue: 154/255, alpha: 1.0)
         return Onboarding.pages
     }
     

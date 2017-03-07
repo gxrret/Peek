@@ -40,13 +40,13 @@ extension Tutorial {
             swipeLeftLabel.isHidden = true
         case 2:
             topLabel.text = "Post"
-            logoImageView.isHidden = true
-            detailLabel.text = "To post a peek, tap the create button on the main page"
+            logoImageView.image = #imageLiteral(resourceName: "photo icon")
+            detailLabel.text = "To post a peek, tap the create button on the main page."
             swipeLeftLabel.isHidden = true
         case 3:
             topLabel.text = "Comment"
-            logoImageView.isHidden = true
-            detailLabel.text = "Tap on a peek to see comments or to add one"
+            logoImageView.image = #imageLiteral(resourceName: "Comment Icon")
+            detailLabel.text = "Tap on a peek to see comments or to add one."
             swipeLeftLabel.isHidden = true
         case 4:
             topLabel.text = "Before You Start..."

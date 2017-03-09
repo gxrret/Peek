@@ -61,6 +61,48 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
         }
     }
     
+    @IBAction func moreButtonTapped(_ sender: Any) {
+        showActionSheet()
+    }
+    
+    func showActionSheet() {
+        let alert = UIAlertController(title: "Choose an Option", message: nil, preferredStyle: .actionSheet)
+        let report = UIAlertAction(title: "Report", style: .destructive) { (_) in
+            if MFMailComposeViewController.canSendMail() {
+                
+                let messageBody = "Specify the abuse or spam you saw from a user. Review the Terms & Conditions."
+                let toRecipients = ["peekapp.contact@gmail.com"]
+                let mc = MFMailComposeViewController()
+                mc.mailComposeDelegate = self
+                mc.setMessageBody(messageBody, isHTML: false)
+                mc.setToRecipients(toRecipients)
+                
+                self.present(mc, animated: true, completion: nil)
+                
+            } else {
+                self.presentErrorAlert()
+            }
+        }
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alert.addAction(report)
+        alert.addAction(cancel)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func presentErrorAlert() {
+        let errorAlert = UIAlertController(title: "Error Sending Email", message: "Check email configuration then try again.", preferredStyle: .alert)
+        
+        let dismissAction = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+        errorAlert.addAction(dismissAction)
+        
+        present(errorAlert, animated: true, completion: nil)
+    }
+    
     @IBAction func composeButtonTapped(_ sender: Any) {
         composeButtonMenuAnimation()
     }
@@ -161,41 +203,6 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
         
         return cell
     }
-
-    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let report = UITableViewRowAction(style: .default, title: "Report") { (action, index) in
-            if MFMailComposeViewController.canSendMail() {
-                
-                let messageBody = "Specify the abuse or spam you saw from a user. Review the Terms & Conditions."
-                let toRecipients = ["peekapp.contact@gmail.com"]
-                let mc = MFMailComposeViewController()
-                mc.mailComposeDelegate = self
-                mc.setMessageBody(messageBody, isHTML: false)
-                mc.setToRecipients(toRecipients)
-                
-                self.present(mc, animated: true, completion: nil)
-                
-            } else {
-                self.presentErrorAlert()
-            }
-        }
-        report.backgroundColor = .clear
-        return [report]
-    }
-    
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    func presentErrorAlert() {
-        let errorAlert = UIAlertController(title: "Error Sending Email", message: "Check email configuration then try again.", preferredStyle: .alert)
-        
-        let dismissAction = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
-        errorAlert.addAction(dismissAction)
-        
-        present(errorAlert, animated: true, completion: nil)
-    }
-
     
     // MARK: - Navigation
     

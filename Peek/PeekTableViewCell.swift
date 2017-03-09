@@ -17,6 +17,7 @@ class PeekTableViewCell: UITableViewCell {
     @IBOutlet weak var peekImageView: UIImageView!
     @IBOutlet weak var commentsLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var nsfwLabel: UILabel!
     
     func updateWithPeek(peek: Peek) {
         peekTitleLabel.text = peek.title
@@ -27,6 +28,12 @@ class PeekTableViewCell: UITableViewCell {
         
         peekImageView.image = peek.photo
         peekImageView.layer.cornerRadius = 3.0
+        
+        if peek.title.contains("#NSFW") {
+            nsfwLabel.isHidden = false
+        } else {
+            nsfwLabel.isHidden = true
+        }
         
         if peek.comments.count == 0 {
             commentsLabel.text = "0"

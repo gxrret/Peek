@@ -51,7 +51,7 @@ extension Tutorial {
         case 4:
             topLabel.text = "NSFW Content"
             logoImageView.isHidden = true
-            detailLabel.text = "Peek users may post content that is NSFW(not safe for work). We filter peeks by a section dedicated to NSFW content."
+            detailLabel.text = "Peek users may post content that is NSFW(not safe for work). We filter peeks by a section dedicated to NSFW content. To report content you find inappropriate, swipe left to send an email to us."
             swipeLeftLabel.isHidden = true
         case 5:
             topLabel.text = "Before You Start..."

@@ -75,7 +75,4 @@ extension PhotoSelectViewController {
         
         return newImage
     }
-
 }
-
-

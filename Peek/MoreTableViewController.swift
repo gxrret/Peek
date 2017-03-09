@@ -50,9 +50,4 @@ class MoreTableViewController: UITableViewController, MFMailComposeViewControlle
     @IBAction func doneButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
-    
 }
-
-
-

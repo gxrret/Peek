@@ -33,15 +33,22 @@ class PeekController {
     }
     
     var sortedPeeksByTime: [Peek] {
-        return peeks.sorted(by: { return $0.timestamp.compare($1.timestamp as Date) == .orderedDescending })
+        let sortedPeeks = peeks.filter { !$0.title.contains("#NSFW") }
+        return sortedPeeks.sorted(by: { return $0.timestamp.compare($1.timestamp as Date) == .orderedDescending})
     }
     
     var sortedPeeksByNumberOfComments: [Peek] {
-        return peeks.sorted(by: { return $0.comments.count > $1.comments.count})
+        let sortedPeeks = peeks.filter { !$0.title.contains("#NSFW") }
+        return sortedPeeks.sorted(by: { return $0.comments.count > $1.comments.count})
     }
     
     var sortedCommentsByTime: [Comment] {
         return comments.sorted(by: { return $0.timestamp.compare($1.timestamp as Date) == .orderedDescending })
+    }
+    
+    var sortedPeeksByNSFWContent: [Peek] {
+        let nsfwPeeks = peeks.filter { $0.title.contains("#NSFW") }
+        return nsfwPeeks
     }
     
     

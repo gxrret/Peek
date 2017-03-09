@@ -94,10 +94,10 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
         switch (segmentedControl.selectedSegmentIndex) {
         case 0:
             returnString = "Newest😄"
-            break
         case 1:
             returnString = "Most Popular😎"
-            break
+        case 2:
+            returnString = "NSFW😶"
         default:
             break
         }
@@ -117,10 +117,10 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
         switch segmentedControl.selectedSegmentIndex {
         case 0:
             returnValue = PeekController.sharedController.sortedPeeksByTime.count
-            break
         case 1:
             returnValue = PeekController.sharedController.sortedPeeksByNumberOfComments.count
-            break
+        case 2:
+            returnValue = PeekController.sharedController.sortedPeeksByNSFWContent.count
         default:
             break
         }
@@ -149,11 +149,12 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
         case 0:
             let peek = PeekController.sharedController.sortedPeeksByTime[indexPath.row]
             cell.updateWithPeek(peek: peek)
-            break
         case 1:
             let peek = PeekController.sharedController.sortedPeeksByNumberOfComments[indexPath.row]
             cell.updateWithPeek(peek: peek)
-            break
+        case 2:
+            let peek = PeekController.sharedController.sortedPeeksByNSFWContent[indexPath.row]
+            cell.updateWithPeek(peek: peek)
         default:
             break
         }
@@ -200,18 +201,18 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toComments" {
-            if let indexPath = tableView.indexPathForSelectedRow {
+            if let indexPath = tableView.indexPathForSelectedRow,
+                let commentsTVC = segue.destination as? CommentsTableViewController {
                 switch segmentedControl.selectedSegmentIndex {
                 case 0:
                     let peek = PeekController.sharedController.sortedPeeksByTime[indexPath.row]
-                    let commentsTVC = segue.destination as? CommentsTableViewController
-                    commentsTVC?.peek = peek
-                    break
+                    commentsTVC.peek = peek
                 case 1:
                     let peek = PeekController.sharedController.sortedPeeksByNumberOfComments[indexPath.row]
-                    let commentsTVC = segue.destination as? CommentsTableViewController
-                    commentsTVC?.peek = peek
-                    break
+                    commentsTVC.peek = peek
+                case 2:
+                    let peek = PeekController.sharedController.sortedPeeksByNSFWContent[indexPath.row]
+                    commentsTVC.peek = peek
                 default:
                     break
                 }

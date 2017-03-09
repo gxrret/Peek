@@ -11,7 +11,7 @@ import UIKit
 class Onboarding: UIViewController {
     var pageViewController: UIPageViewController!
     static var pageIndex = 0
-    static let pages = 5
+    static let pages = 6
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +59,11 @@ extension Onboarding: UIPageViewControllerDataSource {
             Onboarding.pageIndex = 3
             tutorialPage.pageIndex = Onboarding.pageIndex
             return tutorialPage
+        case 5:
+            let tutorialPage = Tutorial.initializeFromStoryboard()
+            Onboarding.pageIndex = 4
+            tutorialPage.pageIndex = Onboarding.pageIndex
+            return tutorialPage
         default:
             break
         }
@@ -88,12 +93,17 @@ extension Onboarding: UIPageViewControllerDataSource {
             Onboarding.pageIndex = 4
             tutorialPage.pageIndex = Onboarding.pageIndex
             return tutorialPage
-//        case 4:
-//            let tutorialPage = Tutorial.initializeFromStoryboard()
-//            Onboarding.pageIndex = 5
-//            tutorialPage.pageIndex = Onboarding.pageIndex
-//            return tutorialPage
         case 4:
+            let tutorialPage = Tutorial.initializeFromStoryboard()
+            Onboarding.pageIndex = 5
+            tutorialPage.pageIndex = Onboarding.pageIndex
+            return tutorialPage
+        case 5:
+            let tutorialPage = Tutorial.initializeFromStoryboard()
+            Onboarding.pageIndex = 6
+            tutorialPage.pageIndex = Onboarding.pageIndex
+            return tutorialPage
+        case 6:
             UserDefaults.standard.set(true, forKey: "onboarding")
             presentingViewController?.dismiss(animated: true, completion: nil)
         default:

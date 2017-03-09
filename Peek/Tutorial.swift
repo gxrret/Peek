@@ -49,6 +49,11 @@ extension Tutorial {
             detailLabel.text = "Tap on a peek to see comments or to add one."
             swipeLeftLabel.isHidden = true
         case 4:
+            topLabel.text = "NSFW Content"
+            logoImageView.isHidden = true
+            detailLabel.text = "Peek users may post content that is NSFW(not safe for work). We filter peeks by a section dedicated to NSFW content."
+            swipeLeftLabel.isHidden = true
+        case 5:
             topLabel.text = "Before You Start..."
             logoImageView.isHidden = true
             detailLabel.text = "In order to use Peek, please accept the Terms & Conditions."

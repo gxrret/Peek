@@ -48,7 +48,7 @@ class PeekController {
     
     var sortedPeeksByNSFWContent: [Peek] {
         let nsfwPeeks = peeks.filter { $0.title.contains("#NSFW") }
-        return nsfwPeeks
+        return nsfwPeeks.sorted(by: { return $0.timestamp.compare($1.timestamp as Date) == .orderedDescending})
     }
     
     

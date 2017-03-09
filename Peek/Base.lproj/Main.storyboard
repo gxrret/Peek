@@ -653,7 +653,7 @@ If you have concerns about the way Peek is handling your Information, please let
                             </connections>
                         </barButtonItem>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="7ZB-fp-osA">
-                            <rect key="frame" x="68" y="7" width="185" height="30"/>
+                            <rect key="frame" x="95" y="7" width="185" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Newest"/>

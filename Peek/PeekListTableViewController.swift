@@ -51,6 +51,11 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
     }
     
     @IBAction func indexChanged(_ sender: Any) {
+        if segmentedControl.selectedSegmentIndex == 2 {
+            segmentedControl.tintColor = .red
+        } else {
+            segmentedControl.tintColor = UIColor(red: 30/255, green: 215/255, blue: 96/255, alpha: 1.0)
+        }
         tableView.reloadData()
     }
     
@@ -181,7 +186,7 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
         cell.contentView.backgroundColor = .clear
         
         let whiteRoundedView: UIView = UIView(frame: CGRect(x: 10, y: 8, width: self.view.frame.size.width - 20, height: cell.frame.size.height - 10))
-        whiteRoundedView.layer.backgroundColor = CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(), components: [1.0, 1.0, 1.0, 0.9])
+        whiteRoundedView.layer.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1.0).cgColor
         whiteRoundedView.layer.masksToBounds = false
         whiteRoundedView.layer.cornerRadius = 4.0
         cell.contentView.addSubview(whiteRoundedView)

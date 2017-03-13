@@ -75,7 +75,6 @@ class PeekController {
             }
             completion?(peek)
         }
-        
     }
     
     func addComment(peek: Peek, commentText: String, completion: @escaping ((Comment) -> Void) = { _ in }) -> Comment {

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AC0941F51E69E4E0009FEA90 /* PulsingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0941F41E69E4E0009FEA90 /* PulsingAnimation.swift */; };
 		AC125DA51E4B928E005204FA /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC125DA41E4B928E005204FA /* DateHelper.swift */; };
 		AC1CBBAF1E3812E900F77E01 /* PeekTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1CBBAE1E3812E900F77E01 /* PeekTableViewCell.swift */; };
 		AC4571831E6E19F900517A2A /* StoryboardInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4571821E6E19F900517A2A /* StoryboardInitializable.swift */; };
@@ -40,7 +39,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AC0941F41E69E4E0009FEA90 /* PulsingAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulsingAnimation.swift; sourceTree = "<group>"; };
 		AC125DA41E4B928E005204FA /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		AC1CBBAA1E38102200F77E01 /* Peek.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Peek.entitlements; sourceTree = "<group>"; };
 		AC1CBBAE1E3812E900F77E01 /* PeekTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeekTableViewCell.swift; sourceTree = "<group>"; };
@@ -90,21 +88,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AC0941F61E69E4E4009FEA90 /* Animations */ = {
-			isa = PBXGroup;
-			children = (
-				AC0941F41E69E4E0009FEA90 /* PulsingAnimation.swift */,
-			);
-			name = Animations;
-			sourceTree = "<group>";
-		};
 		AC0941FA1E69E985009FEA90 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				AC4F17B51E783C6E0057DFF6 /* CommentKeys.swift */,
-				AC4F17B31E783BB30057DFF6 /* PeekKeys.swift */,
+				AC4F17B71E78442D0057DFF6 /* Keys */,
 				AC4571821E6E19F900517A2A /* StoryboardInitializable.swift */,
-				AC0941F61E69E4E4009FEA90 /* Animations */,
+				AC125DA41E4B928E005204FA /* DateHelper.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -120,7 +109,6 @@
 		AC09DB221E451F1100903897 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				AC125DA41E4B928E005204FA /* DateHelper.swift */,
 				ACE797491E33FC08007DB33C /* Assets.xcassets */,
 				ACE7974B1E33FC08007DB33C /* LaunchScreen.storyboard */,
 				ACE7974E1E33FC08007DB33C /* Info.plist */,
@@ -155,6 +143,15 @@
 				AC45717B1E6E134100517A2A /* Onboarding.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		AC4F17B71E78442D0057DFF6 /* Keys */ = {
+			isa = PBXGroup;
+			children = (
+				AC4F17B51E783C6E0057DFF6 /* CommentKeys.swift */,
+				AC4F17B31E783BB30057DFF6 /* PeekKeys.swift */,
+			);
+			name = Keys;
 			sourceTree = "<group>";
 		};
 		AC84A15E1E37B5480053C77F /* Model */ = {
@@ -347,7 +344,6 @@
 				AC84A1631E37B5790053C77F /* CloudKitSyncable.swift in Sources */,
 				AC4F17B61E783C6E0057DFF6 /* CommentKeys.swift in Sources */,
 				AC84A1651E37B8DB0053C77F /* PeekController.swift in Sources */,
-				AC0941F51E69E4E0009FEA90 /* PulsingAnimation.swift in Sources */,
 				ACD8EDE91E36DA360033AB17 /* RulesViewController.swift in Sources */,
 				ACDDB9D41E4168FA00A1C6F4 /* PeekListTableViewController.swift in Sources */,
 				AC125DA51E4B928E005204FA /* DateHelper.swift in Sources */,

@@ -62,6 +62,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WcQ-WG-SFG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Pwn-QU-ySg">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vGI-ic-c6m">
                                 <rect key="frame" x="62" y="177" width="241" height="313"/>
                                 <subviews>
@@ -128,11 +136,15 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" red="0.65005302499999995" green="0.79883803929999997" blue="0.68495621120000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vGI-ic-c6m" firstAttribute="leading" secondItem="MzU-KS-mLu" secondAttribute="leadingMargin" constant="46" id="HTh-oa-IxQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vGI-ic-c6m" secondAttribute="trailing" constant="56" id="JjZ-U7-Edl"/>
+                            <constraint firstAttribute="trailing" secondItem="WcQ-WG-SFG" secondAttribute="trailing" id="KP8-zm-B20"/>
+                            <constraint firstItem="WcQ-WG-SFG" firstAttribute="leading" secondItem="MzU-KS-mLu" secondAttribute="leading" id="eAh-vE-Alw"/>
+                            <constraint firstItem="WcQ-WG-SFG" firstAttribute="bottom" secondItem="KtN-BE-uX0" secondAttribute="top" id="fsR-Bd-W5c"/>
                             <constraint firstItem="KtN-BE-uX0" firstAttribute="top" secondItem="vGI-ic-c6m" secondAttribute="bottom" constant="177" id="imd-dC-UyM"/>
+                            <constraint firstItem="WcQ-WG-SFG" firstAttribute="centerY" secondItem="vGI-ic-c6m" secondAttribute="centerY" id="t3u-Pm-KJ7"/>
                             <constraint firstItem="vGI-ic-c6m" firstAttribute="centerY" secondItem="MzU-KS-mLu" secondAttribute="centerY" id="xOr-Tw-itM"/>
                             <constraint firstItem="vGI-ic-c6m" firstAttribute="top" secondItem="9Sq-HP-uQt" secondAttribute="bottom" constant="157" id="z99-tG-oHK"/>
                         </constraints>

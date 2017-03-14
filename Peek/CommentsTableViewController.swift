@@ -14,16 +14,28 @@ class CommentsTableViewController: UITableViewController, MFMailComposeViewContr
     var peek: Peek?
     
     @IBOutlet weak var commentTextField: UITextField!
+    @IBOutlet weak var peekImageView: UIImageView!
+    @IBOutlet weak var pinchToZoomScrollView: UIScrollView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         commentTextField.delegate = self
+        updateView()
         
         let nc = NotificationCenter.default
         nc.addObserver(self, selector: #selector(postCommentsChanged(notification:)), name: PeekController.PeekCommentsChangedNotification, object: nil)
         
         navigationController?.isNavigationBarHidden = false
+        
+        self.pinchToZoomScrollView.minimumZoomScale = 1.0
+        self.pinchToZoomScrollView.maximumZoomScale = 6.0
+        self.pinchToZoomScrollView.contentSize = self.peekImageView.frame.size
+        self.pinchToZoomScrollView.delegate = self
+        
+        let doubleTapZoomGesture = UITapGestureRecognizer(target: self, action: #selector(zoom(tapGesture:)))
+        doubleTapZoomGesture.numberOfTapsRequired = 2
+        pinchToZoomScrollView.addGestureRecognizer(doubleTapZoomGesture)
         
     }
     
@@ -38,10 +50,34 @@ class CommentsTableViewController: UITableViewController, MFMailComposeViewContr
         navigationController?.hidesBarsOnSwipe = false
     }
     
+    func zoom(tapGesture: UITapGestureRecognizer) {
+        if self.pinchToZoomScrollView.zoomScale == self.pinchToZoomScrollView.minimumZoomScale {
+            let center = tapGesture.location(in: pinchToZoomScrollView)
+            let size = self.peekImageView.image!.size
+            let zoomRect = CGRect(x: center.x, y: center.y, width: size.width / 2, height: size.height / 2)
+            self.pinchToZoomScrollView.zoom(to: zoomRect, animated: true)
+        } else {
+            self.pinchToZoomScrollView.setZoomScale(self.pinchToZoomScrollView.minimumZoomScale, animated: true)
+        }
+    }
+    
     func postCommentsChanged(notification: Notification) {
         guard let notificationPost = notification.object as? Peek,
             let peek = peek, notificationPost === peek else { return }
         tableView.reloadData()
+    }
+    
+    func updateView() {
+        guard let peek = peek , isViewLoaded else { return }
+        peekImageView.image = peek.photo
+        tableView.reloadData()
+    }
+    
+    override func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return self.peekImageView
+    }
+    
+    override func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

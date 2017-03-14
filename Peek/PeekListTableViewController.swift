@@ -244,7 +244,8 @@ extension PeekListTableViewController {
     func composeButtonMenuAnimation() {
         self.view.addSubview(menuView)
         menuView.layer.frame = CGRect(x: 0, y: -100, width: view.frame.size.width, height: menuView.frame.size.height)
-        menuView.layer.cornerRadius = 2
+        menuView.layer.cornerRadius = 1
+        menuView.layer.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.95).cgColor
         
         dimView.frame = CGRect(x: view.frame.origin.x, y: view.frame.origin.y + 45, width: view.frame.size.width, height: view.frame.size.height)
         dimView.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.75)

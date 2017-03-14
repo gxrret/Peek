@@ -51,7 +51,9 @@ class PeekController {
         return nsfwPeeks.sorted(by: { return $0.timestamp.compare($1.timestamp as Date) == .orderedDescending})
     }
     
-    
+    func doSomething() {
+        
+    }
     var isSyncing: Bool = false
     
     var cloudKitManager = CloudKitManager()
@@ -60,6 +62,20 @@ class PeekController {
         
         cloudKitManager = CloudKitManager()
         performFullSync()
+    }
+    
+    func iCloudUserIDAsync(complete: @escaping (_ instance: CKRecordID?, _ error: NSError?) -> ()) {
+        let container = CKContainer.default()
+        container.fetchUserRecordID() {
+            recordID, error in
+            if error != nil {
+                print(error!.localizedDescription)
+                complete(nil, error as NSError?)
+            } else {
+                print("fetched ID \(recordID?.recordName)")
+                complete(recordID, nil)
+            }
+        }
     }
     
     func createPeekWithImage(title: String, image: UIImage, location: CLLocation, completion: ((Peek) -> Void)? = nil) {
@@ -129,12 +145,12 @@ class PeekController {
         
         cloudKitManager.fetchRecordsWithType(type, predicate: predicate, recordFetchedBlock: { (record) in
             switch type {
-            case Peek.kType:
+            case PeekKeys.recordType.rawValue:
                 if let post = Peek(record: record) {
                     self.peeks.append(post)
                 }
-            case Comment.kType:
-                guard let postReference = record[Comment.kPeek] as? CKReference,
+            case CommentKeys.recordType.rawValue:
+                guard let postReference = record[CommentKeys.peekReference.rawValue] as? CKReference,
                     let comment = Comment(record: record) else { return }
                 let matchingPeek = PeekController.sharedController.peeks.filter({$0.cloudKitRecordID == postReference.recordID}).first
                 matchingPeek?.comments.append(comment)
@@ -153,8 +169,8 @@ class PeekController {
     
     func pushChangesToCloudKit(completion: @escaping ((_ success: Bool, Error?) -> Void) = { _,_ in }) {
         
-        let unsavedPeeks = unsyncedRecords(ofType: Peek.kType) as? [Peek] ?? []
-        let unsavedComments = unsyncedRecords(ofType: Comment.kType) as? [Comment] ?? []
+        let unsavedPeeks = unsyncedRecords(ofType: PeekKeys.recordType.rawValue) as? [Peek] ?? []
+        let unsavedComments = unsyncedRecords(ofType: CommentKeys.recordType.rawValue) as? [Comment] ?? []
         var unsavedObjectsByRecord = [CKRecord: CloudKitSyncable]()
         
         for peek in unsavedPeeks {
@@ -192,8 +208,8 @@ class PeekController {
         pushChangesToCloudKit { (success, error) in
             
             if success {
-                self.fetchNewRecords(ofType: Peek.kType) {
-                    self.fetchNewRecords(ofType: Comment.kType) {
+                self.fetchNewRecords(ofType: PeekKeys.recordType.rawValue) {
+                    self.fetchNewRecords(ofType: CommentKeys.recordType.rawValue) {
                         self.isSyncing = false
                         completion()
                     }

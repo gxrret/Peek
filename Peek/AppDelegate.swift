@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.black,
             NSFontAttributeName: UIFont(name: "Avenir Next", size: 20)!]
         
-        //MARK: - NSUserDefaults to store if user has accepted Terms and Conditions
+        //MARK: - UserDefaults to store if user has accepted Terms and Conditions
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         

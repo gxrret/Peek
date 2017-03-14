@@ -13,12 +13,6 @@ import MapKit
 
 class Peek: CloudKitSyncable {
     
-    static let kType = "Peek"
-    static let kPhotoData = "photoData"
-    static let kTimeStamp = "timestamp"
-    static let kTitle = "title"
-    static let kLocation = "location"
-    
     let title: String
     let photoData: Data?
     let timestamp: Date
@@ -39,7 +33,7 @@ class Peek: CloudKitSyncable {
     }
     
     var recordType: String {
-        return Peek.kType
+        return PeekKeys.recordType.rawValue
     }
     
     var cloudKitRecordID: CKRecordID?
@@ -47,9 +41,9 @@ class Peek: CloudKitSyncable {
     convenience required init?(record: CKRecord) {
         
         guard let timestamp = record.creationDate,
-            let photoAsset = record[Peek.kPhotoData] as? CKAsset,
-            let title = record[Peek.kTitle] as? String,
-        let location = record[Peek.kLocation] as? CLLocation else { return nil }
+            let photoAsset = record[PeekKeys.photoData.rawValue] as? CKAsset,
+            let title = record[PeekKeys.title.rawValue] as? String,
+        let location = record[PeekKeys.location.rawValue] as? CLLocation else { return nil }
         let photoData = try? Data(contentsOf: photoAsset.fileURL)
         self.init(title: title, timestamp: timestamp, photoData: photoData, location: location)
         cloudKitRecordID = record.recordID
@@ -73,9 +67,9 @@ extension CKRecord {
         let recordID = CKRecordID(recordName: UUID().uuidString)
         self.init(recordType: peek.recordType, recordID: recordID)
         
-        self[Peek.kTitle] = peek.title as String? as CKRecordValue?
-        self[Peek.kTimeStamp] = peek.timestamp as CKRecordValue?
-        self[Peek.kLocation] = peek.location as CKRecordValue?
-        self[Peek.kPhotoData] = CKAsset(fileURL: peek.temporaryPhotoURL)
+        self[PeekKeys.title.rawValue] = peek.title as String? as CKRecordValue?
+        self[PeekKeys.timestamp.rawValue] = peek.timestamp as CKRecordValue?
+        self[PeekKeys.location.rawValue] = peek.location as CKRecordValue?
+        self[PeekKeys.photoData.rawValue] = CKAsset(fileURL: peek.temporaryPhotoURL)
     }
 }

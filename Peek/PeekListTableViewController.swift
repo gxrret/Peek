@@ -24,6 +24,12 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        PeekController.sharedController.iCloudUserIDAsync { (recordID, error) in
+            if let userID = recordID?.recordName {
+                print(userID)
+            }
+        }
+        
         refreshControl?.tintColor = UIColor(red: 30/255, green: 215/255, blue: 96/255, alpha: 1.0)
         refreshControl?.backgroundColor = tableView.backgroundColor
         
@@ -180,7 +186,7 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
         let bgColorView = UIView()
         bgColorView.backgroundColor = .white
         bgColorView.layer.cornerRadius = 4.0
-    
+        
         cell.selectedBackgroundView = bgColorView
         cell.backgroundColor = .clear
         cell.contentView.backgroundColor = .clear

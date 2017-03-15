@@ -14,4 +14,5 @@ enum PeekKeys: String {
     case timestamp = "timestamp"
     case title = "title"
     case location = "location"
+    case owner = "owner"
 }

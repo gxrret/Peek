@@ -10,7 +10,7 @@ import Foundation
 
 class DateHelper {
     
-    static func timeAgoSinceComments(_ date: Date) -> String {
+    static func timeAgoSinceShortened(_ date: Date) -> String {
         
         let calendar = Calendar.current
         let now = Date()
@@ -46,7 +46,7 @@ class DateHelper {
         }
         
         if let day = components.day, day >= 1 {
-            return "1 day ago"
+            return "1d"
         }
         
         if let hour = components.hour, hour >= 2 {

@@ -8,6 +8,8 @@
 
 import UIKit
 import MessageUI
+import CoreLocation
+import MapKit
 
 class CommentsTableViewController: UITableViewController, MFMailComposeViewControllerDelegate, UITextFieldDelegate {
     
@@ -16,6 +18,9 @@ class CommentsTableViewController: UITableViewController, MFMailComposeViewContr
     @IBOutlet weak var commentTextField: UITextField!
     @IBOutlet weak var peekImageView: UIImageView!
     @IBOutlet weak var pinchToZoomScrollView: UIScrollView!
+    @IBOutlet weak var peekTitleLabel: UILabel!
+    @IBOutlet weak var peekTimestampLabel: UILabel!
+    @IBOutlet weak var peekLocationLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -29,14 +34,9 @@ class CommentsTableViewController: UITableViewController, MFMailComposeViewContr
         navigationController?.isNavigationBarHidden = false
         
         self.pinchToZoomScrollView.minimumZoomScale = 1.0
-        self.pinchToZoomScrollView.maximumZoomScale = 6.0
+        self.pinchToZoomScrollView.maximumZoomScale = 5.0
         self.pinchToZoomScrollView.contentSize = self.peekImageView.frame.size
         self.pinchToZoomScrollView.delegate = self
-        
-        let doubleTapZoomGesture = UITapGestureRecognizer(target: self, action: #selector(zoom(tapGesture:)))
-        doubleTapZoomGesture.numberOfTapsRequired = 2
-        pinchToZoomScrollView.addGestureRecognizer(doubleTapZoomGesture)
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,17 +50,6 @@ class CommentsTableViewController: UITableViewController, MFMailComposeViewContr
         navigationController?.hidesBarsOnSwipe = false
     }
     
-    func zoom(tapGesture: UITapGestureRecognizer) {
-        if self.pinchToZoomScrollView.zoomScale == self.pinchToZoomScrollView.minimumZoomScale {
-            let center = tapGesture.location(in: pinchToZoomScrollView)
-            let size = self.peekImageView.image!.size
-            let zoomRect = CGRect(x: center.x, y: center.y, width: size.width / 2, height: size.height / 2)
-            self.pinchToZoomScrollView.zoom(to: zoomRect, animated: true)
-        } else {
-            self.pinchToZoomScrollView.setZoomScale(self.pinchToZoomScrollView.minimumZoomScale, animated: true)
-        }
-    }
-    
     func postCommentsChanged(notification: Notification) {
         guard let notificationPost = notification.object as? Peek,
             let peek = peek, notificationPost === peek else { return }
@@ -70,14 +59,22 @@ class CommentsTableViewController: UITableViewController, MFMailComposeViewContr
     func updateView() {
         guard let peek = peek , isViewLoaded else { return }
         peekImageView.image = peek.photo
+        peekTitleLabel.text = peek.title
+        
+        let geoCoder = CLGeocoder()
+        geoCoder.reverseGeocodeLocation(peek.location) { (placemarks, error) in
+            guard let placemarks = placemarks else { return }
+            if placemarks.count > 0 {
+                guard let placemark = placemarks.first  else { return }
+                self.peekLocationLabel.text = "\(placemark.locality!), \(placemark.administrativeArea!)"
+            }
+        }
+        peekTimestampLabel.text = DateHelper.timeAgoSinceShortened(peek.timestamp)
         tableView.reloadData()
     }
     
     override func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return self.peekImageView
-    }
-    
-    override func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -130,7 +127,7 @@ class CommentsTableViewController: UITableViewController, MFMailComposeViewContr
         
         cell.textLabel?.text = comment.text
         
-        cell.detailTextLabel?.text = DateHelper.timeAgoSinceComments(comment.timestamp)
+        cell.detailTextLabel?.text = DateHelper.timeAgoSinceShortened(comment.timestamp)
         
         
         return cell

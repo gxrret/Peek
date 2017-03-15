@@ -172,12 +172,12 @@
 			name = CloudKit;
 			sourceTree = "<group>";
 		};
-		AC84A1661E37B8DE0053C77F /* Model Controller */ = {
+		AC84A1661E37B8DE0053C77F /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				AC84A1641E37B8DB0053C77F /* PeekController.swift */,
 			);
-			name = "Model Controller";
+			name = "Model Controllers";
 			sourceTree = "<group>";
 		};
 		ACACADBA1E36A86B00575BB0 /* View Controllers */ = {
@@ -220,7 +220,7 @@
 				AC45717D1E6E134600517A2A /* Storyboards */,
 				AC84A1611E37B5680053C77F /* CloudKit */,
 				AC84A15E1E37B5480053C77F /* Model */,
-				AC84A1661E37B8DE0053C77F /* Model Controller */,
+				AC84A1661E37B8DE0053C77F /* Model Controllers */,
 				ACACADBA1E36A86B00575BB0 /* View Controllers */,
 				AC2871B61E3933F90014151E /* Custom Cells */,
 				AC0941FA1E69E985009FEA90 /* Helpers */,

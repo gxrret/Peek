@@ -9,7 +9,7 @@
 import Foundation
 
 enum CommentKeys: String {
-    case recordType = "comment"
+    case recordType = "Comment"
     case text = "text"
     case peekReference = "peekReference"
     case timestamp = "timestamp"

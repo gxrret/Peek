@@ -17,6 +17,7 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
     
     let dimView = UIView()
     let dismissButton: UIButton = UIButton()
+    let alert = UIAlertController(title: nil, message: "Loading🙃", preferredStyle: .alert)
     
     @IBOutlet var menuView: UIView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -44,7 +45,6 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
         navigationController?.hidesBarsOnSwipe = true
     }
     
@@ -128,11 +128,11 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
     
     func requestFullSync(_ completion: (() -> Void)? = nil) {
         
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        showLoadingView()
         
         PeekController.sharedController.performFullSync {
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
             completion?()
+            self.alert.dismiss(animated: true, completion: nil)
         }
     }
     
@@ -278,5 +278,17 @@ extension PeekListTableViewController {
     
     func tapToExit(_ sender: UIButton) {
         exitComposeMenu()
+    }
+    
+    func showLoadingView() {
+        
+        let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
+        loadingIndicator.frame = CGRect(x: 10, y: 5, width: 50, height: 50)
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.activityIndicatorViewStyle = .gray
+        loadingIndicator.startAnimating()
+        
+        alert.view.addSubview(loadingIndicator)
+        present(alert, animated: true, completion: nil)
     }
 }

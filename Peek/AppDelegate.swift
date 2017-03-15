@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let rootViewController = UserDefaults.standard.bool(forKey: "termsAccepted") ? storyboard.instantiateViewController(withIdentifier: "mainVC") : storyboard.instantiateViewController(withIdentifier: "termsVC")
         
         window?.rootViewController = rootViewController
-        
+
         return true
     }
 }

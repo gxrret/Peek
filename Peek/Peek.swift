@@ -58,7 +58,6 @@ class Peek: CloudKitSyncable {
         
         return fileURL
     }
-    
 }
 
 extension CKRecord {

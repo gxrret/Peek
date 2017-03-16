@@ -16,6 +16,8 @@
 		AC4CB5E81E4E838A00979D03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4CB5E61E4E838A00979D03 /* Main.storyboard */; };
 		AC4F17B41E783BB30057DFF6 /* PeekKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4F17B31E783BB30057DFF6 /* PeekKeys.swift */; };
 		AC4F17B61E783C6E0057DFF6 /* CommentKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4F17B51E783C6E0057DFF6 /* CommentKeys.swift */; };
+		AC7A90CE1E7B2543002347FE /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7A90CD1E7B2543002347FE /* SettingsManager.swift */; };
+		AC7A90D21E7B2ED2002347FE /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7A90D11E7B2ED2002347FE /* CommentTableViewCell.swift */; };
 		AC84A15D1E37B5440053C77F /* Peek.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84A15C1E37B5440053C77F /* Peek.swift */; };
 		AC84A1601E37B5630053C77F /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84A15F1E37B5630053C77F /* CloudKitManager.swift */; };
 		AC84A1631E37B5790053C77F /* CloudKitSyncable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84A1621E37B5790053C77F /* CloudKitSyncable.swift */; };
@@ -49,6 +51,8 @@
 		AC4CB5E71E4E838A00979D03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC4F17B31E783BB30057DFF6 /* PeekKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeekKeys.swift; sourceTree = "<group>"; };
 		AC4F17B51E783C6E0057DFF6 /* CommentKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentKeys.swift; sourceTree = "<group>"; };
+		AC7A90CD1E7B2543002347FE /* SettingsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		AC7A90D11E7B2ED2002347FE /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		AC84A15C1E37B5440053C77F /* Peek.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Peek.swift; sourceTree = "<group>"; };
 		AC84A15F1E37B5630053C77F /* CloudKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
 		AC84A1621E37B5790053C77F /* CloudKitSyncable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitSyncable.swift; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 		AC0941FA1E69E985009FEA90 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				AC7A90CD1E7B2543002347FE /* SettingsManager.swift */,
 				AC4F17B71E78442D0057DFF6 /* Keys */,
 				AC4571821E6E19F900517A2A /* StoryboardInitializable.swift */,
 				AC125DA41E4B928E005204FA /* DateHelper.swift */,
@@ -131,6 +136,7 @@
 		AC2871B61E3933F90014151E /* Custom Cells */ = {
 			isa = PBXGroup;
 			children = (
+				AC7A90D11E7B2ED2002347FE /* CommentTableViewCell.swift */,
 				AC1CBBAE1E3812E900F77E01 /* PeekTableViewCell.swift */,
 			);
 			name = "Custom Cells";
@@ -338,6 +344,7 @@
 				ACB78A451E355E6000AA1D00 /* TermsAndConditionsViewController.swift in Sources */,
 				ACE797431E33FC08007DB33C /* AppDelegate.swift in Sources */,
 				AC84A1601E37B5630053C77F /* CloudKitManager.swift in Sources */,
+				AC7A90D21E7B2ED2002347FE /* CommentTableViewCell.swift in Sources */,
 				AC4571861E6E273D00517A2A /* Onboarding.swift in Sources */,
 				ACACADC41E36BBB900575BB0 /* PhotoSelectViewController.swift in Sources */,
 				ACD959CB1E43F1EA00A2D4F4 /* LocationManager.swift in Sources */,
@@ -355,6 +362,7 @@
 				AC84A15D1E37B5440053C77F /* Peek.swift in Sources */,
 				AC4F17B41E783BB30057DFF6 /* PeekKeys.swift in Sources */,
 				AC4571881E6E277F00517A2A /* Tutorial.swift in Sources */,
+				AC7A90CE1E7B2543002347FE /* SettingsManager.swift in Sources */,
 				ACACADC21E36BB9800575BB0 /* AddPeekwithImageTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

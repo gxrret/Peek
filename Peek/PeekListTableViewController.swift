@@ -25,12 +25,6 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        PeekController.sharedController.iCloudUserIDAsync { (recordID, error) in
-            if let userID = recordID?.recordName {
-                print(userID)
-            }
-        }
-        
         refreshControl?.tintColor = UIColor(red: 30/255, green: 215/255, blue: 96/255, alpha: 1.0)
         refreshControl?.backgroundColor = tableView.backgroundColor
         
@@ -43,6 +37,15 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
         LocationManager.sharedInstance.requestCurrentLocation()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if UserDefaults.standard.bool(forKey: SettingsManager.enableNSFWContentKey) == true {
+            segmentedControl.insertSegment(withTitle: "NSFW", at: 2, animated: true)
+        } else {
+            segmentedControl.removeSegment(at: 2, animated: true)
+        }
+    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         navigationController?.hidesBarsOnSwipe = true
@@ -128,11 +131,12 @@ class PeekListTableViewController: UITableViewController, MFMailComposeViewContr
     
     func requestFullSync(_ completion: (() -> Void)? = nil) {
         
-        showLoadingView()
-        
+//        showLoadingView()
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         PeekController.sharedController.performFullSync {
             completion?()
-            self.alert.dismiss(animated: true, completion: nil)
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+//            self.alert.dismiss(animated: true, completion: nil)
         }
     }
     
@@ -280,15 +284,15 @@ extension PeekListTableViewController {
         exitComposeMenu()
     }
     
-    func showLoadingView() {
-        
-        let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
-        loadingIndicator.frame = CGRect(x: 10, y: 5, width: 50, height: 50)
-        loadingIndicator.hidesWhenStopped = true
-        loadingIndicator.activityIndicatorViewStyle = .gray
-        loadingIndicator.startAnimating()
-        
-        alert.view.addSubview(loadingIndicator)
-        present(alert, animated: true, completion: nil)
-    }
+//    func showLoadingView() {
+//        
+//        let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
+//        loadingIndicator.frame = CGRect(x: 10, y: 5, width: 50, height: 50)
+//        loadingIndicator.hidesWhenStopped = true
+//        loadingIndicator.activityIndicatorViewStyle = .gray
+//        loadingIndicator.startAnimating()
+//        
+//        alert.view.addSubview(loadingIndicator)
+//        present(alert, animated: true, completion: nil)
+//    }
 }

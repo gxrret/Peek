@@ -11,10 +11,21 @@ import MessageUI
 
 class MoreTableViewController: UITableViewController, MFMailComposeViewControllerDelegate {
     
+    @IBOutlet weak var enableNSFWContentSwitch: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        enableNSFWContentSwitch.isOn = UserDefaults.standard.bool(forKey: SettingsManager.enableNSFWContentKey)
     }
+    
+    @IBAction func enableNSFWContentSwitchValueChanged(_ sender: Any) {
+        if enableNSFWContentSwitch.isOn {
+            UserDefaults.standard.set(true, forKey: SettingsManager.enableNSFWContentKey)
+        } else {
+            UserDefaults.standard.set(false, forKey: SettingsManager.enableNSFWContentKey)
+        }
+    }
+    
     
     @IBAction func reportButtonTapped(_ sender: Any) {
         

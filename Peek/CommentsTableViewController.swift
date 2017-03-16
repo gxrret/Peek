@@ -37,6 +37,9 @@ class CommentsTableViewController: UITableViewController, MFMailComposeViewContr
         self.pinchToZoomScrollView.maximumZoomScale = 5.0
         self.pinchToZoomScrollView.contentSize = self.peekImageView.frame.size
         self.pinchToZoomScrollView.delegate = self
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 200
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -111,7 +114,7 @@ class CommentsTableViewController: UITableViewController, MFMailComposeViewContr
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "commentCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "commentCell", for: indexPath) as? CommentTableViewCell else { return UITableViewCell() }
         
         cell.backgroundColor = .clear
         cell.contentView.backgroundColor = .clear
@@ -125,11 +128,8 @@ class CommentsTableViewController: UITableViewController, MFMailComposeViewContr
         
         guard let comment = peek?.comments[indexPath.row] else { return cell }
         
-        cell.textLabel?.text = comment.text
-        
-        cell.detailTextLabel?.text = DateHelper.timeAgoSinceShortened(comment.timestamp)
-        
-        
+        cell.updateComments(comment: comment)
+
         return cell
     }
     

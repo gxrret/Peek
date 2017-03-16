@@ -117,7 +117,7 @@ extension Onboarding: UIPageViewControllerDataSource {
         appearance.pageIndicatorTintColor = .white
         appearance.currentPageIndicatorTintColor = UIColor(red: 30/255, green: 215/255, blue: 96/255, alpha: 1.0)
         appearance.isOpaque = true
-        appearance.backgroundColor = UIColor(red: 154/255, green: 154/255, blue: 154/255, alpha: 1.0)
+        appearance.backgroundColor = UIColor(red: 166/255, green: 204/255, blue: 175/255, alpha: 1.0)
         return Onboarding.pages
     }
     

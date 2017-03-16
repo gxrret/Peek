@@ -66,7 +66,7 @@ extension CKRecord {
         let recordID = CKRecordID(recordName: UUID().uuidString)
         self.init(recordType: peek.recordType, recordID: recordID)
         
-        self[PeekKeys.title.rawValue] = peek.title as String? as CKRecordValue?
+        self[PeekKeys.title.rawValue] = peek.title as CKRecordValue?
         self[PeekKeys.timestamp.rawValue] = peek.timestamp as CKRecordValue?
         self[PeekKeys.location.rawValue] = peek.location as CKRecordValue?
         self[PeekKeys.photoData.rawValue] = CKAsset(fileURL: peek.temporaryPhotoURL)

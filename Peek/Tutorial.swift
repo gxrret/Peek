@@ -36,8 +36,8 @@ extension Tutorial {
         case 1:
             topLabel.text = "Anonymity"
             logoImageView.isHidden = true
-            detailLabel.text = "👀 No account setup at all. Get right to peeking!"
-            swipeLeftLabel.isHidden = true
+            detailLabel.text = "No account setup at all. Get right to peeking!"
+            swipeLeftLabel.text = "👀"
         case 2:
             topLabel.text = "Post"
             logoImageView.image = #imageLiteral(resourceName: "photo icon")
@@ -52,7 +52,7 @@ extension Tutorial {
             topLabel.text = "NSFW Content"
             logoImageView.isHidden = true
             detailLabel.text = "Peek users may post content that is NSFW(not safe for work). We filter peeks by a section dedicated to NSFW content. To report content you find inappropriate, swipe left to send an email to us."
-            swipeLeftLabel.isHidden = true
+            swipeLeftLabel.text = "😶"
         case 5:
             topLabel.text = "Before You Start..."
             logoImageView.isHidden = true

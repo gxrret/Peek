@@ -22,10 +22,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7CA-2J-FIB">
-                                <rect key="frame" x="20" y="71" width="334" height="522"/>
-                                <string key="text">Terms and Conditions
-
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7CA-2J-FIB">
+                                <rect key="frame" x="0.0" y="71" width="375" height="554"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <mutableString key="content">
 Last updated: January 22nd, 2016
 
 Please read these Terms and Conditions carefully before using Peek operated by us.
@@ -40,13 +41,43 @@ if you are between the ages of 13 and 17, you must get a parent or guardian to r
 
 By accessing this Service you agree to be bound by these Terms. If you disagree with any part of the Terms then you may not access the Service.
 
-Termination
+</mutableString>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="13" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Termination">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="13" name="AvenirNext-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
 
 We may terminate or suspend access to our Service immediately, without prior notice or liability, for any reason whatsoever, include without limitation if you breach our Terms.
 
 All provisions of the Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability.
 
-Content
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="13" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Content">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="13" name="AvenirNext-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">
 
 Our Service allows you to post, upload images, share information, and otherwise make available other certain information, text, graphics or other material (“Content”). You are responsible for the information you post. The rules for using the app are as follows (Also under “Rules” when creating a peek). You agree to not use the Service:
 - To depict  pornographic material;
@@ -64,7 +95,22 @@ We reserve the right to remove Content, or ban anyone without warning as we deem
 
 We do not condone posting personal information, so if you do happen to post a phone number, email, or any other sensitive personal information, you are responsible.
 
-COPPA
+</mutableString>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="13" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="COPPA">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="13" name="AvenirNext-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">
 
 Peek is in compliance with COPPA.
 
@@ -74,7 +120,22 @@ If you are the parent of guardian of a child under the age of 13 who has created
 
 For more information on COPPA, visit www.ftc.gov. For more information for staying safe online , visit www.socialsafety.org.
 
-Limitation of Liability
+</mutableString>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="13" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Limitation of Liability">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="13" name="AvenirNext-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">
 
 YOU ACKNOWLEDGE AND AGREE THAT WE CANNOT CONTROL THE CONDUCT OF PEEK’S USERS AND THEREFORE CANNOT BE RESPONSIBLE FOR ANY HARM THEY MAY CAUSE. WE ARE NOT RESPONSIBLE FOR THE ACTIONS, CONTENT, INFORMATION, OR DATA OF THIRD PARTIES, AND YOU RELEASE US, OUR DIRECTORS, OFFICERS, EMPLOYEES, AND AGENTS FROM ANY CLAIMS AND DAMAGES, KNOWN AND UNKNOWN, ARISING OUT OF OR IN ANY WAY CONNECTED WITH ANY CLAIM YOU HAVE AGAINST ANY SUCH THIRD PARTIES. IF YOU ARE A CALIFORNIA RESIDENT, YOU WAIVE CALIFORNIA CIVIL CODE §1542, WHICH SAYS: A GENERAL RELEASE DOES NOT EXTEND TO CLAIMS WHICH THE CREDITOR DOES NOT KNOW OR SUSPECT TO EXIST IN HIS FAVOR AT THE TIME OF EXECUTING THE RELEASE, WHICH IF KNOWN BY HIM MUST HAVE MATERIALLY AFFECTED HIS SETTLEMENT WITH THE DEBTOR.
 
@@ -87,13 +148,43 @@ WE ARE NOT RESPONSIBLE FOR ANY OFFENSIVE, INAPPROPRIATE, OBSCENE, UNLAWFUL OR OT
 WE ARE NOT LIABLE FOR ANY LOST OR DELETED INFORMATION OR DATA, WHETHER INTENTIONAL OR UNINTENTIONAL, NOR FOR THE TIMELINESS, DELETION, MIS-DELIVERY OR FAILURE TO STORE ANY USER COMMUNICATIONS OR PERSONALIZATION SETTINGS.
 NOTWITHSTANDING ANYTHING TO THE CONTRARY CONTAINED HEREIN, AND TO THE EXTENT THAT A JUDGMENT IS RENDERED IN A COURT OF COMPETENT JURISDICTION DISREGARDING ONE OR MORE OF THE WARRANTY DISCLAIMERS AND LIABILITY LIMITATIONS CONTAINED HEREIN, OUR AGGREGATE LIABILITY TO YOU SHALL NOT EXCEED ONE DOLLAR ($1.00).
 
-Links to other Websites
+</mutableString>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="13" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Links to other Websites">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="13" name="AvenirNext-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
 
 Our Service may contain links to third-party web sites or services that are not owned or controlled by Peek.
 
 Peek has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party websites or services. You further acknowledge and agree that Peek shall not be responsible or liable, directly or indirectly, for any such content, goods, or services available on or through any such web sites or services.
 
-DMCA - Digital Media Copyright Act
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="13" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="DMCA - Digital Media Copyright Act">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="13" name="AvenirNext-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">
 
 If you believe that any material on this Service infringes upon any copyright which you own or control, you may send a written notification of such infringement to the email: peekapp.contact@gmail.com
 
@@ -104,25 +195,66 @@ Include the following in your email:
 - A statement that the complaining party has a good-faith belief that use of the material in the manner complained of is not authorized by the copyright owner; and
 - A statement that the information in the notification is accurate, and under penalty or perjury, that the complaining party is authorized to act on behalf of the owner of an exclusive right that is allegedly infringed.
 
-Changes
+</mutableString>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="13" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Changes">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="13" name="AvenirNext-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
 
 We reserve the right, at our sole discretion, to modify or replace these Terms at any time. What constitutes a material change will be determined at our sole discretion.
 
-Contact Us
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="13" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Contact Us">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="13" name="AvenirNext-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
 
 If you have any questions about these Terms, please contact us at peek app.contact@gmail.com.</string>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="13"/>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="13" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms &amp; Conditions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wU-MH-IOm">
+                                <rect key="frame" x="39" y="28" width="290" height="35"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGu-f8-zyu">
-                                <rect key="frame" x="39" y="601" width="297" height="33"/>
+                                <rect key="frame" x="36" y="626" width="297" height="33"/>
                                 <color key="backgroundColor" red="0.11764705882352941" green="0.84313725490196079" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                 <state key="normal" title="Accept Terms"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="15"/>
+                                        <integer key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -130,26 +262,20 @@ If you have any questions about these Terms, please contact us at peek app.conta
                                     <segue destination="iE3-Ad-ohV" kind="show" identifier="toPeekView" id="zKO-sg-GNP"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms &amp; Conditions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wU-MH-IOm">
-                                <rect key="frame" x="39" y="28" width="290" height="35"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="gGu-f8-zyu" firstAttribute="top" secondItem="7CA-2J-FIB" secondAttribute="bottom" constant="8" symbolic="YES" id="57X-av-cke"/>
-                            <constraint firstItem="7CA-2J-FIB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="9lS-rp-NUT"/>
+                            <constraint firstItem="gGu-f8-zyu" firstAttribute="top" secondItem="7CA-2J-FIB" secondAttribute="bottom" constant="1" id="57X-av-cke"/>
+                            <constraint firstItem="7CA-2J-FIB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="9lS-rp-NUT"/>
                             <constraint firstItem="1wU-MH-IOm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="23" id="9za-5F-Hd3"/>
-                            <constraint firstItem="gGu-f8-zyu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BtK-5N-GbC"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gGu-f8-zyu" secondAttribute="bottom" constant="33" id="Dbu-Tf-vkL"/>
+                            <constraint firstItem="gGu-f8-zyu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-3" id="BtK-5N-GbC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gGu-f8-zyu" secondAttribute="bottom" constant="8" id="Dbu-Tf-vkL"/>
                             <constraint firstItem="1wU-MH-IOm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-3.5" id="HIc-rh-QWV"/>
                             <constraint firstItem="1wU-MH-IOm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="LLz-re-rRL"/>
-                            <constraint firstItem="7CA-2J-FIB" firstAttribute="centerX" secondItem="gGu-f8-zyu" secondAttribute="centerX" id="QhO-SC-e3o"/>
+                            <constraint firstItem="7CA-2J-FIB" firstAttribute="centerX" secondItem="gGu-f8-zyu" secondAttribute="centerX" constant="2.5" id="QhO-SC-e3o"/>
                             <constraint firstItem="7CA-2J-FIB" firstAttribute="top" secondItem="1wU-MH-IOm" secondAttribute="bottom" constant="8" symbolic="YES" id="Tg3-eJ-KEm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1wU-MH-IOm" secondAttribute="trailing" constant="30" id="dn5-3j-Tfw"/>
-                            <constraint firstItem="gGu-f8-zyu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="23" id="zy2-Sz-Xzx"/>
+                            <constraint firstItem="gGu-f8-zyu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="zy2-Sz-Xzx"/>
                         </constraints>
                     </view>
                     <connections>
@@ -159,7 +285,7 @@ If you have any questions about these Terms, please contact us at peek app.conta
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1796.25" y="54.929577464788736"/>
+            <point key="canvasLocation" x="1796" y="54.422788605697157"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Xol-zW-ODr">
@@ -312,9 +438,12 @@ If you have any questions about these Terms, please contact us at peek app.conta
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gcg-ot-ZLZ">
-                                <rect key="frame" x="16" y="64" width="343" height="595"/>
-                                <string key="text">Last updated: January 22nd, 2016
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gcg-ot-ZLZ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <mutableString key="content">
+Last updated: January 22nd, 2016
 
 Please read these Terms and Conditions carefully before using Peek operated by us.
 
@@ -398,25 +527,69 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
 
 Contact Us
 
-If you have any questions about these Terms, please contact us at: peekapp.contact@gmail.com.</string>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+If you have any questions about these Terms, please contact us at peek app.contact@gmail.com.</mutableString>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="14" name="AvenirNext-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="28">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="56">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="84">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="112">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="140">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="168">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="196">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="224">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="252">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="280">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="308">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="336">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="qnQ-N2-EQl" firstAttribute="top" secondItem="Gcg-ot-ZLZ" secondAttribute="bottom" constant="8" symbolic="YES" id="1pY-Vq-Ivg"/>
+                            <constraint firstItem="qnQ-N2-EQl" firstAttribute="top" secondItem="Gcg-ot-ZLZ" secondAttribute="bottom" id="1pY-Vq-Ivg"/>
                             <constraint firstItem="Gcg-ot-ZLZ" firstAttribute="top" secondItem="vBm-H2-fcW" secondAttribute="bottom" id="I0O-ND-a9d"/>
-                            <constraint firstItem="Gcg-ot-ZLZ" firstAttribute="trailing" secondItem="PdG-ey-s5s" secondAttribute="trailingMargin" id="bla-z4-Hxw"/>
-                            <constraint firstItem="Gcg-ot-ZLZ" firstAttribute="leading" secondItem="PdG-ey-s5s" secondAttribute="leadingMargin" id="nQF-X3-2Xq"/>
+                            <constraint firstItem="Gcg-ot-ZLZ" firstAttribute="trailing" secondItem="PdG-ey-s5s" secondAttribute="trailingMargin" constant="16" id="bla-z4-Hxw"/>
+                            <constraint firstItem="Gcg-ot-ZLZ" firstAttribute="leading" secondItem="PdG-ey-s5s" secondAttribute="leadingMargin" constant="-16" id="nQF-X3-2Xq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Terms &amp; Conditions" id="3lY-Bl-HzC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jXe-x5-D55" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3937" y="1768"/>
+            <point key="canvasLocation" x="3936.8000000000002" y="1767.1664167916044"/>
         </scene>
         <!--Privacy Policy-->
         <scene sceneID="JKE-lK-KQu">
@@ -431,7 +604,7 @@ If you have any questions about these Terms, please contact us at: peekapp.conta
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQX-MR-721">
-                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <string key="text">
 Thank you for using Peek! As Peek is a social media app where there is no private information shared with others, We still require you to have an iCloud account set up on your device. Holding onto your information, including your peeks, comments, and likes is a serious responsibility, and we want to let you know how we handle it.
 
@@ -481,17 +654,17 @@ If you have concerns about the way Peek is handling your Information, please let
                         </subviews>
                         <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="hQX-MR-721" secondAttribute="trailing" id="3sh-V7-kBe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hQX-MR-721" secondAttribute="trailing" constant="-16" id="3sh-V7-kBe"/>
                             <constraint firstItem="9ju-vz-j70" firstAttribute="top" secondItem="hQX-MR-721" secondAttribute="bottom" id="ABc-aV-PkD"/>
                             <constraint firstItem="hQX-MR-721" firstAttribute="top" secondItem="Cu3-XE-9JB" secondAttribute="bottom" id="lg5-Wc-pcI"/>
-                            <constraint firstItem="hQX-MR-721" firstAttribute="leading" secondItem="otR-aU-f0M" secondAttribute="leadingMargin" id="mPv-Ci-K91"/>
+                            <constraint firstItem="hQX-MR-721" firstAttribute="leading" secondItem="otR-aU-f0M" secondAttribute="leadingMargin" constant="-16" id="mPv-Ci-K91"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Privacy Policy" id="hjw-yJ-0nb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cw0-ol-5g1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4694" y="1767"/>
+            <point key="canvasLocation" x="4693.6000000000004" y="1766.2668665667168"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="mtK-rW-HZq">
@@ -827,9 +1000,9 @@ If you have concerns about the way Peek is handling your Information, please let
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkS-Ss-nZp">
-                                    <rect key="frame" x="0.0" y="65" width="375" height="2"/>
-                                    <color key="backgroundColor" red="0.81215807360742709" green="0.81215807360742709" blue="0.81215807360742709" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkS-Ss-nZp" userLabel="bar">
+                                    <rect key="frame" x="0.0" y="65" width="375" height="1"/>
+                                    <color key="backgroundColor" red="0.89729774535809015" green="0.89729774535809015" blue="0.89729774535809015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Posted" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gda-bs-6D5">
                                     <rect key="frame" x="274" y="17" width="101" height="21"/>
@@ -849,7 +1022,7 @@ If you have concerns about the way Peek is handling your Information, please let
                                 <constraint firstItem="gda-bs-6D5" firstAttribute="top" secondItem="Abc-mb-jHG" secondAttribute="top" constant="17" id="A4z-nJ-G6r"/>
                                 <constraint firstAttribute="trailing" secondItem="qrw-9G-Rna" secondAttribute="trailing" id="CYf-hL-fiD"/>
                                 <constraint firstItem="hkS-Ss-nZp" firstAttribute="top" secondItem="Abc-mb-jHG" secondAttribute="bottom" constant="2" id="DXB-05-UAa"/>
-                                <constraint firstItem="qrw-9G-Rna" firstAttribute="top" secondItem="hkS-Ss-nZp" secondAttribute="bottom" id="PVL-rb-Mdg"/>
+                                <constraint firstItem="qrw-9G-Rna" firstAttribute="top" secondItem="hkS-Ss-nZp" secondAttribute="bottom" constant="1" id="PVL-rb-Mdg"/>
                                 <constraint firstItem="gda-bs-6D5" firstAttribute="trailing" secondItem="Lvb-k7-t0S" secondAttribute="trailing" id="Qg7-g3-GrC"/>
                                 <constraint firstItem="hkS-Ss-nZp" firstAttribute="leading" secondItem="qrw-9G-Rna" secondAttribute="leading" id="Sob-kG-33D"/>
                                 <constraint firstItem="gda-bs-6D5" firstAttribute="leading" secondItem="Lvb-k7-t0S" secondAttribute="leading" id="Z4k-Ma-Oma"/>
@@ -874,7 +1047,7 @@ If you have concerns about the way Peek is handling your Information, please let
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentCell" textLabel="KkI-O0-oz9" detailTextLabel="j5E-Qe-mUK" rowHeight="72" style="IBUITableViewCellStyleValue1" id="9XU-7U-QL3">
-                                <rect key="frame" x="0.0" y="543.5" width="375" height="72"/>
+                                <rect key="frame" x="0.0" y="544" width="375" height="72"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9XU-7U-QL3" id="cM0-ni-0Sq">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>

@@ -1,7 +1,9 @@
 # Peek
 An anonymous social media app for iOS - developed in Swift 3.0
 
-Technologies: CloudKit, CoreLocation, NSUserDefaults
+Technologies: CloudKit, CoreLocation, UserDefaults, Crashlytics (Fabric.io)
+
+To use Fabric frameworks, please sign up with fabric and use your own API key.
 
 Privacy Policy
 

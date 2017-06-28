@@ -20,22 +20,6 @@
 	<string>1</string>
 	<key>CFBundleVersion</key>
 	<string>7</string>
-	<key>Fabric</key>
-	<dict>
-		<key>APIKey</key>
-		<string>99b4cdecbfcbcc3fa7e95ff979c8d23d3d44b628</string>
-		<key>Kits</key>
-		<array>
-			<dict>
-				<key>KitInfo</key>
-				<dict/>
-				<key>KitName</key>
-				<string>Crashlytics</string>
-			</dict>
-		</array>
-	</dict>
-	<key>LSRequiresIPhoneOS</key>
-	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>Peek requires access to your camera in order to use this function.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
